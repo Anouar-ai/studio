@@ -5,6 +5,7 @@ import { Logo } from '@/components/shared/Logo';
 import { MobileNav } from '@/components/shared/MobileNav';
 import { ThemeToggle } from '@/components/shared/ThemeToggle';
 import { navLinks } from '@/lib/site';
+import { SiWhatsapp } from 'react-icons/si';
 
 export function Navbar() {
   return (
@@ -28,7 +29,10 @@ export function Navbar() {
                 <ThemeToggle />
             </div>
             <Button variant="ghost">Sign in</Button>
-            <Button>WhatsApp</Button>
+            <Button>
+              <SiWhatsapp />
+              WhatsApp
+            </Button>
             <MobileNav />
           </div>
         </div>
