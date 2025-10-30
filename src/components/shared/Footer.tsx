@@ -54,9 +54,9 @@ export function Footer() {
             &copy; {new Date().getFullYear()} IPTV Service. All rights reserved.
           </p>
           <div className="mt-4 flex items-center space-x-4 sm:mt-0">
-            <Link href="#" aria-label="Facebook" className="text-muted-foreground hover:text-primary"><Facebook className="h-5 w-5" /></Link>
-            <Link href="#" aria-label="Twitter" className="text-muted-foreground hover:text-primary"><Twitter className="h-5 w-5" /></Link>
-            <Link href="#" aria-label="Instagram" className="text-muted-foreground hover:text-primary"><Instagram className="h-5 w-5" /></Link>
+            <Link href="#" aria-label="Follow us on Facebook" className="text-muted-foreground hover:text-primary"><Facebook className="h-5 w-5" /></Link>
+            <Link href="#" aria-label="Follow us on Twitter" className="text-muted-foreground hover:text-primary"><Twitter className="h-5 w-5" /></Link>
+            <Link href="#" aria-label="Follow us on Instagram" className="text-muted-foreground hover:text-primary"><Instagram className="h-5 w-5" /></Link>
           </div>
         </div>
       </Container>
