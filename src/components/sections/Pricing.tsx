@@ -14,6 +14,7 @@ import { Container } from "../shared/Container";
 import { SectionHeader } from "../shared/SectionHeader";
 import { Reveal } from "../shared/Reveal";
 import { Badge } from "../ui/badge";
+import Link from "next/link";
 
 export function Pricing() {
   return (
@@ -56,8 +57,8 @@ export function Pricing() {
                   </ul>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full" variant={plan.isPopular ? "default" : "outline"}>
-                    Order Now
+                  <Button asChild className="w-full" variant={plan.isPopular ? "default" : "outline"}>
+                    <Link href={`/iptv-subscription/${plan.name.toLowerCase().replace(' ', '-')}`}>Order Now</Link>
                   </Button>
                 </CardFooter>
               </Card>

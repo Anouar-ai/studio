@@ -42,7 +42,7 @@ export function Hero() {
               WhatsApp
             </Button>
             <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 hover:text-primary">
-              <Link href="/pricing">See Pricing</Link>
+              <Link href="/iptv-subscription">See Pricing</Link>
             </Button>
           </div>
 
