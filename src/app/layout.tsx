@@ -22,16 +22,16 @@ const outfit = Outfit({
 
 
 export const metadata: Metadata = {
-  title: "DigitalLizard IPTV",
+  title: "IPTV Service",
   description: "The Most IPTV Service in the world",
   openGraph: {
-    title: "DigitalLizard IPTV",
+    title: "IPTV Service",
     description: "Unlock a world of entertainment — Start your IPTV service subscription now.",
     images: [{ url: "/og-image.jpg" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "DigitalLizard IPTV",
+    title: "IPTV Service",
     description: "The Most IPTV Service in the world.",
     images: ["/twitter-image.jpg"],
   },

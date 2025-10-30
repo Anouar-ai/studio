@@ -13,7 +13,7 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <Logo />
             <p className="mt-4 text-sm text-muted-foreground">
-              Unlock a world of entertainment with DigitalLizard IPTV. The most reliable service for all your streaming needs.
+              Unlock a world of entertainment with IPTV Service. The most reliable service for all your streaming needs.
             </p>
           </div>
           <div>
@@ -52,7 +52,7 @@ export function Footer() {
         </div>
         <div className="flex flex-col items-center justify-between border-t py-6 sm:flex-row">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} DigitalLizard. All rights reserved.
+            &copy; {new Date().getFullYear()} IPTV Service. All rights reserved.
           </p>
           <div className="mt-4 flex items-center space-x-4 sm:mt-0">
             <Link href="#" aria-label="Facebook" className="text-muted-foreground hover:text-primary"><Facebook className="h-5 w-5" /></Link>
