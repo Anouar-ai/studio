@@ -1,28 +1,26 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/shared/Container";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ShieldCheck, Tv, Zap } from "lucide-react";
 
 export function Hero() {
-  const heroImage = PlaceHolderImages.find((img) => img.id === "hero-background");
-
   return (
     <section className="relative h-[80vh] min-h-[600px] w-full overflow-hidden">
-      {heroImage && (
-        <Image
-          src={heroImage.imageUrl}
-          alt={heroImage.description}
-          data-ai-hint={heroImage.imageHint}
-          fill
-          className="object-cover"
-          priority
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source
+          src="https://www.demotemplates.online//snowpulse//wp-content//uploads//2024//05//The-Best-IPTV-Subscription-Service-Provider.mp4"
+          type="video/mp4"
         />
-      )}
+      </video>
       <div className="absolute inset-0 bg-black/60" />
       <Container className="relative z-10 flex h-full items-center justify-center text-center text-white">
         <motion.div
