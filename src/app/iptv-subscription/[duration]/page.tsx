@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import { Check, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -152,8 +153,8 @@ export default function PlanPage({ params }: { params: { duration: string } }) {
                     </p>
 
                     <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-                        <Button size="lg" variant="secondary" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-                            Order Now - Instant Activation
+                        <Button asChild size="lg" variant="secondary" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
+                           <Link href="/checkout">Order Now - Instant Activation</Link>
                         </Button>
                         <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                             <Link href="/iptv-subscription">View All Plans</Link>
@@ -240,7 +241,9 @@ export default function PlanPage({ params }: { params: { duration: string } }) {
                              </ul>
                         </CardContent>
                         <CardFooter className="flex-col items-stretch gap-4">
-                            <Button size="lg">Proceed to Checkout →</Button>
+                            <Button asChild size="lg">
+                              <Link href="/checkout">Proceed to Checkout →</Link>
+                            </Button>
                             <p className="text-center text-xs text-muted-foreground">🔒 Secure checkout with SSL encryption</p>
                         </CardFooter>
                     </Card>
