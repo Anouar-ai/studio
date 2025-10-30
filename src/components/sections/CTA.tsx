@@ -9,7 +9,7 @@ export function CTA() {
         <Reveal>
           <div className="rounded-xl bg-gradient-to-r from-primary to-green-400 p-8 text-center md:p-12">
             <h2 className="font-headline text-3xl font-bold text-primary-foreground sm:text-4xl">
-              Ready to Watch with the Best IPTV Service?
+              Ready for the Best IPTV Service?
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-primary-foreground/80">
               Unlock a world of entertainment — Get your IPTV service subscription now and start streaming instantly.

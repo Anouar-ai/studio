@@ -22,7 +22,7 @@ const outfit = Outfit({
 
 
 export const metadata: Metadata = {
-  title: "Your Premier IPTV Service Provider",
+  title: "IPTV Service | Your Premier Provider",
   description: "Experience the best IPTV service with thousands of channels, HD/4K quality, and instant activation. Unlock a world of entertainment with our reliable IPTV service.",
   openGraph: {
     title: "The Best IPTV Service in the World",

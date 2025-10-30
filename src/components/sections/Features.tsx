@@ -9,7 +9,7 @@ export function Features() {
     <section id="features" className="py-16 sm:py-24">
       <Container>
         <SectionHeader
-          title="No desire for buffering and freezers?"
+          title="The Best Features for Your IPTV Service"
           subtitle="We've built a platform with your entertainment in mind. Experience the difference with our premium features."
         />
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
