@@ -18,6 +18,7 @@ import { Badge } from "@/components/ui/badge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import Image from "next/image";
 
 type Props = {
   params: { duration: string };
@@ -224,7 +225,15 @@ export default function PlanPage({ params }: { params: { duration: string } }) {
                 )}
 
                 <section id="order" className="py-16 sm:py-24">
-                    <Card className="mx-auto max-w-lg">
+                    <Card className="mx-auto max-w-lg overflow-hidden">
+                        <div className="relative h-48 w-full">
+                            <Image 
+                                src="https://images-cdn.ubuy.co.in/633fee9c3a16a463ad2f7388-iptv-subscription-not-box-including.jpg" 
+                                alt="IPTV Subscription" 
+                                fill
+                                className="object-cover"
+                            />
+                        </div>
                         <CardHeader className="text-center">
                             <CardTitle className="font-headline text-2xl">Order Your {plan.name} IPTV Subscription</CardTitle>
                             <CardDescription>Complete your purchase and start streaming in minutes!</CardDescription>
