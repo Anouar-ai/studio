@@ -28,7 +28,6 @@ export function Navbar() {
             <div className="hidden lg:flex">
                 <ThemeToggle />
             </div>
-            <Button variant="ghost">Sign in</Button>
             <Button>
               <SiWhatsapp />
               WhatsApp
