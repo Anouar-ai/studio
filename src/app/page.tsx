@@ -7,7 +7,6 @@ const Pricing = dynamic(() => import("@/components/sections/Pricing").then((m) =
 const CTA = dynamic(() => import("@/components/sections/CTA").then((m) => m.CTA));
 const FAQ = dynamic(() => import("@/components/sections/FAQ").then((m) => m.FAQ));
 const Testimonials = dynamic(() => import("@/components/sections/Testimonials").then((m) => m.Testimonials));
-const BlogGrid = dynamic(() => import("@/components/sections/BlogGrid").then((m) => m.BlogGrid));
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
       <CTA />
       <Testimonials />
       <FAQ />
-      <BlogGrid />
     </>
   );
 }
