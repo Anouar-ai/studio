@@ -6,7 +6,7 @@ export const navLinks = [
   { name: "Pricing", href: "/pricing" },
   { name: "FAQ", href: "/faq" },
   { name: "Devices", href: "#devices" },
-  { name: "Blog", href: "#blog" },
+  { name: "Blog", href: "/blog" },
   { name: "Affiliate", href: "#" },
 ];
 
@@ -189,7 +189,7 @@ export const footerLinks = {
     quickLinks: [
         { name: "Pricing", href: "/pricing" },
         { name: "FAQ", href: "/faq" },
-        { name: "Blog", href: "#blog" },
+        { name: "Blog", href: "/blog" },
         { name: "Affiliate Program", href: "#" },
     ],
     supportedLinks: [
