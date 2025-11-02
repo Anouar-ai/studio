@@ -86,13 +86,18 @@ const GlowingEffect = memo(
           const angleDiff = ((targetAngle - currentAngle + 180) % 360) - 180;
           const newAngle = currentAngle + angleDiff;
 
-          animate(currentAngle, newAngle, {
-            duration: movementDuration,
-            ease: [0.16, 1, 0.3, 1],
-            onUpdate: (value) => {
-              element.style.setProperty("--start", String(value));
+          animate(
+            (progress) => {
+              element.style.setProperty(
+                "--start",
+                String(currentAngle + angleDiff * progress)
+              );
             },
-          });
+            {
+              duration: movementDuration,
+              ease: [0.16, 1, 0.3, 1],
+            }
+          );
         });
       },
       [inactiveZone, proximity, movementDuration]
