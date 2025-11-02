@@ -18,10 +18,10 @@ interface DeviceIconProps {
   href: string;
 }
 
-const allIcons = { ...siIcons, ...lucideIcons };
+const allIcons: Record<string, IconType | any> = { ...siIcons, ...lucideIcons };
 
 export function DeviceIcon({ name, iconName, href }: DeviceIconProps) {
-  const Icon = (allIcons as Record<string, IconType>)[iconName];
+  const Icon = allIcons[iconName];
 
   if (!Icon) {
     return null;
