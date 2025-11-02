@@ -34,20 +34,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const title = `${plan.name} IPTV Subscription - $${plan.price}/${plan.duration.split('-')[0]} Months`;
-  const description = `Get our best value ${plan.name} IPTV subscription for just $${plan.price}. Save ${plan.savings} with 20,000+ channels, HD/4K quality, 24/7 support, and instant activation.`;
+  const title = `${plan.name} IPTV Subscription | $${plan.price}/${plan.duration.split('-')[0]} Months`;
+  const description = `Get our flexible ${plan.name} IPTV subscription for just $${plan.price}. Enjoy 20,000+ channels, HD/4K quality, 24/7 support, and instant activation.`;
 
   return {
     title,
     description,
-    keywords: `${plan.name} IPTV, ${plan.duration} IPTV subscription, annual IPTV plan, IPTV subscription deal`,
+    keywords: `${plan.name} IPTV, ${plan.duration} IPTV subscription, IPTV trial, monthly IPTV plan`,
     alternates: {
-      canonical: `https://yoursite.com/iptv-subscription/${plan.id}`,
+      canonical: `/iptv-subscription/${plan.id}`,
     },
     openGraph: {
-      title: `${plan.name} IPTV Subscription - Best Value at $${plan.price_monthly.toFixed(2)}/month`,
-      description: `Save ${plan.savings} with our ${plan.duration} IPTV subscription. 20,000+ channels in HD/4K.`,
-      url: `https://yoursite.com/iptv-subscription/${plan.id}`,
+      title: `${plan.name} IPTV Subscription - Starting at $${plan.price_monthly.toFixed(2)}/month`,
+      description: `Get instant access to 20,000+ channels in HD/4K with our ${plan.duration} IPTV subscription.`,
+      url: `/iptv-subscription/${plan.id}`,
     },
   };
 }
@@ -64,14 +64,14 @@ export default function PlanPage({ params }: { params: { duration: string } }) {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": `${plan.name} IPTV Subscription`,
-    "description": `Annual IPTV subscription with 20,000+ channels, HD/4K quality, and 24/7 support`,
+    "description": `${plan.name} IPTV subscription with 20,000+ channels, HD/4K quality, and 24/7 support`,
     "offers": {
       "@type": "Offer",
       "price": plan.price,
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "priceValidUntil": "2025-12-31",
-      "url": `https://yoursite.com/iptv-subscription/${plan.id}`
+      "url": `/iptv-subscription/${plan.id}`
     },
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -83,15 +83,15 @@ export default function PlanPage({ params }: { params: { duration: string } }) {
   const pageFaqs = [
       {
         question: `How does the ${plan.name} IPTV subscription work?`,
-        answer: `After purchase, you'll receive instant access to our IPTV service for ${plan.duration}. You pay once ($${plan.price}) and enjoy unlimited streaming for the entire period.`
+        answer: `After purchase, you'll receive instant access to our IPTV service for ${plan.duration}. You pay once ($${plan.price}) and enjoy unlimited streaming for the entire period without any contract.`
       },
       {
         question: "Can I cancel my subscription?",
-        answer: "We offer a 7-day money-back guarantee. If you're not satisfied within the first week, contact our support team for a full refund."
+        answer: "Yes, you can cancel anytime. We also offer a 7-day money-back guarantee. If you're not satisfied within the first week, contact our support team for a full refund, no questions asked."
       },
       {
         question: "What devices are compatible?",
-        answer: "Our IPTV subscription works on Smart TVs, Android devices, iOS (iPhone/iPad), Fire Stick, MAG boxes, and more. We provide setup guides for all platforms."
+        answer: "Our IPTV subscription works on almost any device, including Smart TVs, Android boxes, iOS (iPhone/iPad), Fire Stick, MAG boxes, and computers. We provide easy-to-follow setup guides for all platforms."
       }
   ]
 
@@ -323,3 +323,5 @@ export async function generateStaticParams() {
       duration: plan.id,
     }));
 }
+
+    
