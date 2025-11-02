@@ -65,6 +65,24 @@
       "imageUrl": "https://image.tmdb.org/t/p/w500/wvWRCDR0wScmrJVAh2iipBSxkZw.jpg",
       "imageHint": "fantasy potion",
       "description": "The Elixir movie poster"
+    },
+    {
+      "id": "how-to-iphone",
+      "imageUrl": "https://images.unsplash.com/photo-1664883410931-2edffc8be5e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxpUGhvbmUlMjBzY3JlZW58ZW58MHx8fHwxNzYyMTAwNjgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "iPhone screen",
+      "description": "IPTV setup on an iPhone"
+    },
+    {
+      "id": "how-to-android",
+      "imageUrl": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxBbmRyb2lkJTIwcGhvbmV8ZW58MHx8fHwxNzYyMTAwNjgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Android phone",
+      "description": "IPTV setup on an Android phone"
+    },
+    {
+      "id": "how-to-smart-tv",
+      "imageUrl": "https://images.unsplash.com/photo-1721333079705-36b879261b30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzbWFydCUyMHRlbGV2aXNpb258ZW58MHx8fHwxNzYyMTAwNjgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smart television",
+      "description": "IPTV setup on a smart TV"
     }
   ]
 }
