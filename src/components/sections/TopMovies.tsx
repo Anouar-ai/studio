@@ -69,11 +69,6 @@ const MovieCard = ({ movie, index }: { movie: any; index: number }) => {
               className="h-full w-full object-cover transition-opacity duration-300 opacity-100"
             />
           )}
-          <div className="absolute bottom-1 left-1 right-1 z-30 flex justify-center">
-            <div className="rounded-sm bg-red-600 px-2 py-1 text-xs font-bold text-white">
-              Recently Added
-            </div>
-          </div>
         </div>
       </div>
     </div>
