@@ -31,11 +31,8 @@ const MovieCard = ({ movie, index }: { movie: any; index: number }) => {
 
   return (
     <motion.div
-      className="group relative flex-shrink-0 cursor-pointer transition-all duration-300"
+      className="group relative flex-shrink-0 w-[280px] sm:w-[350px] h-[220px] cursor-pointer transition-all duration-300"
       style={{ 
-        minWidth: "350px", 
-        width: "350px", 
-        height: "220px",
         perspective: 2000,
       }}
       onMouseMove={(e) => {
