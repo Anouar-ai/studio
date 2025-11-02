@@ -6,6 +6,7 @@ import { Footer } from "@/components/shared/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { ContactSheet } from "@/components/shared/ContactSheet";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -56,6 +57,7 @@ export default function RootLayout({
             <main className="flex-grow">{children}</main>
             <Footer />
           </div>
+          <ContactSheet />
           <Toaster />
         </ThemeProvider>
       </body>
