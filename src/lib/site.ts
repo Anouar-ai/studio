@@ -190,10 +190,10 @@ export const footerLinks = {
         { name: "Affiliate Program", href: "#" },
     ],
     supportedLinks: [
-        { name: "Android App", href: "#" },
-        { name: "iOS App", href: "#" },
-        { name: "Windows App", href: "#" },
-        { name: "macOS App", href: "#" },
+        { name: "Android App", href: "/how-to-work/android" },
+        { name: "iOS App", href: "/how-to-work/iphone" },
+        { name: "Windows App", href: "/how-to-work/windows" },
+        { name: "macOS App", href: "/how-to-work/macos" },
     ],
     contact: {
         address: "123 Digital Street, Lizard City, LC 12345",
@@ -206,4 +206,5 @@ export const socialIcons = [
     { name: "Twitter", href: "#" },
     { name: "Instagram", href: "#" },
 ];
+
 
