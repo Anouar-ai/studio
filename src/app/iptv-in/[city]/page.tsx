@@ -92,11 +92,26 @@ export default function CityPage({ params }: { params: { city: string } }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <script
-        type.="application/ld+json"
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <main className="py-16 sm:py-24">
         <Container>
+           <nav aria-label="Breadcrumb" className="mb-8 text-sm text-muted-foreground">
+              <ol itemScope itemType="https://schema.org/BreadcrumbList" className="flex items-center gap-2">
+                <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+                  <Link href="/" itemProp="item" className="hover:text-primary">
+                    <span itemProp="name">Home</span>
+                  </Link>
+                  <meta itemProp="position" content="1" />
+                </li>
+                <li>/</li>
+                 <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+                    <span itemProp="name">{`IPTV in ${name}`}</span>
+                    <meta itemProp="position" content="2" />
+                </li>
+              </ol>
+            </nav>
           <article className="prose prose-lg dark:prose-invert max-w-none">
             <header className="mb-12">
               <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">Buy IPTV in {name}, {state}, {country}: {new Date().getFullYear()} Guide</h1>

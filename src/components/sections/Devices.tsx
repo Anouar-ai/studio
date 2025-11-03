@@ -1,3 +1,4 @@
+
 import { Container } from "../shared/Container";
 import { SectionHeader } from "../shared/SectionHeader";
 import { devices } from "@/lib/site";
@@ -6,11 +7,11 @@ import { Reveal } from "../shared/Reveal";
 
 export function Devices() {
   return (
-    <section id="devices" className="bg-muted/30 py-16 dark:bg-card/30 sm:py-24">
+    <section id="devices" className="py-16 sm:py-24">
       <Container>
         <SectionHeader
           title="Works on All Your Devices"
-          subtitle="Watch on your TV, computer, tablet, or phone. Our service is compatible with a wide range of devices."
+          subtitle="Watch on your TV, computer, tablet, or phone. Our IPTV service is compatible with a wide range of devices."
         />
         <Reveal>
           <div className="flex flex-wrap justify-center gap-4">

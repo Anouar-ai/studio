@@ -1,3 +1,4 @@
+
 import {
   Accordion,
   AccordionContent,
@@ -11,7 +12,7 @@ import { Reveal } from "../shared/Reveal";
 
 export function FAQ() {
   return (
-    <section id="faq" className="bg-muted/30 py-16 dark:bg-card/30 sm:py-24">
+    <section id="faq" className="py-16 sm:py-24">
       <Container>
         <SectionHeader
           title="Frequently Asked Questions"

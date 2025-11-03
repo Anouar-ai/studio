@@ -6,11 +6,37 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { CreditCard, Lock } from "lucide-react";
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+    title: "Secure Checkout | IPTV Service",
+    description: "Complete your IPTV service subscription securely. Enter your payment details to get instant access to thousands of channels.",
+    alternates: {
+      canonical: "/checkout",
+    },
+};
+
 
 export default function CheckoutPage() {
     return (
         <main className="py-16 sm:py-24">
             <Container>
+                 <nav aria-label="Breadcrumb" className="mb-8 text-sm text-muted-foreground">
+                  <ol itemScope itemType="https://schema.org/BreadcrumbList" className="flex items-center gap-2">
+                    <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+                      <Link href="/" itemProp="item" className="hover:text-primary">
+                        <span itemProp="name">Home</span>
+                      </Link>
+                      <meta itemProp="position" content="1" />
+                    </li>
+                    <li>/</li>
+                    <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+                        <span itemProp="name">Checkout</span>
+                         <meta itemProp="position" content="2" />
+                    </li>
+                  </ol>
+                </nav>
                 <SectionHeader 
                     title="Secure Checkout"
                     subtitle="Complete your purchase in just a few steps. Your streaming journey awaits."
