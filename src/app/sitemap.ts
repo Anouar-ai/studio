@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { howToArticles } from '@/lib/how-to';
+import { allCities } from '@/lib/cities';
  
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://yoursite.com'
@@ -9,6 +10,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: 'monthly' as 'monthly',
     priority: 0.7,
+  }));
+
+  const cityPages = allCities.map((city) => ({
+    url: `${baseUrl}/iptv-in/${city.id}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as 'weekly',
+    priority: 0.8,
   }));
 
 
@@ -55,8 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.6,
     },
-    ...howToPages
+    ...howToPages,
+    ...cityPages,
   ]
 }
-
-    
