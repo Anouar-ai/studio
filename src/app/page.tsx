@@ -1,8 +1,6 @@
 
 import { Hero } from "@/components/sections/Hero";
 import dynamic from "next/dynamic";
-import { LogoCarousel } from "@/components/sections/LogoCarousel";
-import { TopMovies } from "@/components/sections/TopMovies";
 
 const Features = dynamic(() => import("@/components/sections/Features").then((m) => m.Features));
 const Devices = dynamic(() => import("@/components/sections/Devices").then((m) => m.Devices));
@@ -10,6 +8,8 @@ const Pricing = dynamic(() => import("@/components/sections/Pricing").then((m) =
 const CTA = dynamic(() => import("@/components/sections/CTA").then((m) => m.CTA));
 const FAQ = dynamic(() => import("@/components/sections/FAQ").then((m) => m.FAQ));
 const Testimonials = dynamic(() => import("@/components/sections/Testimonials").then((m) => m.Testimonials));
+const LogoCarousel = dynamic(() => import("@/components/sections/LogoCarousel").then((m) => m.LogoCarousel));
+const TopMovies = dynamic(() => import("@/components/sections/TopMovies").then((m) => m.TopMovies));
 
 export default function Home() {
     const productSchema = {
