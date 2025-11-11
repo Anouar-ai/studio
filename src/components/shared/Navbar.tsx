@@ -28,9 +28,11 @@ export function Navbar() {
             <div className="hidden lg:flex">
                 <ThemeToggle />
             </div>
-            <Button>
-              <SiWhatsapp />
-              WhatsApp
+            <Button asChild>
+              <Link href="#">
+                <SiWhatsapp />
+                WhatsApp
+              </Link>
             </Button>
             <MobileNav />
           </div>

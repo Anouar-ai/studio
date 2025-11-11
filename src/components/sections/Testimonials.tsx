@@ -17,7 +17,7 @@ export function Testimonials() {
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {testimonials.map((testimonial, i) => (
             <Reveal key={testimonial.name} delay={i * 0.1}>
-              <Card className="h-full dark:bg-card/50">
+              <Card className="h-full bg-card hover:bg-secondary/50 transition-colors">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-4">
                     <Avatar>

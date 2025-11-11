@@ -11,7 +11,7 @@ import { LogoCarousel } from "./LogoCarousel";
 
 export function Hero() {
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-b from-background to-background/80 via-background/90">
+    <section className="relative w-full overflow-hidden">
        <div className="absolute inset-0 bg-[radial-gradient(40%_100%_at_50%_0%,hsl(var(--primary)/0.1),transparent)]" />
       <Container className="relative z-10 flex min-h-[80vh] flex-col items-center justify-center py-20 text-center md:min-h-[600px]">
         <motion.div
@@ -25,14 +25,14 @@ export function Hero() {
             textClassName="font-headline text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70"
             underlineClassName="text-primary"
           />
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-secondary-foreground/80">
             Unlock a world of entertainment with our top-rated IPTV service. Start your subscription now, from just $7.50/mo.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button asChild size="lg" className="shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:shadow-primary/30">
+            <Button asChild size="lg" className="shadow-lg shadow-primary/20 transition-all hover:bg-accent hover:shadow-xl hover:shadow-primary/30">
               <Link href="/iptv-subscription">Get Started Now</Link>
             </Button>
-            <Button asChild size="lg" variant="ghost">
+            <Button asChild size="lg" variant="outline">
               <Link href="/#pricing">View Plans</Link>
             </Button>
           </div>

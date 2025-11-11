@@ -28,19 +28,19 @@ export function Pricing() {
           {plans.map((plan, i) => (
             <Reveal key={plan.name} delay={i * 0.1}>
               <Card className={cn(
-                "relative flex h-full flex-col transition-all hover:scale-[1.02]",
+                "relative flex h-full flex-col transition-all hover:scale-[1.02] bg-card",
                 plan.isPopular && "border-2 border-primary shadow-lg shadow-primary/20"
               )}>
                 {plan.isPopular && (
-                  <Badge className="absolute -top-3 right-4">Best Value</Badge>
+                  <Badge className="absolute -top-3 right-4 bg-primary text-primary-foreground hover:bg-accent">Best Value</Badge>
                 )}
                 <CardHeader>
                   <CardTitle className="font-headline">{plan.name}</CardTitle>
                   <CardDescription>
                     <span className="text-4xl font-bold text-foreground">${plan.price}</span>
-                    <span className="text-muted-foreground"> / {plan.name.toLowerCase()}</span>
+                    <span className="text-muted-foreground"> / {plan.duration.toLowerCase()}</span>
                   </CardDescription>
-                  {plan.name !== '1 Month' && (
+                  {plan.price_monthly !== plan.price && (
                     <p className="text-sm text-muted-foreground">
                       Equivalent to ${plan.price_monthly.toFixed(2)}/month
                     </p>
@@ -58,7 +58,7 @@ export function Pricing() {
                 </CardContent>
                 <CardFooter>
                   <Button asChild className="w-full" variant={plan.isPopular ? "default" : "outline"}>
-                    <Link href={`/iptv-subscription/${plan.name.toLowerCase().replace(' ', '-')}`}>Order Now</Link>
+                    <Link href={`/iptv-subscription/${plan.id}`}>Order Now</Link>
                   </Button>
                 </CardFooter>
               </Card>
