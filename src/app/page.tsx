@@ -9,7 +9,6 @@ const Pricing = dynamic(() => import("@/components/sections/Pricing").then((m) =
 const CTA = dynamic(() => import("@/components/sections/CTA").then((m) => m.CTA));
 const FAQ = dynamic(() => import("@/components/sections/FAQ").then((m) => m.FAQ));
 const Testimonials = dynamic(() => import("@/components/sections/Testimonials").then((m) => m.Testimonials));
-const TopMovies = dynamic(() => import("@/components/sections/TopMovies").then((m) => m.TopMovies));
 
 export default function Home() {
     const productSchema = {
@@ -41,7 +40,6 @@ export default function Home() {
       <Hero />
       <Features />
       <Brands />
-      <TopMovies />
       <Devices />
       <Pricing />
       <CTA />

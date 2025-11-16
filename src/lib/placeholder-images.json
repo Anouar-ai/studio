@@ -7,66 +7,6 @@
       "imageHint": "cinema theater"
     },
     {
-      "id": "movie-1",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/xR0IhVBjbNU34b8erhJCgRbjXo3.jpg",
-      "imageHint": "sci-fi action",
-      "description": "Afterburn movie poster"
-    },
-    {
-      "id": "movie-2",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/yvirUYrva23IudARHn3mMGVxWqM.jpg",
-      "imageHint": "alien invasion",
-      "description": "War of the Worlds movie poster"
-    },
-    {
-      "id": "movie-3",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/yzqHt4m1SeY9FbPrfZ0C2Hi9x1s.jpg",
-      "imageHint": "teen romance",
-      "description": "Our Fault movie poster"
-    },
-    {
-      "id": "movie-4",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/cgZjpqRQt9sk6XMCwZ3B1NPAaoy.jpg",
-      "imageHint": "forest thriller",
-      "description": "Hunting Grounds movie poster"
-    },
-    {
-      "id": "movie-5",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/bcP7FtskwsNpikpMQJzDPjofP5.jpg",
-      "imageHint": "pirate adventure",
-      "description": "Captain Hook movie poster"
-    },
-    {
-      "id": "movie-6",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/fWVSwgjpT2D78VUh6X8UBd2rorW.jpg",
-      "imageHint": "anime fantasy",
-      "description": "Demon Slayer movie poster"
-    },
-    {
-      "id": "movie-7",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/fZlNXEHZsBp7unqw009MeBbMv87.jpg",
-      "imageHint": "kidnapping drama",
-      "description": "Stolen Girl movie poster"
-    },
-    {
-      "id": "movie-8",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/bYe2ZjUhb4Kje0BpWE6kN34u2hv.jpg",
-      "imageHint": "character portrait",
-      "description": "Martin movie poster"
-    },
-    {
-      "id": "movie-9",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/rayAREIKtSinuov10GvrZHyXfXH.jpg",
-      "imageHint": "fairytale twist",
-      "description": "The Ugly Stepsister movie poster"
-    },
-    {
-      "id": "movie-10",
-      "imageUrl": "https://image.tmdb.org/t/p/w500/wvWRCDR0wScmrJVAh2iipBSxkZw.jpg",
-      "imageHint": "fantasy potion",
-      "description": "The Elixir movie poster"
-    },
-    {
       "id": "how-to-iphone",
       "imageUrl": "https://images.unsplash.com/photo-1664883410931-2edffc8be5e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxpUGhvbmUlMjBzY3JlZW58ZW58MHx8fHwxNzYyMTAwNjgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "iPhone screen",
@@ -74,7 +14,7 @@
     },
     {
       "id": "how-to-android",
-      "imageUrl": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxBbmRyb2lkJTIwcGhvbmV8ZW58MHx8fHwxNzYyMTAwNjgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxBbmRyb2lkJTIwcGhvbmV8ZW58MHx8fHwxNzYyMTAwNjgzfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Android phone",
       "description": "IPTV setup on an Android phone"
     },
