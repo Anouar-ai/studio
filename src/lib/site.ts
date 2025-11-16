@@ -43,17 +43,17 @@ export const features = [
 ];
 
 export const devices: { name: string; icon: string; href: string; }[] = [
-    { name: 'iPhone', icon: 'SiIphone', href: '/how-to-work/iphone' },
-    { name: 'iPad', icon: 'SiIpad', href: '/how-to-work/ipad' },
-    { name: 'macOS', icon: 'SiMacos', href: '/how-to-work/macos' },
-    { name: 'Android', icon: 'SiAndroid', href: '/how-to-work/android' },
-    { name: 'Windows', icon: 'SiWindows', href: '/how-to-work/windows' },
-    { name: 'Roku', icon: 'SiRoku', href: '/how-to-work/roku' },
-    { name: 'Samsung TV', icon: 'SiSamsung', href: '/how-to-work/smart-tv' },
-    { name: 'LG TV', icon: 'SiLg', href: '/how-to-work/smart-tv' },
-    { name: 'Fire TV', icon: 'SiAmazonfiretv', href: '/how-to-work/fire-tv' },
-    { name: 'MAG', icon: 'Tv', href: '/how-to-work/mag' },
-    { name: 'Apple TV', icon: 'SiAppletv', href: '/how-to-work/apple-tv' }
+    { name: 'iPhone', icon: 'SiIphone', href: '/guides/iphone' },
+    { name: 'iPad', icon: 'SiIpad', href: '/guides/ipad' },
+    { name: 'macOS', icon: 'SiMacos', href: '/guides/macos' },
+    { name: 'Android', icon: 'SiAndroid', href: '/guides/android' },
+    { name: 'Windows', icon: 'SiWindows', href: '/guides/windows' },
+    { name: 'Roku', icon: 'SiRoku', href: '/guides/roku' },
+    { name: 'Samsung TV', icon: 'SiSamsung', href: '/guides/smart-tv' },
+    { name: 'LG TV', icon: 'SiLg', href: '/guides/smart-tv' },
+    { name: 'Fire TV', icon: 'SiAmazonfiretv', href: '/guides/fire-tv' },
+    { name: 'MAG', icon: 'Tv', href: '/guides/mag' },
+    { name: 'Apple TV', icon: 'SiAppletv', href: '/guides/apple-tv' }
 ];
 
 export const plans = [
@@ -190,10 +190,10 @@ export const footerLinks = {
         { name: "Affiliate Program", href: "#" },
     ],
     supportedLinks: [
-        { name: "Android App", href: "/how-to-work/android" },
-        { name: "iOS App", href: "/how-to-work/iphone" },
-        { name: "Windows App", href: "/how-to-work/windows" },
-        { name: "macOS App", href: "/how-to-work/macos" },
+        { name: "Android App", href: "/guides/android" },
+        { name: "iOS App", href: "/guides/iphone" },
+        { name: "Windows App", href: "/guides/windows" },
+        { name: "macOS App", href: "/guides/macos" },
     ],
     contact: {
         address: "123 Digital Street, Lizard City, LC 12345",
@@ -224,8 +224,7 @@ export const brands_two = [
     { id: "brand_item10", alt: "brand_item10", imageHint: "brand logo" },
     { id: "brand_item11", alt: "brand_item11", imageHint: "brand logo" },
     { id: "brand_item08", alt: "brand_item08", imageHint: "brand logo" },
-    { id_item: "brand_item09", alt: "brand_item09", imageHint: "brand logo" },
+    { id: "brand_item09", alt: "brand_item09", imageHint: "brand logo" },
     { id: "brand_item06", alt: "brand_item06", imageHint: "brand logo" },
     { id: "brand_item05", alt: "brand_item05", imageHint: "brand logo" },
 ]
-
