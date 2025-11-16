@@ -21,7 +21,7 @@ export function CTA() {
               variant="outline"
               className="mt-8 border-primary-foreground bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-primary"
             >
-              <Link href="/iptv-subscription">Get Your IPTV Service</Link>
+              <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">Get Your IPTV Service</Link>
             </Button>
           </div>
         </Reveal>

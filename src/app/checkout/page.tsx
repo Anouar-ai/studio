@@ -5,9 +5,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { CreditCard, Lock } from "lucide-react";
+import { CreditCard, MessageCircle } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SiWhatsapp } from "react-icons/si";
 
 export const metadata: Metadata = {
     title: "Secure Checkout | IPTV Service",
@@ -38,8 +39,8 @@ export default function CheckoutPage() {
                   </ol>
                 </nav>
                 <SectionHeader 
-                    title="Secure Checkout"
-                    subtitle="Complete your purchase in just a few steps. Your streaming journey awaits."
+                    title="Contact Us to Purchase"
+                    subtitle="To complete your purchase, please contact us via WhatsApp. Our team is ready to assist you."
                 />
                 <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
                     <div className="order-2 md:order-1">
@@ -49,37 +50,39 @@ export default function CheckoutPage() {
                                 <CardDescription>All transactions are secure and encrypted.</CardDescription>
                             </CardHeader>
                             <CardContent>
-                                <form className="space-y-6">
+                                <div className="space-y-6">
                                     <div className="space-y-2">
                                         <Label htmlFor="email">Email Address</Label>
-                                        <Input id="email" type="email" placeholder="you@example.com" />
+                                        <Input id="email" type="email" placeholder="you@example.com" disabled />
                                     </div>
                                     <div className="space-y-2">
                                         <Label htmlFor="card-number">Card Details</Label>
                                         <div className="relative">
-                                            <Input id="card-number" placeholder="Card Number" />
+                                            <Input id="card-number" placeholder="Card Number" disabled />
                                             <CreditCard className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-2 gap-4">
                                         <div className="space-y-2">
                                             <Label htmlFor="expiry">Expiry Date</Label>
-                                            <Input id="expiry" placeholder="MM / YY" />
+                                            <Input id="expiry" placeholder="MM / YY" disabled />
                                         </div>
                                         <div className="space-y-2">
                                             <Label htmlFor="cvc">CVC</Label>
-                                            <Input id="cvc" placeholder="CVC" />
+                                            <Input id="cvc" placeholder="CVC" disabled />
                                         </div>
                                     </div>
                                     <div className="space-y-2">
                                         <Label htmlFor="name">Cardholder Name</Label>
-                                        <Input id="name" placeholder="Full Name" />
+                                        <Input id="name" placeholder="Full Name" disabled />
                                     </div>
-                                    <Button type="submit" size="lg" className="w-full">
-                                        <Lock className="mr-2 h-4 w-4" />
-                                        Pay Now
+                                    <Button asChild size="lg" className="w-full">
+                                        <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+                                            <SiWhatsapp className="mr-2 h-4 w-4" />
+                                            Contact on WhatsApp
+                                        </Link>
                                     </Button>
-                                </form>
+                                </div>
                             </CardContent>
                         </Card>
                     </div>

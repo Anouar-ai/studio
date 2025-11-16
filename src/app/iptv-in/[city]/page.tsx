@@ -135,7 +135,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
                 </CardContent>
                 <CardFooter>
                     <Button asChild>
-                        <Link href="/iptv-subscription/12-months">Claim Your {country} Discount</Link>
+                        <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">Claim Your {country} Discount</Link>
                     </Button>
                 </CardFooter>
             </Card>
@@ -187,7 +187,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
                 </CardContent>
                 <CardFooter>
                      <Button asChild size="lg">
-                        <Link href="/iptv-subscription">View Plans & Order Now</Link>
+                        <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">View Plans & Order Now</Link>
                     </Button>
                 </CardFooter>
               </Card>
@@ -249,7 +249,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
               <h2 className="font-headline">Conclusion</h2>
               <p>For residents of {name}, {state}, our IPTV service offers an unbeatable combination of channel selection, streaming quality, and value. With instant activation and 24/7 support, it's the best choice for upgrading your home entertainment. Ready to get started?</p>
               <Button asChild size="lg" className="mt-4">
-                <Link href="/iptv-subscription">Choose Your Plan for {name}</Link>
+                <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">Choose Your Plan for {name}</Link>
               </Button>
             </section>
 
