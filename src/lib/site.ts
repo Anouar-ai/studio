@@ -6,7 +6,6 @@ import { Check, Tv, Zap, Server, Rabbit, Star, ShieldCheck } from "lucide-react"
 export const navLinks = [
   { name: "Home", href: "/" },
   { name: "Features", href: "/#features" },
-  { name: "Free Trial", href: "/free-trial" },
   { name: "Pricing", href: "/pricing" },
   { name: "Devices", href: "/devices" },
 ];
