@@ -3,6 +3,8 @@ import { SectionHeader } from "../shared/SectionHeader";
 import { devices } from "@/lib/site-data/devices";
 import { DeviceIcon } from "./DeviceIcon";
 import { Reveal } from "../shared/Reveal";
+import { Button } from "../ui/button";
+import Link from "next/link";
 
 export function Devices() {
   return (
@@ -19,6 +21,11 @@ export function Devices() {
             ))}
           </div>
         </Reveal>
+         <div className="mt-12 text-center">
+            <Button asChild variant="outline">
+                <Link href="/guides">View All Setup Guides</Link>
+            </Button>
+        </div>
       </Container>
     </section>
   );

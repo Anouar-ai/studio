@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import { allCities } from '@/lib/cities';
-import { howToArticles } from '@/lib/how-to';
+import { howToArticles } from '@/lib/site-data/how-to';
  
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://yoursite.com';
@@ -63,6 +63,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.6,
+    },
+     {
+      url: `${baseUrl}/guides`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/faq`,
