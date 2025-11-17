@@ -1,143 +1,303 @@
+"use client";
 
+import { useActionState, useEffect } from "react";
+import { useFormStatus } from "react-dom";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/shared/Container";
-import { Check, Star, Tv, ShieldCheck, MessageCircle, Zap } from "lucide-react";
-import type { Metadata } from "next";
-import Link from "next/link";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { SiWhatsapp } from "react-icons/si";
+import { Check, Mail, Globe, Tv, Smartphone, StickyNote } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+import { countries, iptvApps } from "@/lib/site";
+import { submitFreeTrialForm } from "@/app/actions";
 
-export const metadata: Metadata = {
-    title: "IPTV Free Trial - Test Our Premium IPTV Service For Free",
-    description: "Get a free IPTV trial and test our premium service. Instant activation, 20,000+ channels, HD/4K quality, and 24/7 support. No credit card required. Claim your free trial now!",
-    keywords: ["IPTV free trial", "free IPTV", "test IPTV service", "IPTV trial no credit card", "get free IPTV"],
-    alternates: {
-        canonical: "/free-trial",
-    },
-};
-
-const trialFaqs = [
-    {
-        question: "Is the IPTV free trial really free?",
-        answer: "Yes, our IPTV trial is completely free. We don't require any payment information. It's a risk-free way to experience the quality of our service before committing to a plan."
-    },
-    {
-        question: "What's included in the free IPTV trial?",
-        answer: "The free trial includes access to our full package: 20,000+ live channels, our complete VOD library of movies and series, HD/4K quality, and anti-freeze technology. You get the full premium experience."
-    },
-    {
-        question: "How do I get my free IPTV trial?",
-        answer: "Simply click the 'Claim Your Free Trial' button on this page to contact us on WhatsApp. Our team will provide you with your trial credentials instantly."
-    },
-    {
-        question: "How long does the IPTV trial last?",
-        answer: "Our free IPTV trial period is designed to give you enough time to explore our channels and features. The exact duration will be confirmed by our support team when you request the trial."
-    }
-];
-
-export default function FreeTrialPage() {
-    const faqSchema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": trialFaqs.map(faq => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer
-          }
-        }))
-      };
-
-    return (
-        <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-            />
-            <main>
-                <Container className="py-16 sm:py-24">
-                     <nav aria-label="Breadcrumb" className="mb-8 text-sm text-muted-foreground">
-                        <ol itemScope itemType="https://schema.org/BreadcrumbList" className="flex items-center gap-2">
-                            <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
-                            <Link href="/" itemProp="item" className="hover:text-primary">
-                                <span itemProp="name">Home</span>
-                            </Link>
-                            <meta itemProp="position" content="1" />
-                            </li>
-                            <li>/</li>
-                            <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
-                                <span itemProp="name">Free Trial</span>
-                                <meta itemProp="position" content="2" />
-                            </li>
-                        </ol>
-                    </nav>
-
-                    <div className="mx-auto max-w-3xl text-center">
-                        <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">
-                            Test Our Premium IPTV Service with a Free Trial
-                        </h1>
-                        <p className="mt-4 text-lg text-muted-foreground">
-                            Experience buffer-free, high-quality streaming with instant access to over 20,000 channels. No credit card, no risk.
-                        </p>
-                        <Button asChild size="lg" className="mt-8">
-                            <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
-                                <SiWhatsapp className="mr-2" /> Claim Your Free Trial Now
-                            </Link>
-                        </Button>
-                    </div>
-
-                    <section className="py-16 sm:py-24">
-                        <h2 className="mb-12 text-center font-headline text-3xl font-bold tracking-tight sm:text-4xl">What You Get with Your IPTV Trial</h2>
-                        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                            <div className="rounded-lg bg-muted/30 p-6 dark:bg-card/50">
-                                <h3 className="mb-2 flex items-center gap-2 font-headline text-xl"><Zap size={20} className="text-primary"/> Instant Activation</h3>
-                                <p className="text-muted-foreground">Get your IPTV trial credentials within minutes of requesting them.</p>
-                            </div>
-                            <div className="rounded-lg bg-muted/30 p-6 dark:bg-card/50">
-                                <h3 className="mb-2 flex items-center gap-2 font-headline text-xl"><Tv size={20} className="text-primary"/> 20,000+ Channels</h3>
-                                <p className="text-muted-foreground">Explore a massive library of international channels, movies, and VOD content.</p>
-                            </div>
-                             <div className="rounded-lg bg-muted/30 p-6 dark:bg-card/50">
-                                <h3 className="mb-2 flex items-center gap-2 font-headline text-xl"><Star size={20} className="text-primary"/> HD/4K Streaming Quality</h3>
-                                <p className="text-muted-foreground">Experience crystal-clear picture quality for an immersive viewing experience.</p>
-                            </div>
-                            <div className="rounded-lg bg-muted/30 p-6 dark:bg-card/50">
-                                <h3 className="mb-2 flex items-center gap-2 font-headline text-xl"><ShieldCheck size={20} className="text-primary"/> Anti-Freeze Technology</h3>
-                                <p className="text-muted-foreground">Enjoy smooth, buffer-free streaming thanks to our powerful servers.</p>
-                            </div>
-                            <div className="rounded-lg bg-muted/30 p-6 dark:bg-card/50">
-                                <h3 className="mb-2 flex items-center gap-2 font-headline text-xl"><MessageCircle size={20} className="text-primary"/> 24/7 Support</h3>
-                                <p className="text-muted-foreground">Even during your trial, our expert support team is here to help you.</p>
-                            </div>
-                             <div className="rounded-lg bg-muted/30 p-6 dark:bg-card/50">
-                                <h3 className="mb-2 flex items-center gap-2 font-headline text-xl"><Check size={20} className="text-primary"/> No Risk, No Hassle</h3>
-                                <p className="text-muted-foreground">No credit card required. Test our IPTV service with zero commitment.</p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section className="bg-muted/30 py-16 dark:bg-card/30 sm:py-24">
-                        <Container>
-                            <div className="mx-auto max-w-3xl text-center">
-                                <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">Free Trial - Frequently Asked Questions</h2>
-                            </div>
-                            <div className="mx-auto mt-8 max-w-3xl">
-                                <Accordion type="single" collapsible>
-                                    {trialFaqs.map((faq, i) => (
-                                    <AccordionItem key={i} value={`item-${i}`}>
-                                        <AccordionTrigger>{faq.question}</AccordionTrigger>
-                                        <AccordionContent>{faq.answer}</AccordionContent>
-                                    </AccordionItem>
-                                    ))}
-                                </Accordion>
-                            </div>
-                        </Container>
-                    </section>
-                </Container>
-            </main>
-        </>
-    );
+function SubmitButton() {
+  const { pending } = useFormStatus();
+  return (
+    <Button type="submit" disabled={pending} className="w-full" size="lg">
+      {pending ? "Submitting..." : "Submit"}
+    </Button>
+  );
 }
 
-    
+export default function FreeTrialPage() {
+  const { toast } = useToast();
+  const initialState = { message: null, errors: null };
+  const [state, dispatch] = useActionState(submitFreeTrialForm, initialState);
+
+  useEffect(() => {
+    if (state.message && !state.errors) {
+      toast({
+        title: "Success!",
+        description: state.message,
+      });
+    } else if (state.message && state.errors) {
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: state.message,
+      });
+    }
+  }, [state, toast]);
+
+  return (
+    <main className="bg-muted/20 dark:bg-card/30">
+      <Container className="py-16 sm:py-24">
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
+          <div className="space-y-8">
+            <div className="prose prose-lg dark:prose-invert max-w-none">
+                <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">IPTV Free Trial - Experience Premium Streaming Today!</h1>
+                <p className="lead text-muted-foreground">
+                    Take advantage of our 24-hour IPTV free trial to explore the best in entertainment. Enjoy high-quality streaming with access to thousands of channels, on-demand shows, and live sports—completely risk-free! Sign up today and get your trial delivered instantly to your email.
+                </p>
+            </div>
+            
+            <Card>
+                <CardHeader>
+                    <CardTitle>Why Choose Our Free IPTV Trial?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                     <ul className="space-y-4">
+                        <li className="flex items-start gap-3">
+                            <Check className="h-6 w-6 flex-shrink-0 text-primary" />
+                            <div>
+                                <h3 className="font-semibold">Instant Access</h3>
+                                <p className="text-muted-foreground">Fill out the simple form, and receive your IPTV trial immediately.</p>
+                            </div>
+                        </li>
+                        <li className="flex items-start gap-3">
+                            <Check className="h-6 w-6 flex-shrink-0 text-primary" />
+                            <div>
+                                <h3 className="font-semibold">Premium Service</h3>
+                                <p className="text-muted-foreground">Discover the seamless performance of a reliable IPTV provider.</p>
+                            </div>
+                        </li>
+                         <li className="flex items-start gap-3">
+                            <Check className="h-6 w-6 flex-shrink-0 text-primary" />
+                            <div>
+                                <h3 className="font-semibold">No Obligations</h3>
+                                <p className="text-muted-foreground">Try our service before you commit to a subscription.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </CardContent>
+            </Card>
+
+            <div className="prose dark:prose-invert max-w-none">
+                <h2 className="font-headline text-3xl">IPTV Trial Setup</h2>
+                <div className="space-y-8 mt-8">
+                    <div className="flex gap-6">
+                        <div className="flex flex-col items-center">
+                            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold">1</div>
+                            <div className="w-px flex-grow bg-border" />
+                        </div>
+                        <div>
+                            <h3 className="font-headline text-2xl font-semibold mt-1 mb-2">Download an IPTV Player</h3>
+                            <p className="text-muted-foreground">Get an IPTV-compatible application via the App Store, Google Play, or APK download.</p>
+                        </div>
+                    </div>
+                    <div className="flex gap-6">
+                         <div className="flex flex-col items-center">
+                            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold">2</div>
+                            <div className="w-px flex-grow bg-border" />
+                        </div>
+                         <div>
+                            <h3 className="font-headline text-2xl font-semibold mt-1 mb-2">Sign Up for the Free Trial</h3>
+                            <p className="text-muted-foreground">Provide your details using the form on this page.</p>
+                        </div>
+                    </div>
+                    <div className="flex gap-6">
+                         <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold">3</div>
+                         <div>
+                            <h3 className="font-headline text-2xl font-semibold mt-1 mb-2">Enjoy Premium IPTV</h3>
+                            <p className="text-muted-foreground">Access your free IPTV trial in minutes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+          </div>
+
+          <div>
+            <Card className="sticky top-24">
+              <CardHeader className="text-center">
+                <CardTitle className="font-headline text-3xl">APPLY NOW</CardTitle>
+                <CardDescription>
+                  Experience our cutting-edge IPTV services with a complimentary
+                  24-hour free trial.
+                </CardDescription>
+              </CardHeader>
+              <form action={dispatch}>
+                <CardContent className="space-y-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Email *</Label>
+                    <div className="relative">
+                      <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="Your free trial will be sent here"
+                        className="pl-10"
+                      />
+                    </div>
+                    {state.errors?.email && (
+                      <p className="text-sm text-destructive">
+                        {state.errors.email[0]}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="country">Country *</Label>
+                     <div className="relative">
+                       <Globe className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                        <Select name="country">
+                        <SelectTrigger className="pl-10">
+                            <SelectValue placeholder="Select your country" />
+                        </SelectTrigger>
+                        <SelectContent>
+                            {countries.map((country) => (
+                            <SelectItem key={country} value={country}>
+                                {country}
+                            </SelectItem>
+                            ))}
+                        </SelectContent>
+                        </Select>
+                    </div>
+                    {state.errors?.country && (
+                      <p className="text-sm text-destructive">
+                        {state.errors.country[0]}
+                      </p>
+                    )}
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="device">Your Device Type</Label>
+                     <div className="relative">
+                       <Tv className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                        <Select name="device">
+                        <SelectTrigger className="pl-10">
+                            <SelectValue placeholder="Select your device" />
+                        </SelectTrigger>
+                        <SelectContent>
+                             <SelectItem value="Android Box">Android Box</SelectItem>
+                             <SelectItem value="Smart TV">Smart TV</SelectItem>
+                             <SelectItem value="Firestick">Firestick</SelectItem>
+                             <SelectItem value="iOS">iOS</SelectItem>
+                             <SelectItem value="Windows">Windows</SelectItem>
+                        </SelectContent>
+                        </Select>
+                    </div>
+                     {state.errors?.device && (
+                      <p className="text-sm text-destructive">
+                        {state.errors.device[0]}
+                      </p>
+                    )}
+                  </div>
+
+                   <div className="space-y-2">
+                    <Label htmlFor="application">IPTV Application</Label>
+                     <div className="relative">
+                       <Smartphone className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                        <Select name="application">
+                        <SelectTrigger className="pl-10">
+                            <SelectValue placeholder="Select your application" />
+                        </SelectTrigger>
+                        <SelectContent>
+                           {iptvApps.map((app) => (
+                            <SelectItem key={app} value={app}>
+                                {app}
+                            </SelectItem>
+                            ))}
+                        </SelectContent>
+                        </Select>
+                    </div>
+                     {state.errors?.application && (
+                      <p className="text-sm text-destructive">
+                        {state.errors.application[0]}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="note">Note !</Label>
+                    <div className="relative">
+                       <StickyNote className="absolute left-3 top-3 h-5 w-5 text-muted-foreground" />
+                        <Textarea
+                            id="note"
+                            name="note"
+                            placeholder="Any suggestions or questions?"
+                            className="pl-10"
+                        />
+                    </div>
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <SubmitButton />
+                </CardFooter>
+              </form>
+            </Card>
+          </div>
+        </div>
+
+        <section className="py-16 sm:py-24">
+            <div className="prose dark:prose-invert max-w-none text-center">
+                <h2 className="font-headline text-3xl font-bold">IPTV Free Trial Overview</h2>
+                <p className="lead text-muted-foreground">
+                    Unlock a World of Entertainment with Our Exclusive 24-Hour IPTV Free Trial. Experience the future of television on your terms. Try it now, risk-free!
+                </p>
+            </div>
+            <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <Card>
+                    <CardHeader>
+                        <CardTitle>Stable and Reliable</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-muted-foreground">Our free trial lets you explore a stable, high-quality IPTV service.</p>
+                    </CardContent>
+                </Card>
+                 <Card>
+                    <CardHeader>
+                        <CardTitle>16,000+ Live Channels</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-muted-foreground">Access to a massive library of global channels even during your trial.</p>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <CardTitle>Latest Movies on VOD</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-muted-foreground">Enjoy a huge VOD library featuring over 40,000+ movies.</p>
+                    </CardContent>
+                </Card>
+            </div>
+             <div className="mt-12 text-center">
+                <Button asChild>
+                    <Link href="/iptv-subscription">View Subscription Plans</Link>
+                </Button>
+            </div>
+        </section>
+      </Container>
+    </main>
+  );
+}
