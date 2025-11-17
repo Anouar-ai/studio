@@ -4,7 +4,7 @@ import { Container } from '@/components/shared/Container';
 import { Logo } from '@/components/shared/Logo';
 import { MobileNav } from '@/components/shared/MobileNav';
 import { ThemeToggle } from '@/components/shared/ThemeToggle';
-import { navLinks } from '@/lib/site';
+import { navLinks } from '@/lib/site-data/nav';
 import { SiWhatsapp } from 'react-icons/si';
 
 export function Navbar() {

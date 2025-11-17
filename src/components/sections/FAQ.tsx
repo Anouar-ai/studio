@@ -1,11 +1,10 @@
-
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { faqs } from "@/lib/site";
+import { faqs } from "@/lib/site-data/faq";
 import { Container } from "../shared/Container";
 import { SectionHeader } from "../shared/SectionHeader";
 import { Reveal } from "../shared/Reveal";

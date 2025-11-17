@@ -1,7 +1,7 @@
 import { Star } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
-import { testimonials } from "@/lib/site";
+import { testimonials } from "@/lib/site-data/testimonials";
 import { Container } from "../shared/Container";
 import { SectionHeader } from "../shared/SectionHeader";
 import { Reveal } from "../shared/Reveal";

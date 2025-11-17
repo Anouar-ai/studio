@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { brands, brands_two } from "@/lib/site";
+import { brands, brands_two } from "@/lib/site-data/brands";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const BrandCarousel = ({ images, direction = 1 }: { images: typeof brands, direction?: number }) => {
@@ -39,8 +39,8 @@ const BrandCarousel = ({ images, direction = 1 }: { images: typeof brands, direc
                         <Image
                             src={brandImage.imageUrl}
                             alt={brand.alt}
-                            width={150}
-                            height={46}
+                            width={brandImage.width || 150}
+                            height={brandImage.height || 46}
                             className="object-contain h-12 w-auto"
                             data-ai-hint={brandImage.imageHint}
                         />

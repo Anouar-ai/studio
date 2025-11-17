@@ -1,9 +1,8 @@
-
 import { FAQ } from "@/components/sections/FAQ";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/shared/Container";
-import { faqs } from "@/lib/site";
+import { faqs } from "@/lib/site-data/faq";
 
 export const metadata: Metadata = {
     title: "Frequently Asked Questions | IPTV Service",

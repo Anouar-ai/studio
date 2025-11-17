@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { Check, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { plans } from "@/lib/site";
+import { plans } from "@/lib/site-data/pricing";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/shared/Container";
 import type { Metadata } from "next";
@@ -345,5 +344,3 @@ export async function generateStaticParams() {
       duration: plan.id,
     }));
 }
-
-    

@@ -6,7 +6,7 @@ import { Menu } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import { Logo } from '@/components/shared/Logo';
-import { navLinks } from '@/lib/site';
+import { navLinks } from '@/lib/site-data/nav';
 import { ThemeToggle } from './ThemeToggle';
 
 export function MobileNav() {
@@ -31,8 +31,7 @@ export function MobileNav() {
               onClick={() => setIsOpen(false)}
             >
               {link.name}
-            </Link>
-          ))}
+            </Link>))}
         </nav>
         <div className="mt-auto flex justify-center">
             <ThemeToggle />

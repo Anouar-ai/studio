@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { plans } from "@/lib/site";
+import { plans } from "@/lib/site-data/pricing";
 import { Container } from "../shared/Container";
 import { SectionHeader } from "../shared/SectionHeader";
 import { Reveal } from "../shared/Reveal";

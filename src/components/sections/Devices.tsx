@@ -1,7 +1,6 @@
-
 import { Container } from "../shared/Container";
 import { SectionHeader } from "../shared/SectionHeader";
-import { devices } from "@/lib/site";
+import { devices } from "@/lib/site-data/devices";
 import { DeviceIcon } from "./DeviceIcon";
 import { Reveal } from "../shared/Reveal";
 

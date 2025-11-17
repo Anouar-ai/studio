@@ -1,4 +1,3 @@
-
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -8,7 +7,7 @@ import { Check } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter, CardDescription } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { plans } from "@/lib/site";
+import { plans } from "@/lib/site-data/pricing";
 import { getCityData, allCities } from "@/lib/cities";
 
 type Props = {

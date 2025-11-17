@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { plans, faqs } from "@/lib/site";
+import { faqs } from "@/lib/site-data/faq";
+import { plans } from "@/lib/site-data/pricing";
 import { Container } from "@/components/shared/Container";
 import { Check, Shield, Tv, Zap, MessageCircle, Smartphone } from "lucide-react";
 import { Pricing } from "@/components/sections/Pricing";

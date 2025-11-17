@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import { Container } from "./Container";
 import { Logo } from "./Logo";
-import { footerLinks } from "@/lib/site";
+import { footerLinks } from "@/lib/site-data/footer";
 
 export function Footer() {
   return (
