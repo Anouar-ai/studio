@@ -1,3 +1,4 @@
+
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -13,7 +14,7 @@ import type { ImagePlaceholder } from "@/lib/placeholder-images";
 type Article = (typeof howToArticles)[0];
 
 type Props = {
-  params: { device: string; article: Article };
+  params: { device: string; };
 };
 
 function StructuredData({ article }: { article: Article }) {
@@ -49,7 +50,7 @@ function StructuredData({ article }: { article: Article }) {
             name: faq.question,
             acceptedAnswer: {
                 "@type": "Answer",
-                text: faq.answer
+                text": faq.answer
             }
         }))
     } : null;
