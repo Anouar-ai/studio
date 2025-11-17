@@ -1,3 +1,4 @@
+
 import { MetadataRoute } from 'next'
 import { allCities } from '@/lib/cities';
 import { howToArticles } from '@/lib/how-to';
@@ -75,6 +76,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified,
+      changeFrequency: 'yearly',
+      priority: 0.5,
     },
     ...cityPages,
     ...guidePages,
