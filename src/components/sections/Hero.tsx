@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/shared/Container";
 import { ShieldCheck, Tv, Zap } from "lucide-react";
 import { AnimatedText } from "../ui/animated-underline-text-one";
+import { SiWhatsapp } from "react-icons/si";
 
 export function Hero() {
   return (
@@ -29,10 +30,13 @@ export function Hero() {
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button asChild size="lg" className="shadow-lg shadow-primary/20 transition-all hover:bg-accent hover:shadow-xl hover:shadow-primary/30">
-              <Link href="/iptv-subscription">Get Started Now</Link>
+              <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">Start Free Trial Now</Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link href="/#pricing">View Plans</Link>
+              <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+                <SiWhatsapp className="mr-2" />
+                Contact on WhatsApp
+              </Link>
             </Button>
           </div>
 
