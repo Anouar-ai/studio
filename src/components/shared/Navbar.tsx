@@ -24,14 +24,12 @@ export function Navbar() {
               </Link>
             ))}
           </nav>
-          <div className="ml-auto flex items-center gap-4">
-            <div className="hidden lg:flex">
-                <ThemeToggle />
-            </div>
+          <div className="ml-auto flex items-center gap-2">
+            <ThemeToggle />
             <Button asChild>
               <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
                 <SiWhatsapp />
-                WhatsApp
+                <span className='hidden sm:inline-block'>WhatsApp</span>
               </Link>
             </Button>
             <MobileNav />

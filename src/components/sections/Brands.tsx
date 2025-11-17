@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { brands, brands_two } from "@/lib/site-data/brands";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { Container } from "../shared/Container";
 
 const BrandCarousel = ({ images, direction = 1 }: { images: typeof brands, direction?: number }) => {
     const duplicatedLogos = [...images, ...images];
@@ -55,10 +56,10 @@ const BrandCarousel = ({ images, direction = 1 }: { images: typeof brands, direc
 export function Brands() {
   return (
     <section className="py-12 sm:py-16">
-      <div className="container mx-auto space-y-4">
+      <Container className="space-y-4">
         <BrandCarousel images={brands} direction={-1} />
         <BrandCarousel images={brands_two} direction={1} />
-      </div>
+      </Container>
     </section>
   );
 }

@@ -2,16 +2,31 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/shared/Container";
 import { ShieldCheck, Tv, Zap } from "lucide-react";
 import { AnimatedText } from "../ui/animated-underline-text-one";
 import { SiWhatsapp } from "react-icons/si";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export function Hero() {
+  const heroImage = PlaceHolderImages.find(img => img.id === 'hero-background');
+  
   return (
     <section className="relative w-full overflow-hidden">
+      {heroImage && (
+         <Image
+            src={heroImage.imageUrl}
+            alt={heroImage.description}
+            fill
+            className="object-cover"
+            priority
+            data-ai-hint={heroImage.imageHint}
+        />
+      )}
+       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
        <div className="absolute inset-0 bg-[radial-gradient(40%_100%_at_50%_0%,hsl(var(--primary)/0.1),transparent)]" />
       <Container className="relative z-10 flex min-h-[80vh] flex-col items-center justify-center py-20 text-center md:min-h-[600px]">
         <motion.div

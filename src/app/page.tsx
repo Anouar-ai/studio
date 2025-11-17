@@ -2,9 +2,9 @@
 import { Hero } from "@/components/sections/Hero";
 import dynamic from "next/dynamic";
 import { Blog } from "@/components/sections/Blog";
+import { Brands } from "@/components/sections/Brands";
 
 const Features = dynamic(() => import("@/components/sections/Features").then((m) => m.Features));
-const Brands = dynamic(() => import("@/components/sections/Brands").then((m) => m.Brands));
 const Devices = dynamic(() => import("@/components/sections/Devices").then((m) => m.Devices));
 const Pricing = dynamic(() => import("@/components/sections/Pricing").then((m) => m.Pricing));
 const CTA = dynamic(() => import("@/components/sections/CTA").then((m) => m.CTA));
