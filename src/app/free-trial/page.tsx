@@ -1,8 +1,8 @@
+
 "use client";
 
 import { useActionState, useEffect } from "react";
 import { useFormStatus } from "react-dom";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/shared/Container";
 import { Check, Mail, Globe, Tv, Smartphone, StickyNote } from "lucide-react";
@@ -27,6 +27,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { countries, iptvApps } from "@/lib/site";
 import { submitFreeTrialForm } from "@/app/actions";
+import Link from "next/link";
 
 function SubmitButton() {
   const { pending } = useFormStatus();
@@ -293,7 +294,7 @@ export default function FreeTrialPage() {
             </div>
              <div className="mt-12 text-center">
                 <Button asChild>
-                    <Link href="/iptv-subscription">View Subscription Plans</Link>
+                    <Link href="/pricing">View Subscription Plans</Link>
                 </Button>
             </div>
         </section>
@@ -301,3 +302,4 @@ export default function FreeTrialPage() {
     </main>
   );
 }
+    
