@@ -1,3 +1,4 @@
+
 export const plans = [
   {
     id: "1-month",
@@ -14,7 +15,7 @@ export const plans = [
       "24/7 Support",
     ],
     isPopular: false,
-    url: "/iptv-subscription/1-month",
+    url: "https://wa.me/1234567890",
   },
   {
     id: "3-months",
@@ -32,7 +33,7 @@ export const plans = [
       "3 Connections",
     ],
 isPopular: false,
-    url: "/iptv-subscription/3-months",
+    url: "https://wa.me/1234567890",
   },
   {
     id: "6-months",
@@ -51,7 +52,7 @@ isPopular: false,
       "PPV Events",
     ],
     isPopular: true,
-    url: "/iptv-subscription/6-months",
+    url: "https://wa.me/1234567890",
   },
   {
     id: "12-months",
@@ -71,6 +72,7 @@ isPopular: false,
       "Premium Support",
     ],
     isPopular: false,
-    url: "/iptv-subscription/12-months",
+    url: "https://wa.me/1234567890",
   },
 ];
+

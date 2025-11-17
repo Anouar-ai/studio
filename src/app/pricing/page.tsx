@@ -1,19 +1,76 @@
-
-import { Pricing } from "@/components/sections/Pricing";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-    title: "Pricing | IPTV Service",
-    description: "Find the best IPTV service plan for your needs. Compare our 1, 3, 6, and 12-month subscription packages and choose the right one for you.",
-    alternates: {
-        canonical: "/pricing",
-    }
-}
-
-export default function PricingPage() {
-  return (
-    <main>
-        <Pricing />
-    </main>
-  )
-}
+export const plans = [
+  {
+    id: "1-month",
+    name: "1 Month",
+    duration: "1 month",
+    price: 14.99,
+    price_monthly: 14.99,
+    savings: null,
+    features: [
+      "7000+ Live Channels",
+      "40000+ VOD Movies",
+      "1500+ TV Shows",
+      "HD & SD Quality",
+      "24/7 Support",
+    ],
+    isPopular: false,
+    url: "https://wa.me/1234567890",
+  },
+  {
+    id: "3-months",
+    name: "3 Months",
+    duration: "3 months",
+    price: 24.99,
+    price_monthly: 8.33,
+    savings: "Save $20",
+    features: [
+      "7000+ Live Channels",
+      "40000+ VOD Movies",
+      "1500+ TV Shows",
+      "HD & SD Quality",
+      "24/7 Support",
+      "3 Connections",
+    ],
+isPopular: false,
+    url: "https://wa.me/1234567890",
+  },
+  {
+    id: "6-months",
+    name: "6 Months",
+    duration: "6 months",
+    price: 39.99,
+    price_monthly: 6.66,
+    savings: "Save $50",
+    features: [
+      "7000+ Live Channels",
+      "40000+ VOD Movies",
+      "1500+ TV Shows",
+      "HD & SD Quality",
+      "24/7 Support",
+      "3 Connections",
+      "PPV Events",
+    ],
+    isPopular: true,
+    url: "https://wa.me/1234567890",
+  },
+  {
+    id: "12-months",
+    name: "12 Months",
+    duration: "12 months",
+    price: 59.99,
+    price_monthly: 5.0,
+    savings: "Save $120",
+    features: [
+      "7000+ Live Channels",
+      "40000+ VOD Movies",
+      "1500+ TV Shows",
+      "HD & SD Quality",
+      "24/7 Support",
+      "4 Connections",
+      "PPV Events",
+      "Premium Support",
+    ],
+    isPopular: false,
+    url: "https://wa.me/1234567890",
+  },
+];

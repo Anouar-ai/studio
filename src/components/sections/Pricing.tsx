@@ -1,3 +1,4 @@
+
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -58,7 +59,7 @@ export function Pricing() {
                 </CardContent>
                 <CardFooter>
                   <Button asChild className="w-full" variant={plan.isPopular ? "default" : "outline"}>
-                    <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">Order Now</Link>
+                    <Link href={plan.url} target="_blank" rel="noopener noreferrer">Order Now</Link>
                   </Button>
                 </CardFooter>
               </Card>
@@ -69,3 +70,4 @@ export function Pricing() {
     </section>
   );
 }
+

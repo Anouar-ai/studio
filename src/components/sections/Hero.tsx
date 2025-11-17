@@ -45,7 +45,7 @@ export function Hero() {
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button asChild size="lg" className="shadow-lg shadow-primary/20 transition-all hover:bg-accent hover:shadow-xl hover:shadow-primary/30">
-              <Link href="/pricing">View Pricing</Link>
+              <Link href="/#pricing">View Pricing</Link>
             </Button>
             <Button asChild size="lg" variant="outline">
               <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
