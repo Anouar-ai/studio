@@ -1,6 +1,6 @@
 import { Container } from "@/components/shared/Container";
 import { SectionHeader } from "@/components/shared/SectionHeader";
-import { howToArticles } from "@/lib/site-data/how-to";
+import { posts } from "@/lib/site-data/posts";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -38,13 +38,13 @@ export default function GuidesPage() {
           subtitle="Follow our simple step-by-step guides to set up your IPTV service on any device. Get streaming in minutes!"
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {howToArticles.map((article) => (
-                <Link key={article.id} href={`/guides/${article.id}`} className="group">
+            {posts.map((article) => (
+                <Link key={article.id} href={article.href} className="group">
                     <Card className="h-full transition-all group-hover:border-primary group-hover:shadow-lg">
                         <CardHeader>
                             <CardTitle className="group-hover:text-primary">{article.title}</CardTitle>
                             <CardDescription className="flex items-center justify-between">
-                                <span>{article.description}</span>
+                                <span>{article.excerpt}</span>
                                 <ArrowRight className="h-5 w-5 opacity-0 transition-opacity group-hover:opacity-100" />
                             </CardDescription>
                         </CardHeader>
