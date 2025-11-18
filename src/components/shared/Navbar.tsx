@@ -29,7 +29,7 @@ export function Navbar() {
             <Button asChild>
               <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
                 <SiWhatsapp />
-                <span className='hidden sm:inline-block'>WhatsApp</span>
+                <span className='hidden sm:inline-block ml-2'>WhatsApp</span>
               </Link>
             </Button>
             <MobileNav />

@@ -25,7 +25,7 @@ export function Pricing() {
           title="Choose Your IPTV Service Package"
           subtitle="Select the perfect IPTV service plan that fits your needs. All plans come with our full feature set."
         />
-        <div className="grid max-w-md grid-cols-1 gap-8 md:max-w-none md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {plans.map((plan, i) => (
             <Reveal key={plan.name} delay={i * 0.1}>
               <Card className={cn(

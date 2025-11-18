@@ -36,7 +36,7 @@ export function Hero() {
         >
           <AnimatedText 
             text="The World's Premier IPTV Service"
-            textClassName="font-headline text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70"
+            textClassName="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70"
             underlineClassName="text-primary"
           />
           <p className="mx-auto mt-6 max-w-2xl text-lg text-secondary-foreground/80">
