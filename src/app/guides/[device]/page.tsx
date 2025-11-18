@@ -102,6 +102,31 @@ function StructuredData({ article }: { article: Article }) {
         }
     };
 
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": `${baseUrl}/`
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Guides",
+                "item": `${baseUrl}/guides`
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": title,
+                "item": `${baseUrl}/guides/${id}`
+            }
+        ]
+    };
+
     return (
         <>
             <script
@@ -119,6 +144,10 @@ function StructuredData({ article }: { article: Article }) {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+            />
+             <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
         </>
     );

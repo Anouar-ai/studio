@@ -70,6 +70,8 @@ export default function PlanPage({ params }: { params: { duration: string } }) {
   const planId = params.duration;
   const plan = plans.find(p => p.id === planId);
   const productImage = PlaceHolderImages.find(img => img.id === 'subscription-og');
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://yoursite.com';
+
 
   if (!plan) {
     notFound();
@@ -111,11 +113,40 @@ export default function PlanPage({ params }: { params: { duration: string } }) {
       answer: faq.answer.replace('{plan_name}', plan.name).replace('{plan_price}', String(plan.price)).replace('{plan_duration}', plan.duration),
   }));
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": `${baseUrl}/`
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Pricing",
+            "item": `${baseUrl}/pricing`
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": `${plan.name} IPTV Service`,
+            "item": `${baseUrl}/iptv-subscription/${plan.id}`
+        }
+    ]
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(planSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <main>
         <Container className="py-8">

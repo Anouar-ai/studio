@@ -1,3 +1,4 @@
+
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -50,6 +51,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
   }
 
   const { name, state, country, population, zipCodes, nearbyCities, faqs, id } = cityData;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://yoursite.com';
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
@@ -84,6 +86,25 @@ export default function CityPage({ params }: { params: { city: string } }) {
     }))
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": `${baseUrl}/`
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": `IPTV in ${name}`,
+            "item": `${baseUrl}/iptv-in/${id}`
+        }
+    ]
+  };
+
   return (
     <>
       <script
@@ -93,6 +114,10 @@ export default function CityPage({ params }: { params: { city: string } }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <main className="py-16 sm:py-24">
         <Container>
