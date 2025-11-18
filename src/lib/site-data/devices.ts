@@ -1,7 +1,8 @@
+
 export const devices: { name: string; icon: string; href: string; }[] = [
     { name: 'iPhone', icon: 'SiIphone', href: '/guides/ios' },
     { name: 'iPad', icon: 'SiIpad', href: '/guides/ios' },
-    { name: 'macOS', icon: 'SiMacos', href: '/devices/macos' },
+    { name: 'macOS', icon: 'SiMacos', href: '/guides/macos' },
     { name: 'Android', icon: 'SiAndroid', href: '/guides/android' },
     { name: 'Windows', icon: 'SiWindows', href: '/guides/windows' },
     { name: 'Roku', icon: 'SiRoku', href: '/guides/roku' },
