@@ -42,6 +42,12 @@ const nextConfig = {
         hostname: 'iptvwell.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.demotemplates.online',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
