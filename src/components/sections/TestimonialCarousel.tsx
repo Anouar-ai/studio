@@ -1,7 +1,7 @@
 "use client";
 
 import Swiper from 'react-id-swiper';
-import 'swiper/css/swiper.css';
+import 'swiper/css';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
