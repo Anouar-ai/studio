@@ -11,6 +11,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import type { ImagePlaceholder } from "@/lib/placeholder-images";
+import { getRelatedPosts } from "@/lib/linking";
+import InternalLinks from "@/components/shared/InternalLinks";
 
 type Article = (typeof howToArticles)[0];
 
@@ -120,12 +122,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function HowToPage({ params }: { params: { device: string }}) {
+export default async function HowToPage({ params }: { params: { device: string }}) {
   const article = howToArticles.find((p) => p.id === params.device);
 
   if (!article) {
     notFound();
   }
+  
+  const relatedPosts = await getRelatedPosts(params.device);
+  const relatedLinks = relatedPosts.map(post => ({
+    href: `/guides/${post.id}`,
+    title: post.title,
+    keyword: post.title,
+  }));
 
   const { id, title, description, steps, extraSections, faqs, image } = article;
   const deviceName = id.replace('-', ' ');
@@ -250,7 +259,7 @@ export default function HowToPage({ params }: { params: { device: string }}) {
                       </CardContent>
                   </Card>
                   )}
-                 
+                  <InternalLinks relatedLinks={relatedLinks} />
               </aside>
             </div>
 
