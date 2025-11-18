@@ -3,6 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import dynamic from "next/dynamic";
 import { Blog } from "@/components/sections/Blog";
 import { Brands } from "@/components/sections/Brands";
+import { Pricing } from "@/components/sections/Pricing";
 
 const Features = dynamic(() => import("@/components/sections/Features").then((m) => m.Features));
 const Devices = dynamic(() => import("@/components/sections/Devices").then((m) => m.Devices));
@@ -41,6 +42,7 @@ export default function Home() {
       <Features />
       <Brands />
       <Devices />
+      <Pricing />
       <CTA />
       <Blog />
       <Testimonials />
