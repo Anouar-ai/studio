@@ -233,8 +233,6 @@ export default function HowToPage({ params }: { params: { device: string }}) {
                               src={image.imageUrl}
                               alt={`A person using a ${deviceName} to watch IPTV`}
                               data-ai-hint={image.imageHint}
-                              width={image.width}
-                              height={image.height}
                               fill
                               className="object-cover rounded-lg"
                           />
