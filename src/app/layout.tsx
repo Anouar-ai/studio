@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Inter, Outfit } from 'next/font/google';
 import { ThemeProvider } from "@/components/shared/ThemeProvider";
@@ -26,17 +27,34 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://yoursite.com'),
-  title: "Best IPTV Service Provider | Buy IPTV In USA, UK & Worldwide",
-  description: "Looking to Buy IPTV? Choose the best IPTV provider offering affordable services in USA, UK & Worldwide with 24K+ channels. Subscribe now!",
-  alternates: {
-    canonical: "/",
+  title: {
+    default: 'DigitalLizard IPTV',
+    template: '%s | DigitalLizard IPTV'
   },
+  description: 'Your premier IPTV service for unlocking a world of entertainment. The most reliable choice for all your streaming needs.',
+  keywords: ['IPTV', 'IPTV service', 'buy IPTV', 'IPTV subscription', 'IPTV provider'],
+  authors: [{ name: 'DigitalLizard' }],
   openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://yoursite.com',
+    siteName: 'DigitalLizard IPTV',
     title: "Best IPTV Service Provider | Buy IPTV In USA, UK & Worldwide",
     description: "Looking to Buy IPTV? Choose the best IPTV provider offering affordable services in USA, UK & Worldwide with 24K+ channels. Subscribe now!",
     images: [{ url: "/og-image.jpg" }],
   },
-  twitter: {
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+   twitter: {
     card: "summary_large_image",
     title: "Best IPTV Service Provider | Buy IPTV In USA, UK & Worldwide",
     description: "Looking to Buy IPTV? Choose the best IPTV provider offering affordable services in USA, UK & Worldwide with 24K+ channels. Subscribe now!",
