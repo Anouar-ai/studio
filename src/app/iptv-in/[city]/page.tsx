@@ -140,33 +140,33 @@ export default function CityPage({ params }: { params: { city: string } }) {
             <header className="mb-12">
               <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">Buy IPTV in {name}, {state}, {country}: {new Date().getFullYear()} Guide</h1>
               <p className="mt-4 text-lg text-muted-foreground">
-                Welcome to your complete guide for buying IPTV service in {name}, {state}. With a population of around {population.toLocaleString()}, {name} residents are increasingly looking for flexible and high-quality entertainment. This guide covers the best providers, local pricing, legal considerations, and more. Nearby zip codes include: {zipCodes.join(', ')}.
+                This is your complete guide for buying IPTV service in {name}, {state}. With a population of around {population.toLocaleString()}, {name} residents are increasingly looking for flexible and high-quality entertainment. This guide covers the best providers, local pricing, legal considerations, and more. Nearby zip codes include: {zipCodes.join(', ')}.
               </p>
             </header>
 
             <Card className="not-prose my-8 border-primary bg-primary/10">
                 <CardHeader>
-                    <CardTitle>Special Price for {country}</CardTitle>
+                    <CardTitle>Special IPTV Price for {country}</CardTitle>
                     <CardDescription>
-                        For a limited time, residents of {country} get an exclusive discount on our most popular plan!
+                        For a limited time, residents of {country} get an exclusive discount on our most popular IPTV service plan.
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
                     <div className="flex items-baseline gap-4">
                         <p className="text-4xl font-bold">$7.50<span className="text-lg font-normal text-muted-foreground">/month</span></p>
-                        <p className="text-muted-foreground">Billed annually. Regular price $16.00/month.</p>
+                        <p className="text-muted-foreground">Billed annually for our 12-month plan. Regular price $16.00/month.</p>
                     </div>
                 </CardContent>
                 <CardFooter>
                     <Button asChild>
-                        <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">Claim Your {country} Discount</Link>
+                        <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">Claim Your {country} IPTV Discount</Link>
                     </Button>
                 </CardFooter>
             </Card>
             
             <section id="best-iptv" className="mb-12">
-              <h2 className="font-headline">Best IPTV Services in {name}, {state}</h2>
-              <p>When looking for an IPTV service in {name}, it's important to choose a provider with a reliable stream, excellent channel selection, and strong customer support. We confirm that our premium IPTV service is fully available in {name} and surrounding areas like {nearbyCities[0]} and {nearbyCities[1]}.</p>
+              <h2 className="font-headline">IPTV Provider Comparison for {name}, {state}</h2>
+              <p>Choosing a provider in {name} requires balancing channel selection, stream quality, and price. We confirm that our premium IPTV service is fully available in {name} and surrounding areas like {nearbyCities[0]} and {nearbyCities[1]}.</p>
               <Table>
                 <TableHeader>
                   <TableRow>
@@ -177,7 +177,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  <TableRow>
+                  <TableRow className="border-2 border-primary">
                     <TableCell className="font-medium">Our IPTV Service</TableCell>
                     <TableCell>20,000+</TableCell>
                     <TableCell>HD/4K</TableCell>
@@ -211,7 +211,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
                 </CardContent>
                 <CardFooter>
                      <Button asChild size="lg">
-                        <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">View Plans & Order Now</Link>
+                        <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">View Plans &amp; Order Now</Link>
                     </Button>
                 </CardFooter>
               </Card>
@@ -270,7 +270,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
             </section>
             
             <section id="conclusion" className="border-t pt-8 mt-12">
-              <h2 className="font-headline">Conclusion</h2>
+              <h2 className="font-headline">Conclusion: Get The Best IPTV Service in {name}</h2>
               <p>For residents of {name}, {state}, our IPTV service offers an unbeatable combination of channel selection, streaming quality, and value. With instant activation and 24/7 support, it's the best choice for upgrading your home entertainment. Ready to get started?</p>
               <Button asChild size="lg" className="mt-4">
                 <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">Choose Your Plan for {name}</Link>
