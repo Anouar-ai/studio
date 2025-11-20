@@ -1,7 +1,6 @@
 
 import { Hero } from "@/components/sections/Hero";
 import dynamic from "next/dynamic";
-import { Blog } from "@/components/sections/Blog";
 import { Brands } from "@/components/sections/Brands";
 import { Pricing } from "@/components/sections/Pricing";
 
@@ -42,7 +41,6 @@ export default function Home() {
       <Devices />
       <Pricing />
       <CTA />
-      <Blog />
       <Testimonials />
       <FAQ />
     </>
