@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -19,11 +18,11 @@ export function WeeklyBuzz() {
       <div className="-mb-2 text-xl font-bold uppercase tracking-[10px] sm:text-2xl">
         <div className="flex flex-col gap-2 pt-20 max-sm:items-center">
           <h3 className="styled-title absolute top-8 text-7xl opacity-10 sm:top-4 sm:text-[9rem]">
-            weekly
+            Top 10
           </h3>
           <div className="z-10 -mt-8 max-sm:text-center md:-mt-10 md:translate-x-3">
             <p className="text-2xl font-bold uppercase tracking-[10px]">
-              Buzz
+              Movies
             </p>
           </div>
         </div>
