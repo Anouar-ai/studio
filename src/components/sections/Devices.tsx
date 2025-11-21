@@ -1,4 +1,5 @@
 
+"use client";
 
 import { Container } from "../shared/Container";
 import { SectionHeader } from "../shared/SectionHeader";
