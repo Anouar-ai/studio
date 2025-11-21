@@ -1,5 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
-module.exports = {
+const config = {
     siteUrl: process.env.SITE_URL || 'https://digitallizard-iptv.vercel.app',
     generateRobotsTxt: true,
     robotsTxtOptions: {
@@ -14,4 +14,6 @@ module.exports = {
         // To add a crawl-delay, uncomment the following line:
         // crawlDelay: 5, 
     }
-}
+};
+
+export default config;
