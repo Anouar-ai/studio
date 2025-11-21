@@ -10,6 +10,9 @@ export type ArticleWithEmbedding = (typeof articles)[0] & {
 
 // Function to generate embeddings for all articles
 async function getArticlesWithEmbeddings(): Promise<ArticleWithEmbedding[]> {
+    if (!articles.length) {
+        return [];
+    }
     const articlesWithEmbeddings = await Promise.all(
         articles.map(async (article) => {
             // Create a single text block for embedding

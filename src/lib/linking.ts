@@ -18,6 +18,10 @@ export async function getAllPosts(): Promise<Post[]> {
  */
 export async function getRelatedPosts(currentId: string, minLinks = 3) {
   const allPosts = await getAllPosts();
+  if (!allPosts || allPosts.length === 0) {
+    return [];
+  }
+  
   const currentPost = allPosts.find(p => p.id === currentId);
 
   if (!currentPost) {

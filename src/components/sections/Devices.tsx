@@ -1,4 +1,5 @@
 
+
 import { Container } from "../shared/Container";
 import { SectionHeader } from "../shared/SectionHeader";
 import { devices } from "@/lib/site-data/devices";
@@ -22,11 +23,6 @@ export function Devices() {
             ))}
           </div>
         </Reveal>
-         <div className="mt-12 text-center">
-            <Button asChild variant="outline">
-                <Link href="/guides">View All Setup Guides</Link>
-            </Button>
-        </div>
       </Container>
     </section>
   );
