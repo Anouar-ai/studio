@@ -12,10 +12,32 @@ import {
 import { Button } from "@/components/ui/button";
 import { weeklyBuzzItems } from "@/lib/site-data/weekly-buzz";
 import { Bookmark, Heart, Play } from "lucide-react";
+import { getPlaceholderImage } from "@/lib/image-blur";
+import { useEffect, useState } from "react";
 
-const BLUR_DATA_URL = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4IDUiPjxwYXRoIGQ9Ik0wIDBoOHY1SDB6IiBmaWxsPSIjZWRlZGVkIi8+PC9zdmc+";
+type ItemWithPlaceholder = (typeof weeklyBuzzItems)[0] & { placeholder: string };
 
 export function WeeklyBuzz() {
+  const [imageWithPlaceholders, setImageWithPlaceholders] = useState<ItemWithPlaceholder[]>([]);
+
+  useEffect(() => {
+    async function loadImages() {
+      const images = await Promise.all(
+        weeklyBuzzItems.map(async (item) => {
+          const placeholder = await getPlaceholderImage(item.src);
+          return { ...item, placeholder };
+        })
+      );
+      setImageWithPlaceholders(images);
+    }
+    loadImages();
+  }, []);
+
+  if (imageWithPlaceholders.length === 0) {
+    // You can return a loading skeleton here if you want
+    return null;
+  }
+
   return (
     <section className="relative space-y-4 px-4 py-4 sm:px-16">
       <div className="-mb-2 text-xl font-bold uppercase tracking-[10px] sm:text-2xl">
@@ -39,7 +61,7 @@ export function WeeklyBuzz() {
         className="w-full"
       >
         <CarouselContent className="-ml-3">
-          {weeklyBuzzItems.map((item, index) => (
+          {imageWithPlaceholders.map((item, index) => (
             <CarouselItem key={index} className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/7 pl-3 max-w-[200px]">
               <main className="group relative overflow-hidden rounded-xl">
                   <Image
@@ -51,7 +73,7 @@ export function WeeklyBuzz() {
                     className="rounded-xl object-cover transition-opacity duration-300 ease-in h-[300px] w-[200px]"
                     src={item.src}
                     placeholder="blur"
-                    blurDataURL={BLUR_DATA_URL}
+                    blurDataURL={item.placeholder}
                   />
                   <div className="absolute inset-0 flex flex-col items-center justify-center bg-transparent opacity-0 transition-[colors,opacity] ease-in-out group-hover:bg-black/40 group-hover:opacity-100">
                     <div className="m-auto grid h-10 w-10 scale-0 place-content-center rounded-full bg-card text-primary shadow-xl shadow-primary/50 transition-transform ease-in-out group-hover:scale-100">
