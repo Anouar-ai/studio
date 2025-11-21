@@ -7,8 +7,6 @@ import { Check, Shield, Tv, Zap, MessageCircle, Smartphone } from "lucide-react"
 import { Pricing } from "@/components/sections/Pricing";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Link from "next/link";
-import { generateSemanticContent } from "@/lib/vector-seo";
-import SemanticContent from "@/components/shared/SemanticContent";
 
 export const metadata: Metadata = {
   title: "IPTV Service Plans - Buy 1, 3, 6 & 12 Month Subscriptions",
@@ -52,9 +50,7 @@ const pageFaqs = [
     }
 ]
 
-export default async function IPTVSubscription() {
-    const semanticContent = await generateSemanticContent("IPTV Service Subscription Plans");
-
+export default function IPTVSubscription() {
     const schemaOrg = {
         "@context": "https://schema.org",
         "@type": "Product",
@@ -106,14 +102,6 @@ export default async function IPTVSubscription() {
 
   return (
     <>
-      <div className="sr-only">
-        <SemanticContent
-          topic="IPTV Service Subscription Plans"
-          primaryEntity={semanticContent.primaryEntity}
-          relatedEntities={semanticContent.relatedEntities}
-          semanticClusters={semanticContent.semanticClusters}
-        />
-      </div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
