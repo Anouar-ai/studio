@@ -66,7 +66,7 @@ export default function IPTVSubscription() {
           "price": plan.price,
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "url": `https://digitallizard-iptv.vercel.app${plan.url}`,
+          "url": `https://digitallizard-iptv.vercel.app/pricing`,
           "priceValidUntil": "2025-12-31",
           "itemCondition": "https://schema.org/NewCondition",
           "seller": {

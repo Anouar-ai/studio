@@ -1,15 +1,14 @@
 
 import { MetadataRoute } from 'next'
-import { allCities } from '@/lib/cities';
+import { allCountries } from '@/lib/countries';
 import { howToArticles } from '@/lib/how-to';
-import { plans } from '@/lib/site-data/pricing';
  
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://digitallizard-iptv.vercel.app';
   const lastModified = new Date();
   
-  const cityPages: MetadataRoute.Sitemap = allCities.map((city) => ({
-    url: `${baseUrl}/iptv-in/${city.id}`,
+  const countryPages: MetadataRoute.Sitemap = allCountries.map((country) => ({
+    url: `${baseUrl}/iptv-in/${country.id}`,
     lastModified,
     changeFrequency: 'weekly',
     priority: 0.8,
@@ -20,13 +19,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified,
     changeFrequency: 'monthly',
     priority: 0.7,
-  }));
-
-  const subscriptionPages: MetadataRoute.Sitemap = plans.map((plan) => ({
-    url: `${baseUrl}${plan.url}`,
-    lastModified,
-    changeFrequency: 'weekly',
-    priority: 0.9,
   }));
 
 
@@ -43,7 +35,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
-    ...subscriptionPages,
     {
       url: `${baseUrl}/faq`,
       lastModified,
@@ -56,7 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.5,
     },
-    ...cityPages,
+    ...countryPages,
     ...guidePages,
   ]
 }

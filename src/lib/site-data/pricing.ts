@@ -16,7 +16,6 @@ export const plans = [
       "Anti-Freeze Technology"
     ],
     isPopular: false,
-    url: "/iptv-subscription/1-month",
   },
   {
     id: "3-months",
@@ -34,7 +33,6 @@ export const plans = [
       "Anti-Freeze Technology"
     ],
     isPopular: false,
-    url: "/iptv-subscription/3-months",
   },
   {
     id: "6-months",
@@ -52,7 +50,6 @@ export const plans = [
       "Anti-Freeze Technology"
     ],
     isPopular: false,
-    url: "/iptv-subscription/6-months",
   },
   {
     id: "12-months",
@@ -70,6 +67,5 @@ export const plans = [
       "Anti-Freeze Technology"
     ],
     isPopular: true,
-    url: "/iptv-subscription/12-months",
   },
 ];
