@@ -25,13 +25,16 @@ const outfit = Outfit({
 });
 
 
+const defaultTitle = "Best IPTV Provider | Buy IPTV In USA, UK & Worldwide";
+const defaultDescription = "Looking to Buy IPTV? Choose the best IPTV provider offering affordable services in USA, UK & Worldwide with 24K+ channels. Subscribe now!";
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.iptvprovider.me'),
   title: {
-    default: 'Best IPTV Provider | Buy IPTV In USA, UK & Worldwide',
+    default: defaultTitle,
     template: '%s | IPTV Provider'
   },
-  description: 'Looking to Buy IPTV? Choose the best IPTV provider offering affordable services in USA, UK & Worldwide with 24K+ channels. Subscribe now!',
+  description: defaultDescription,
   keywords: ['IPTV', 'IPTV Provider', 'buy IPTV', 'IPTV subscription', 'IPTV provider'],
   authors: [{ name: 'DigitalLizard' }],
   alternates: {
@@ -42,9 +45,9 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://www.iptvprovider.me',
     siteName: 'IPTV Provider',
-    title: "Best IPTV Provider | Buy IPTV In USA, UK & Worldwide",
-    description: "Looking to Buy IPTV? Choose the best IPTV provider offering affordable services in USA, UK & Worldwide with 24K+ channels. Subscribe now!",
-    images: [{ url: "/og-image.jpg" }],
+    title: defaultTitle,
+    description: defaultDescription,
+    images: [{ url: `/api/og?title=${encodeURIComponent(defaultTitle)}` }],
   },
   robots: {
     index: true,
@@ -59,9 +62,9 @@ export const metadata: Metadata = {
   },
    twitter: {
     card: "summary_large_image",
-    title: "Best IPTV Provider | Buy IPTV In USA, UK & Worldwide",
-    description: "Looking to Buy IPTV? Choose the best IPTV provider offering affordable services in USA, UK & Worldwide with 24K+ channels. Subscribe now!",
-    images: ["/twitter-image.jpg"],
+    title: defaultTitle,
+    description: defaultDescription,
+    images: [`/api/og?title=${encodeURIComponent(defaultTitle)}`],
   },
 };
 
