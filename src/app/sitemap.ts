@@ -1,6 +1,7 @@
 
 import { MetadataRoute } from 'next'
 import { howToArticles } from '@/lib/how-to';
+import { allCountries } from '@/lib/countries';
  
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.iptvprovider.me';
@@ -8,6 +9,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   const devicePages: MetadataRoute.Sitemap = howToArticles.map((article) => ({
     url: `${baseUrl}/devices/${article.id}`,
+    lastModified,
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  const countryPages: MetadataRoute.Sitemap = allCountries.map((country) => ({
+    url: `${baseUrl}/country/${country.id}`,
     lastModified,
     changeFrequency: 'monthly',
     priority: 0.7,
@@ -28,6 +36,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/locations`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/faq`,
       lastModified,
       changeFrequency: 'monthly',
@@ -40,5 +54,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     ...devicePages,
+    ...countryPages,
   ]
 }
