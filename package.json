@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "genkit": "latest",
-    "genkitx-groq": "latest",
     "@iconify-icons/circle-flags": "^1.2.4",
     "@iconify/react": "^5.0.1",
     "@imgproxy/imgproxy-js-core": "latest",
