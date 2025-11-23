@@ -31,7 +31,7 @@ const semanticContentPrompt = ai.definePrompt({
     2.  **Related Entities**: A list of closely related people, places, organizations, or concepts.
     3.  **Semantic Clusters**: Group related concepts into clusters. Each cluster should be an array of strings, where the first string is the cluster's main theme.
     4.  **Contextual Keywords**: A list of keywords that frequently appear in the same semantic context as the main topic.`,
-    model: googleAI.model('gemini-pro'),
+    model: 'gemini-pro',
     config: {
         safetySettings: [
             {
