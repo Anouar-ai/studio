@@ -3,7 +3,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { Container } from '@/components/shared/Container';
 import { allCountries } from '@/lib/countries';
-import { Globe } from 'lucide-react';
+import { FlagIcon } from '@/components/shared/FlagIcon';
 
 export const metadata: Metadata = {
     title: "IPTV Provider Service Locations | Available Worldwide",
@@ -57,7 +57,7 @@ export default function LocationsPage() {
                                 href={`/country/${country.id}`}
                                 className="flex items-center gap-3 rounded-lg p-3 transition-colors hover:bg-muted/50"
                             >
-                                <Globe className="h-5 w-5 flex-shrink-0 text-primary" />
+                                <FlagIcon countryCode={country.code} className="h-5 w-5 flex-shrink-0" />
                                 <span className="font-medium">{country.name}</span>
                             </Link>
                         ))}
