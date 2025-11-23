@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { Container } from '@/components/shared/Container';
 import { allCountries } from '@/lib/countries';
 import { FlagIcon } from '@/components/shared/FlagIcon';
+import SemanticContent from '@/components/shared/SemanticContent';
 
 export const metadata: Metadata = {
     title: "IPTV Provider Service Locations | Available Worldwide",
@@ -38,6 +39,18 @@ export default function LocationsPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <SemanticContent 
+                topic="IPTV Service Locations"
+                primaryEntity="IPTV Service Locations"
+                relatedEntities={["IPTV Provider", "Global Streaming", "Country-specific IPTV", "VPN for IPTV", "International Channels"]}
+                semanticClusters={[
+                    ["Regional IPTV", "IPTV USA", "IPTV UK", "IPTV Canada", "IPTV Europe"],
+                    ["Streaming Quality", "HD Streaming", "4K IPTV", "Anti-Freeze Technology"],
+                    ["Device Compatibility", "Fire TV Stick", "Android IPTV", "Smart TV", "iOS IPTV"],
+                    ["Content Access", "Geo-restrictions", "VPN Service", "Live Sports", "International Movies"]
+                ]}
+                contextualKeywords={["best iptv provider", "iptv subscription", "worldwide channels", "live tv streaming", "iptv for sports"]}
             />
             <main className="py-16 sm:py-24">
                 <Container>
