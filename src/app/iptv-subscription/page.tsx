@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { faqs } from "@/lib/site-data/faq";
 import { plans } from "@/lib/site-data/pricing";

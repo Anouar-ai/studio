@@ -16,6 +16,7 @@ export const plans = [
       "Anti-Freeze Technology"
     ],
     isPopular: false,
+    url: "/checkout?plan=1-month"
   },
   {
     id: "3-months",
@@ -33,6 +34,7 @@ export const plans = [
       "Anti-Freeze Technology"
     ],
     isPopular: false,
+    url: "/checkout?plan=3-months"
   },
   {
     id: "6-months",
@@ -50,6 +52,7 @@ export const plans = [
       "Anti-Freeze Technology"
     ],
     isPopular: false,
+    url: "/checkout?plan=6-months"
   },
   {
     id: "12-months",
@@ -67,5 +70,6 @@ export const plans = [
       "Anti-Freeze Technology"
     ],
     isPopular: true,
+    url: "/checkout?plan=12-months"
   },
 ];

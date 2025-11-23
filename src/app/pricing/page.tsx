@@ -1,5 +1,6 @@
 
 
+
 import type { Metadata } from "next";
 import { plans } from "@/lib/site-data/pricing";
 import { Container } from "@/components/shared/Container";
