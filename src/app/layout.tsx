@@ -28,8 +28,8 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.iptvprovider.me'),
   title: {
-    default: 'DigitalLizard IPTV',
-    template: '%s | DigitalLizard IPTV'
+    default: 'IPTV Provider',
+    template: '%s | IPTV Provider'
   },
   description: 'Your premier IPTV service for unlocking a world of entertainment. The most reliable choice for all your streaming needs.',
   keywords: ['IPTV', 'IPTV service', 'buy IPTV', 'IPTV subscription', 'IPTV provider'],
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.iptvprovider.me',
-    siteName: 'DigitalLizard IPTV',
+    siteName: 'IPTV Provider',
     title: "Best IPTV Service Provider | Buy IPTV In USA, UK & Worldwide",
     description: "Looking to Buy IPTV? Choose the best IPTV provider offering affordable services in USA, UK & Worldwide with 24K+ channels. Subscribe now!",
     images: [{ url: "/og-image.jpg" }],

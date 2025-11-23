@@ -36,11 +36,11 @@ function StructuredData({ article }: { article: Post }) {
         dateModified: dateModified,
         author: {
             '@type': 'Organization',
-            name: 'DigitalLizard IPTV',
+            name: 'IPTV Provider',
         },
         publisher: {
             '@type': 'Organization',
-            name: 'DigitalLizard IPTV',
+            name: 'IPTV Provider',
             logo: {
                 '@type': 'ImageObject',
                 url: `${baseUrl}/logo.png`,
