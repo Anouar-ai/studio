@@ -203,9 +203,9 @@ export default async function HowToPage({ params }: { params: { device: string }
                 </li>
               </ol>
             </nav>
-          <article itemScope itemType="https://schema.org/Article">
+          <article>
             <header className="mb-12 text-center">
-              <h1 itemProp="headline" className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">
+              <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">
                 {title}
               </h1>
               <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
@@ -215,7 +215,7 @@ export default async function HowToPage({ params }: { params: { device: string }
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               <div className="lg:col-span-2">
-                  <div itemProp="articleBody" className="prose prose-lg dark:prose-invert max-w-none">
+                  <div className="prose prose-lg dark:prose-invert max-w-none">
                       <h2 className="font-headline text-3xl">Step-by-Step Installation Guide for {primaryKeyword}</h2>
                       <p>Follow these simple steps to get our IPTV Provider running on your {primaryKeyword}. The entire process should only take a few minutes.</p>
                       <div className="space-y-8 mt-8">
@@ -253,10 +253,10 @@ export default async function HowToPage({ params }: { params: { device: string }
                             <h2 className="font-headline text-3xl">Frequently Asked Questions</h2>
                             <Accordion type="single" collapsible>
                                 {faqs.map((faq, i) => (
-                                <AccordionItem key={i} value={`item-${i}`} itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                                    <AccordionTrigger itemProp="name">{faq.question}</AccordionTrigger>
-                                    <AccordionContent itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                                    <p itemProp="text">{faq.answer}</p>
+                                <AccordionItem key={i} value={`item-${i}`}>
+                                    <AccordionTrigger>{faq.question}</AccordionTrigger>
+                                    <AccordionContent>
+                                    <p>{faq.answer}</p>
                                     </AccordionContent>
                                 </AccordionItem>
                                 ))}
@@ -289,7 +289,8 @@ export default async function HowToPage({ params }: { params: { device: string }
                               alt={`${primaryKeyword} - ${title}`}
                               data-ai-hint={image.imageHint}
                               fill
-                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                              sizes="(max-width: 1024px) 100vw, 33vw"
+                              priority
                               className="object-cover rounded-lg"
                               placeholder="blur"
                               blurDataURL={BLUR_DATA_URL}
