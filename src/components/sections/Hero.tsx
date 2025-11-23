@@ -35,12 +35,12 @@ export function Hero() {
           className="w-full max-w-4xl"
         >
           <AnimatedText 
-            text="The World's Premier IPTV Service"
+            text="The World's Premier IPTV Provider"
             textClassName="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70"
             underlineClassName="text-primary"
           />
           <p className="mx-auto mt-6 max-w-2xl text-lg text-secondary-foreground/80">
-            Unlock a world of entertainment with our top-rated IPTV service. Start your subscription now, from just $7.50/mo.
+            Unlock a world of entertainment with our top-rated IPTV Provider. Start your subscription now, from just $7.50/mo.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button asChild size="lg" className="shadow-lg shadow-primary/20 transition-all hover:bg-accent hover:shadow-xl hover:shadow-primary/30">

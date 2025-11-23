@@ -15,7 +15,7 @@ export function Devices() {
       <Container>
         <SectionHeader
           title="Works on All Your Devices"
-          subtitle="Watch on your TV, computer, tablet, or phone. Our IPTV service is compatible with a wide range of devices."
+          subtitle="Watch on your TV, computer, tablet, or phone. Our IPTV Provider is compatible with a wide range of devices."
         />
         <Reveal>
           <div className="flex flex-wrap justify-center gap-4">

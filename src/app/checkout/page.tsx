@@ -11,8 +11,8 @@ import Link from "next/link";
 import { SiWhatsapp } from "react-icons/si";
 
 export const metadata: Metadata = {
-    title: "Secure Checkout | IPTV Service",
-    description: "Complete your IPTV service subscription securely. Enter your payment details to get instant access to thousands of channels.",
+    title: "Secure Checkout | IPTV Provider",
+    description: "Complete your IPTV Provider subscription securely. Enter your payment details to get instant access to thousands of channels.",
     alternates: {
       canonical: "/checkout",
     },

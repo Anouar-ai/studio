@@ -6,8 +6,8 @@ import { Container } from "@/components/shared/Container";
 import { faqs } from "@/lib/site-data/faq";
 
 export const metadata: Metadata = {
-    title: "Frequently Asked Questions | IPTV Service",
-    description: "Have questions about our IPTV service? Find answers to common questions about free trials, device compatibility, buffering, activation, and our refund policy.",
+    title: "Frequently Asked Questions | IPTV Provider",
+    description: "Have questions about our IPTV Provider? Find answers to common questions about free trials, device compatibility, buffering, activation, and our refund policy.",
     alternates: {
         canonical: "/faq",
     }

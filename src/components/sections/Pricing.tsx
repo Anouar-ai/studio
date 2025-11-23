@@ -23,8 +23,8 @@ export function Pricing() {
     <section id="pricing" className="py-16 sm:py-24">
       <Container>
         <SectionHeader
-          title="Choose Your IPTV Service Package"
-          subtitle="Select the perfect IPTV service plan that fits your needs. All plans come with our full feature set."
+          title="Choose Your IPTV Provider Package"
+          subtitle="Select the perfect IPTV Provider plan that fits your needs. All plans come with our full feature set."
         />
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {plans.map((plan, i) => (

@@ -10,10 +10,10 @@ export function CTA() {
         <Reveal>
           <div className="rounded-xl bg-primary p-8 text-center md:p-12">
             <h2 className="font-headline text-3xl font-bold text-primary-foreground sm:text-4xl">
-              Ready for the Best IPTV Service?
+              Ready for the Best IPTV Provider?
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-primary-foreground/80">
-              Unlock a world of entertainment — Get your IPTV service subscription now and start streaming instantly.
+              Unlock a world of entertainment — Get your IPTV Provider subscription now and start streaming instantly.
             </p>
             <Button
               asChild
@@ -21,7 +21,7 @@ export function CTA() {
               variant="outline"
               className="mt-8 border-primary-foreground bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-primary"
             >
-              <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">Get Your IPTV Service</Link>
+              <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">Get Your IPTV Provider</Link>
             </Button>
           </div>
         </Reveal>

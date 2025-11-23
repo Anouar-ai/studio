@@ -14,8 +14,8 @@ export default async function Home() {
     const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "IPTV Service Subscription",
-    "description": "Premium IPTV service with over 20,000 channels, HD/4K quality, and instant activation.",
+    "name": "IPTV Provider Subscription",
+    "description": "Premium IPTV Provider with over 20,000 channels, HD/4K quality, and instant activation.",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",

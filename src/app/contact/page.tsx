@@ -13,8 +13,8 @@ import { ContactForm } from '@/components/shared/ContactForm';
 
 
 export const metadata: Metadata = {
-    title: "Contact Us | IPTV Service",
-    description: "Get in touch with our team. Whether you have a question about our IPTV service or need support, we're here to help.",
+    title: "Contact Us | IPTV Provider",
+    description: "Get in touch with our team. Whether you have a question about our IPTV Provider or need support, we're here to help.",
     alternates: {
         canonical: "/contact",
     }

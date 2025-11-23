@@ -31,15 +31,15 @@ export const metadata: Metadata = {
     default: 'IPTV Provider',
     template: '%s | IPTV Provider'
   },
-  description: 'Your premier IPTV service for unlocking a world of entertainment. The most reliable choice for all your streaming needs.',
-  keywords: ['IPTV', 'IPTV service', 'buy IPTV', 'IPTV subscription', 'IPTV provider'],
+  description: 'Your premier IPTV Provider for unlocking a world of entertainment. The most reliable choice for all your streaming needs.',
+  keywords: ['IPTV', 'IPTV Provider', 'buy IPTV', 'IPTV subscription', 'IPTV provider'],
   authors: [{ name: 'DigitalLizard' }],
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.iptvprovider.me',
     siteName: 'IPTV Provider',
-    title: "Best IPTV Service Provider | Buy IPTV In USA, UK & Worldwide",
+    title: "Best IPTV Provider | Buy IPTV In USA, UK & Worldwide",
     description: "Looking to Buy IPTV? Choose the best IPTV provider offering affordable services in USA, UK & Worldwide with 24K+ channels. Subscribe now!",
     images: [{ url: "/og-image.jpg" }],
   },
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
    twitter: {
     card: "summary_large_image",
-    title: "Best IPTV Service Provider | Buy IPTV In USA, UK & Worldwide",
+    title: "Best IPTV Provider | Buy IPTV In USA, UK & Worldwide",
     description: "Looking to Buy IPTV? Choose the best IPTV provider offering affordable services in USA, UK & Worldwide with 24K+ channels. Subscribe now!",
     images: ["/twitter-image.jpg"],
   },
@@ -71,7 +71,7 @@ export default function RootLayout({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "IPTV Service",
+    "name": "IPTV Provider",
     "url": "https://www.iptvprovider.me",
     "logo": "https://www.iptvprovider.me/logo.png",
     "contactPoint": {

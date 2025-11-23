@@ -89,11 +89,11 @@ function StructuredData({ article }: { article: Post }) {
     const productSchema = {
         "@context": "https://schema.org",
         "@type": "Product",
-        name: "IPTV Service Subscription",
-        description: `Our premium IPTV service is fully compatible with ${article.primaryKeyword}. Follow our guide to get set up.`,
+        name: "IPTV Provider Subscription",
+        description: `Our premium IPTV Provider is fully compatible with ${article.primaryKeyword}. Follow our guide to get set up.`,
         brand: {
             "@type": "Brand",
-            name: "IPTV Service"
+            name: "IPTV Provider"
         },
         offers: {
             "@type": "Offer",
@@ -227,7 +227,7 @@ export default async function HowToPage({ params }: { params: { device: string }
               <div className="lg:col-span-2">
                   <div itemProp="articleBody" className="prose prose-lg dark:prose-invert max-w-none">
                       <h2 className="font-headline text-3xl">Step-by-Step Installation Guide for {primaryKeyword}</h2>
-                      <p>Follow these simple steps to get our IPTV service running on your {primaryKeyword}. The entire process should only take a few minutes.</p>
+                      <p>Follow these simple steps to get our IPTV Provider running on your {primaryKeyword}. The entire process should only take a few minutes.</p>
                       <div className="space-y-8 mt-8">
                       {steps.map((step, index) => (
                           <div key={index} id={`step-${index + 1}`} className="flex gap-6">
