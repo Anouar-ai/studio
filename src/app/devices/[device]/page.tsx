@@ -117,12 +117,6 @@ function StructuredData({ article }: { article: Post }) {
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Guides",
-                "item": `${baseUrl}/guides`
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
                 "name": title,
                 "item": `${baseUrl}/guides/${id}`
             }
@@ -212,17 +206,10 @@ export default async function HowToPage({ params }: { params: { device: string }
                   </Link>
                   <meta itemProp="position" content="1" />
                 </li>
-                <li>/</li>
-                <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
-                  <Link href="/guides" itemProp="item" className="hover:text-primary">
-                    <span itemProp="name">Guides</span>
-                  </Link>
-                  <meta itemProp="position" content="2" />
-                </li>
                  <li>/</li>
                 <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
                     <span itemProp="name">{title}</span>
-                    <meta itemProp="position" content="3" />
+                    <meta itemProp="position" content="2" />
                 </li>
               </ol>
             </nav>
@@ -323,12 +310,6 @@ export default async function HowToPage({ params }: { params: { device: string }
                   )}
                   <InternalLinks relatedLinks={relatedLinks} />
               </aside>
-            </div>
-
-            <div className="text-center mt-16">
-              <Link href="/guides" className="text-primary font-semibold hover:underline">
-                  &larr; Back to All Guides
-              </Link>
             </div>
 
           </article>
