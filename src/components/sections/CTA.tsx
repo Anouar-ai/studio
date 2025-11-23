@@ -10,10 +10,10 @@ export function CTA() {
         <Reveal>
           <div className="rounded-xl bg-primary p-8 text-center md:p-12">
             <h2 className="font-headline text-3xl font-bold text-primary-foreground sm:text-4xl">
-              Ready for the Best IPTV Provider?
+              Start Your IPTV Free Trial Today
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-primary-foreground/80">
-              Unlock a world of entertainment — Get your IPTV Provider subscription now and start streaming instantly.
+              Experience the best in streaming with instant access to over 20,000 channels. No commitment, no hassle.
             </p>
             <Button
               asChild
