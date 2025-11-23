@@ -46,6 +46,6 @@ export async function getRelatedPosts(currentId: string, minLinks = 3) {
   
   return related.map(post => ({
       ...post,
-      href: `/guides/${post.id}`
+      href: `/devices/${post.id}`
   }));
 }

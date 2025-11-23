@@ -48,7 +48,7 @@ function StructuredData({ article }: { article: Post }) {
         },
         mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': `${baseUrl}/guides/${id}`,
+            '@id': `${baseUrl}/devices/${id}`,
         },
     };
 
@@ -67,7 +67,7 @@ function StructuredData({ article }: { article: Post }) {
             "@type": "HowToStep",
             name: step.title,
             text: step.description,
-            url: `${baseUrl}/guides/${id}#step-${index + 1}`,
+            url: `${baseUrl}/devices/${id}#step-${index + 1}`,
             position: index + 1,
         })),
         totalTime: "PT5M",
@@ -92,8 +92,8 @@ function StructuredData({ article }: { article: Post }) {
         name: "IPTV Provider Subscription",
         description: `Our premium IPTV Provider is fully compatible with ${article.primaryKeyword}. Follow our guide to get set up.`,
         brand: {
-            "@type": "Brand",
-            name: "IPTV Provider"
+            '@type': 'Brand',
+            name: 'IPTV Provider'
         },
         offers: {
             "@type": "Offer",
@@ -118,7 +118,7 @@ function StructuredData({ article }: { article: Post }) {
                 "@type": "ListItem",
                 "position": 2,
                 "name": title,
-                "item": `${baseUrl}/guides/${id}`
+                "item": `${baseUrl}/devices/${id}`
             }
         ]
     };
@@ -172,7 +172,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: image ? [{ url: image.imageUrl }] : [],
     },
     alternates: {
-      canonical: `/guides/${params.device}`,
+      canonical: `/devices/${params.device}`,
     },
   };
 }
@@ -186,7 +186,7 @@ export default async function HowToPage({ params }: { params: { device: string }
   
   const relatedPosts = await getRelatedPosts(params.device);
   const relatedLinks = relatedPosts.map(post => ({
-    href: `/guides/${post.id}`,
+    href: `/devices/${post.id}`,
     title: post.title,
     keyword: post.title,
   }));

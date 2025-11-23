@@ -6,8 +6,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.iptvprovider.me';
   const lastModified = new Date();
   
-  const guidePages: MetadataRoute.Sitemap = howToArticles.map((article) => ({
-    url: `${baseUrl}/guides/${article.id}`,
+  const devicePages: MetadataRoute.Sitemap = howToArticles.map((article) => ({
+    url: `${baseUrl}/devices/${article.id}`,
     lastModified,
     changeFrequency: 'monthly',
     priority: 0.7,
@@ -39,6 +39,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.5,
     },
-    ...guidePages,
+    ...devicePages,
   ]
 }

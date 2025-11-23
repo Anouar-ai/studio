@@ -39,7 +39,7 @@ export const articlesWithEmbeddings = await getArticlesWithEmbeddings();
 
 
 export const howToArticles = articlesWithEmbeddings.map(article => {
-    const image = PlaceHolderImages.find(img => img.id === article.id);
+    const image = PlaceHolderImages.find(img => img.id === `guide-image-${article.id}`);
     return {
         ...article,
         image,

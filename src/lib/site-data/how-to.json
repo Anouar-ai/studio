@@ -1,2 +1,223 @@
 
-[]
+[
+  {
+    "id": "fire-tv",
+    "title": "How to Install IPTV on Amazon Fire TV Stick",
+    "description": "A step-by-step guide to setting up IPTV on your Fire TV Stick and start streaming your favorite channels in minutes. Perfect for all users, regardless of technical skill.",
+    "primaryKeyword": "Fire TV Stick",
+    "keywords": ["IPTV Fire TV", "Firestick IPTV setup", "install IPTV on Fire TV"],
+    "datePublished": "2024-07-20T10:00:00Z",
+    "dateModified": "2024-07-20T10:00:00Z",
+    "steps": [
+      { "title": "Enable Apps from Unknown Sources", "description": "Navigate to <strong>Settings > My Fire TV > Developer Options</strong>. Turn on <strong>'Apps from Unknown Sources'</strong>. This is a crucial first step for sideloading applications." },
+      { "title": "Install the Downloader App", "description": "From the Fire TV home screen, search for the 'Downloader' app and install it. This app allows you to download files from the internet onto your device." },
+      { "title": "Enter the IPTV App URL", "description": "Open the Downloader app and enter the APK URL for your chosen IPTV player (e.g., IPTV Smarters Pro or TiviMate). You will receive this URL from us after subscribing." },
+      { "title": "Download and Install the App", "description": "Follow the on-screen prompts to download and install the IPTV application. Once installed, you can delete the downloaded APK file to save space." },
+      { "title": "Log In with Your Credentials", "description": "Open your new IPTV app and log in using the username, password, and server URL provided in your subscription email. You're all set to stream!" }
+    ],
+    "faqs": [
+      { "question": "Is it safe to enable Apps from Unknown Sources?", "answer": "Yes, it is generally safe if you are downloading reputable applications like the ones we recommend. This setting is required for installing any app not available on the Amazon Appstore." },
+      { "question": "What if I can't find the Downloader app?", "answer": "The Downloader app is available in most regions. If you cannot find it, you can use an alternative method like 'Apps2Fire' to send the APK from your Android phone to your Fire TV." }
+    ]
+  },
+  {
+    "id": "android",
+    "title": "Setting Up IPTV on Your Android Device",
+    "description": "Learn how to easily install and configure our IPTV service on any Android phone, tablet, or TV box for streaming on the go.",
+    "primaryKeyword": "Android Device",
+    "keywords": ["IPTV on Android", "Android IPTV player", "setup IPTV Android"],
+    "datePublished": "2024-07-19T11:00:00Z",
+    "dateModified": "2024-07-19T11:00:00Z",
+    "steps": [
+      { "title": "Download the IPTV Player App", "description": "Go to the Google Play Store and search for an IPTV player. We highly recommend <strong>IPTV Smarters Pro</strong> or <strong>TiviMate</strong> for the best experience." },
+      { "title": "Install the Application", "description": "Tap the 'Install' button and wait for the app to download and install on your Android device." },
+      { "title": "Open the App and Add User", "description": "Launch the IPTV app. You will be prompted to add a new user or load a playlist. Choose the option to log in with Xtream Codes API or an M3U URL." },
+      { "title": "Enter Your Subscription Details", "description": "Carefully enter the username, password, and server URL that we provided in your subscription email. Double-check for any typos." },
+      { "title": "Start Streaming", "description": "Once you've logged in, the app will download the channel list and VOD content. You can now start enjoying thousands of channels and movies!" }
+    ],
+    "faqs": [
+      { "question": "Can I use a different IPTV player?", "answer": "Yes, our service is compatible with most IPTV players on the Google Play Store. However, we recommend IPTV Smarters Pro or TiviMate for optimal performance and features." },
+      { "question": "What is the difference between M3U link and Xtream Codes API?", "answer": "Both methods work, but the Xtream Codes API login is generally easier and more reliable. It automatically fetches all necessary information, including EPG (Electronic Program Guide)." }
+    ]
+  },
+  {
+    "id": "troubleshooting",
+    "title": "Troubleshooting Common IPTV Buffering Issues",
+    "description": "Experiencing buffering? Our guide provides simple fixes to solve common IPTV streaming problems for a smooth, uninterrupted viewing experience.",
+    "primaryKeyword": "IPTV Buffering",
+    "keywords": ["IPTV buffering fix", "stop IPTV freezing", "IPTV troubleshooting"],
+    "datePublished": "2024-07-18T14:00:00Z",
+    "dateModified": "2024-07-18T14:00:00Z",
+    "steps": [
+      { "title": "Check Your Internet Speed", "description": "Buffering is often caused by a slow internet connection. Run a speed test. For stable HD/4K streaming, we recommend a minimum of <strong>25-30 Mbps</strong>." },
+      { "title": "Restart Your Devices", "description": "A simple but effective solution. Restart your streaming device (Fire TV, Android box, etc.) and your internet router. This can clear temporary cache and resolve connectivity issues." },
+      { "title": "Use a Wired Ethernet Connection", "description": "Wi-Fi can be unstable. Whenever possible, connect your streaming device directly to your router using an Ethernet cable for the most stable connection." },
+      { "title": "Use a VPN Service", "description": "Internet Service Providers (ISPs) sometimes throttle or block IPTV traffic. Using a reliable VPN can bypass these restrictions and often eliminates buffering completely." },
+      { "title": "Clear the App's Cache", "description": "Over time, your IPTV app can accumulate a large cache. Go to your device's settings, find the IPTV app, and select 'Clear Cache'. Do NOT clear data, as this will erase your login details." }
+    ],
+    "faqs": [
+      { "question": "Why does my IPTV only buffer at night?", "answer": "This is a common sign of ISP throttling. During peak hours (evenings), ISPs may slow down streaming video traffic to manage their network. A VPN is the most effective solution for this issue." },
+      { "question": "Will a faster internet plan fix buffering?", "answer": "Not always. While a minimum speed is required, extreme high speeds (e.g., 1 Gbps) won't help if the issue is ISP throttling or an unstable Wi-Fi connection. Stability is more important than raw speed." }
+    ]
+  },
+  {
+    "id": "ios",
+    "title": "How to Set Up IPTV on iPhone and iPad",
+    "description": "Follow this guide to install and configure IPTV on your iOS devices. Enjoy live TV and on-demand content anywhere on your iPhone or iPad.",
+    "primaryKeyword": "IPTV on iOS",
+    "keywords": ["IPTV iPhone", "iPad IPTV app", "GSE Smart IPTV iOS"],
+    "datePublished": "2024-07-21T09:00:00Z",
+    "dateModified": "2024-07-21T09:00:00Z",
+    "steps": [
+      { "title": "Install an IPTV Player from the App Store", "description": "Open the App Store and search for an IPTV player. We recommend <strong>'GSE Smart IPTV'</strong> or <strong>'IPTV Smarters Player'</strong>, which are both available for free." },
+      { "title": "Accept Terms and Open Menu", "description": "Launch the app. After accepting the terms, open the main menu, usually represented by three horizontal lines (a 'hamburger' icon) in the top-left corner." },
+      { "title": "Add Remote Playlist", "description": "In the menu, find and select 'Remote Playlists'. Tap the '+' icon to add a new playlist." },
+      { "title": "Enter M3U Link", "description": "Select the 'Add M3U URL' option. In the 'Playlist Name' field, type 'IPTV Provider'. In the 'Playlist Link' field, carefully paste the M3U URL we sent to your email." },
+      { "title": "Watch Your Channels", "description": "Tap 'Add'. The app will process the playlist. Once loaded, you can navigate the channel groups and start watching." }
+    ],
+    "faqs": [
+      { "question": "Can I use my subscription on both my iPhone and iPad?", "answer": "You can install the app on multiple devices, but our standard subscription allows for only one stream at a time. Using it on two devices simultaneously requires an additional connection." },
+      { "question": "Why are the channel logos or EPG not showing?", "answer": "This can sometimes happen on first load. Try refreshing the playlist within the app's settings or completely restarting the application. If the problem persists, our support team can help." }
+    ]
+  },
+  {
+    "id": "windows",
+    "title": "Guide to Watching IPTV on a Windows PC",
+    "description": "Learn how to watch your IPTV subscription on any Windows computer or laptop using a free and powerful media player.",
+    "primaryKeyword": "IPTV on Windows",
+    "keywords": ["IPTV player for PC", "VLC IPTV setup", "watch IPTV on computer"],
+    "datePublished": "2024-07-22T12:00:00Z",
+    "dateModified": "2024-07-22T12:00:00Z",
+    "steps": [
+      { "title": "Download VLC Media Player", "description": "Go to the official VideoLAN website (videolan.org) and download the free <strong>VLC Media Player</strong>. It's a versatile player that fully supports IPTV streams." },
+      { "title": "Install VLC", "description": "Run the downloaded installer and follow the on-screen instructions to install VLC Media Player on your PC." },
+      { "title": "Open Network Stream", "description": "Launch VLC. In the top menu, click on <strong>'Media'</strong> and then select <strong>'Open Network Stream...'</strong> (or press Ctrl+N)." },
+      { "title": "Paste Your M3U URL", "description": "A new window will open. In the 'Network' tab, paste your M3U subscription URL into the field that says 'Please enter a network URL:'." },
+      { "title": "Access the Playlist", "description": "Click 'Play'. The first channel on the list will start playing. To see all channels, click the 'Toggle Playlist' button (three horizontal lines) in the bottom controls." }
+    ],
+    "faqs": [
+      { "question": "Can I use a different player for Windows?", "answer": "Yes, other players like 'MyIPTV Player' from the Microsoft Store also work well. However, VLC is universally recommended for its stability and compatibility." },
+      { "question": "How do I see the program guide (EPG) in VLC?", "answer": "VLC has basic EPG support. If your M3U link includes EPG data, it should load automatically. You can view it by going to 'Tools' > 'Program Guide'." }
+    ]
+  },
+  {
+    "id": "macos",
+    "title": "How to Set Up IPTV on macOS",
+    "description": "This guide will show you the best and easiest ways to get your IPTV subscription running on your MacBook or iMac.",
+    "primaryKeyword": "IPTV on macOS",
+    "keywords": ["IPTV for Mac", "macOS IPTV player", "GSE for Mac"],
+    "datePublished": "2024-07-23T14:00:00Z",
+    "dateModified": "2024-07-23T14:00:00Z",
+    "steps": [
+      { "title": "Download an IPTV Player", "description": "For macOS, we recommend using a dedicated IPTV player. Search the App Store for <strong>'GSE Smart IPTV'</strong> or download <strong>VLC Media Player</strong> from its official website." },
+      { "title": "Installation and Setup", "description": "Install your chosen application. For this guide, we'll use GSE Smart IPTV. Open the app after installation." },
+      { "title": "Add Xtream Playlist", "description": "In the GSE menu, navigate to <strong>'Xtream-Codes API'</strong>. Click the '+' button to add a new server." },
+      { "title": "Enter Your Credentials", "description": "Fill in the fields: set the name to 'IPTV Provider', paste the server URL, and enter the username and password from your subscription email." },
+      { "title": "Load and Watch", "description": "Click 'Add'. The app will verify your details and start downloading channels and VOD. Once finished, you can begin streaming." }
+    ],
+    "faqs": [
+      { "question": "Is TiviMate available for macOS?", "answer": "No, TiviMate is an Android-exclusive application and is not officially available for macOS. GSE Smart IPTV is an excellent alternative with similar features." },
+      { "question": "Why use Xtream-Codes API instead of an M3U link?", "answer": "Using the API login method is generally more robust. It handles EPG (TV Guide) and channel logos more effectively and requires less manual setup." }
+    ]
+  },
+  {
+    "id": "samsung-tv",
+    "title": "Installing IPTV on Your Samsung Smart TV",
+    "description": "Unlock thousands of channels on your Samsung Smart TV. Follow our simple guide to install and configure an IPTV player directly on your television.",
+    "primaryKeyword": "Samsung Smart TV",
+    "keywords": ["IPTV on Samsung TV", "Samsung Smart IPTV", "Set IPTV Samsung"],
+    "datePublished": "2024-07-24T10:00:00Z",
+    "dateModified": "2024-07-24T10:00:00Z",
+    "steps": [
+      { "title": "Access the App Store on Your TV", "description": "Press the 'Smart Hub' button on your remote control to open the app screen. Navigate to the 'Apps' section." },
+      { "title": "Search for an IPTV Player", "description": "Use the search function to look for an IPTV player. We recommend installing the <strong>'SET IPTV'</strong> or <strong>'NET IPTV'</strong> application." },
+      { "title": "Note Your TV's MAC Address", "description": "After installing and opening the app, it will display your TV's unique MAC address. Write this down or take a picture of the screen." },
+      { "title": "Upload Your Playlist Online", "description": "On a computer or phone, go to the website for the app you installed (e.g., setiptv.app or netiptv.eu). Find the section for uploading a playlist." },
+      { "title": "Enter MAC and M3U URL", "description": "Enter your TV's MAC address and paste your M3U subscription URL into the appropriate fields on the website. Click 'Upload' or 'Send'. Then, restart the app on your TV. Your channels will now be loaded." }
+    ],
+    "faqs": [
+      { "question": "Are the IPTV apps for Samsung TV free?", "answer": "Apps like SET IPTV and NET IPTV are paid apps. They usually offer a 7-day free trial, after which a one-time activation fee (typically €5-€15) is required to continue using them. This fee is for the app, not for the IPTV subscription." },
+      { "question": "What if my TV is an older model?", "answer": "If your Samsung TV is an older model and doesn't support these apps, the best alternative is to purchase an external Android box or Amazon Fire TV Stick, which are affordable and fully compatible." }
+    ]
+  },
+  {
+    "id": "lg-tv",
+    "title": "How to Activate IPTV on an LG Smart TV",
+    "description": "This guide shows you how to easily set up an IPTV subscription on your LG Smart TV running webOS.",
+    "primaryKeyword": "LG Smart TV",
+    "keywords": ["IPTV on LG TV", "webOS IPTV", "Smart IPTV LG"],
+    "datePublished": "2024-07-25T11:00:00Z",
+    "dateModified": "2024-07-25T11:00:00Z",
+    "steps": [
+      { "title": "Open the LG Content Store", "description": "Press the 'Home' button on your remote and navigate to the 'LG Content Store'." },
+      { "title": "Find an IPTV Player", "description": "Search for <strong>'IPTV Smarters Player'</strong>, <strong>'SET IPTV'</strong>, or <strong>'NET IPTV'</strong> and install your preferred application." },
+      { "title": "Get Your TV's MAC Address", "description": "If using SET IPTV or NET IPTV, launch the app. It will display a MAC address on the screen. Note this down." },
+      { "title": "Activate the Playlist", "description": "For SET/NET IPTV, visit the app's website on a computer, enter the MAC address and your M3U URL, and upload. For IPTV Smarters, you can log in directly on the TV using your Xtream Codes API credentials." },
+      { "title": "Restart and Watch", "description": "After uploading the playlist (for SET/NET) or logging in (for Smarters), restart the application on your LG TV. The channels and VOD will load, and you can start streaming." }
+    ],
+    "faqs": [
+      { "question": "The app I want isn't in the LG Content Store.", "answer": "App availability can vary by region and TV model year. If you can't find a specific app, try searching for another one of our recommended players. If all else fails, an external streaming device is a great backup." },
+      { "question": "Do I have to pay for the LG TV app?", "answer": "Some apps like SET IPTV and NET IPTV require a one-time activation fee to the app developer after a trial period. This is separate from your IPTV subscription with us. IPTV Smarters Player is generally free to use." }
+    ]
+  },
+  {
+    "id": "apple-tv",
+    "title": "Setting up IPTV on Your Apple TV",
+    "description": "Learn how to stream live television from your IPTV subscription on any generation of Apple TV.",
+    "primaryKeyword": "Apple TV",
+    "keywords": ["IPTV Apple TV", "tvOS IPTV player", "iPlayTV setup"],
+    "datePublished": "2024-07-26T15:00:00Z",
+    "dateModified": "2024-07-26T15:00:00Z",
+    "steps": [
+      { "title": "Go to the App Store", "description": "From your Apple TV home screen, navigate to and open the App Store." },
+      { "title": "Search for an IPTV App", "description": "Search for a suitable IPTV player. Popular and reliable choices for Apple TV include <strong>'iPlayTV'</strong> (paid) or <strong>'GSE Smart IPTV'</strong> (free)." },
+      { "title": "Install the App", "description": "Download and install your chosen application onto your Apple TV." },
+      { "title": "Add Your Playlist", "description": "Open the app and find the option to add a new playlist. You can typically choose between 'Add M3U URL' or 'Login with Xtream Codes API'." },
+      { "title": "Enter Credentials and Stream", "description": "Enter the details provided in your subscription email. We recommend the Xtream Codes API login for the easiest setup. Once logged in, your channel list will appear, and you can start watching." }
+    ],
+    "faqs": [
+      { "question": "Is a paid app like iPlayTV better than a free one?", "answer": "Paid apps like iPlayTV often offer a more polished user interface, better EPG (TV Guide) integration, and more frequent updates. However, free apps like GSE Smart IPTV are also very functional and perfectly suitable." },
+      { "question": "My remote makes typing the URL difficult. Is there an easier way?", "answer": "Yes. Many apps, including iPlayTV, offer a way to add the playlist via a web browser on your computer by visiting a specific URL and entering a code displayed on your TV screen. This is much easier than typing with the remote." }
+    ]
+  },
+  {
+    "id": "roku",
+    "title": "How to Watch IPTV on a Roku Device",
+    "description": "Roku devices don't directly support IPTV players, but with this simple workaround using screen mirroring, you can still enjoy your subscription.",
+    "primaryKeyword": "Roku",
+    "keywords": ["IPTV on Roku", "Roku screen mirror IPTV", "cast IPTV to Roku"],
+    "datePublished": "2024-07-27T16:00:00Z",
+    "dateModified": "2024-07-27T16:00:00Z",
+    "steps": [
+      { "title": "Understand the Method", "description": "Roku's operating system does not allow the direct installation of common IPTV apps. The best method is to play the IPTV stream on another device (like a phone or PC) and 'cast' or 'screen mirror' it to your Roku." },
+      { "title": "Set Up IPTV on Your Phone or PC", "description": "First, follow our separate guide to set up your IPTV subscription on an <strong>Android/iOS device</strong> or a <strong>Windows/macOS computer</strong>." },
+      { "title": "Enable Screen Mirroring on Roku", "description": "On your Roku, go to <strong>Settings > System > Screen Mirroring</strong> and ensure 'Screen mirroring mode' is set to 'Prompt' or 'Always allow'." },
+      { "title": "Start Mirroring from Your Device", "description": "On your Android device, pull down the quick settings panel and find the 'Smart View', 'Cast', or 'Screen Mirroring' button. On Windows, press Win+K. Select your Roku from the list of available devices." },
+      { "title": "Play IPTV Content", "description": "Once your screen is mirrored to the TV, open your IPTV player on your phone or PC and play any channel. The video will now appear on your TV through the Roku." }
+    ],
+    "faqs": [
+      { "question": "Are there any apps for Roku that play M3U files?", "answer": "There are some media players on Roku that claim to play M3U files, but they are often unreliable, lack EPG support, and provide a poor user experience. Screen mirroring is currently the most dependable method." },
+      { "question": "Does screen mirroring reduce quality?", "answer": "The quality of the stream depends on the strength of your Wi-Fi network, as your phone/PC is sending the video to your Roku wirelessly. For best results, ensure both devices have a strong Wi-Fi signal." }
+    ]
+  },
+  {
+    "id": "mag",
+    "title": "Configuring Your MAG Box for IPTV",
+    "description": "This guide covers the setup process for Infomir MAG boxes, a popular dedicated device for IPTV streaming.",
+    "primaryKeyword": "MAG Box",
+    "keywords": ["IPTV MAG setup", "MAG box portal", "configure MAG device"],
+    "datePublished": "2024-07-28T09:00:00Z",
+    "dateModified": "2024-07-28T09:00:00Z",
+    "steps": [
+      { "title": "Find Your MAC Address", "description": "Connect your MAG box to your TV and internet. On the back or bottom of the device, find the sticker with the MAC address. It will start with 00:1A:79. Write it down." },
+      { "title": "Send Us Your MAC Address", "description": "When you purchase your subscription, or by contacting our support, you must provide us with your full MAC address. We will use it to activate your device on our server." },
+      { "title": "Access the Inner Portal", "description": "Restart your MAG box. When you see 'Loading', press the 'SET' or 'GEAR' button on your remote to enter the Inner Portal." },
+      { "title": "Configure the Portal", "description": "Go to <strong>'Servers' > 'Portals'</strong>. In the 'Portal 1 URL' field, enter the specific portal URL we provided in your subscription email. Press 'OK' to save." },
+      { "title": "Reboot the Device", "description": "Press the 'EXIT' key on your remote several times to go back, and then select the option to 'Reboot Portal' or 'Reboot Device'. The IPTV portal will load, and your channels will appear." }
+    ],
+    "faqs": [
+      { "question": "My MAG box is stuck on 'Loading'. What should I do?", "answer": "This usually means the portal URL is incorrect or your MAC address hasn't been activated yet. Double-check the portal URL for typos. If it's correct, contact our support to confirm your MAC address is active in our system." },
+      { "question": "Can I use an M3U link with a MAG box?", "answer": "While technically possible in some firmwares, MAG boxes are designed to work with IPTV portals. The portal method provides a much better experience, with a TV-friendly interface and EPG, and is the only method we support for these devices." }
+    ]
+  }
+]
