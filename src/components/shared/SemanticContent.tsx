@@ -4,6 +4,7 @@ interface Props {
   primaryEntity: string
   relatedEntities: string[]
   semanticClusters: string[][]
+  contextualKeywords: string[]
 }
 
 export default function SemanticContent({ 
@@ -13,7 +14,7 @@ export default function SemanticContent({
   semanticClusters 
 }: Props) {
   return (
-    <article vocab="https://schema.org/" typeof="Article">
+    <article vocab="https://schema.org/" typeof="Article" hidden>
       {/* Primary Entity - Strong semantic signal */}
       <h1 property="headline">
         {primaryEntity}: Comprehensive Guide
