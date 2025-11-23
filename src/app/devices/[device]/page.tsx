@@ -10,7 +10,6 @@ import { Check } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
-import { getRelatedPosts } from "@/lib/linking";
 import InternalLinks from "@/components/shared/InternalLinks";
 import type { Post } from "@/lib/linking";
 
@@ -184,14 +183,7 @@ export default async function HowToPage({ params }: { params: { device: string }
     notFound();
   }
   
-  const relatedPosts = await getRelatedPosts(params.device);
-  const relatedLinks = relatedPosts.map(post => ({
-    href: `/devices/${post.id}`,
-    title: post.title,
-    keyword: post.title,
-  }));
-
-  const { title, description, steps, extraSections, faqs, image, primaryKeyword } = article;
+  const { title, description, steps, extraSections, faqs, image, primaryKeyword, id } = article;
 
   return (
     <>
@@ -308,7 +300,7 @@ export default async function HowToPage({ params }: { params: { device: string }
                       </CardContent>
                   </Card>
                   )}
-                  <InternalLinks relatedLinks={relatedLinks} />
+                  <InternalLinks currentId={id} />
               </aside>
             </div>
 
