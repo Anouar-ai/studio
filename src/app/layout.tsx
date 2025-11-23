@@ -34,6 +34,9 @@ export const metadata: Metadata = {
   description: 'Looking to Buy IPTV? Choose the best IPTV provider offering affordable services in USA, UK & Worldwide with 24K+ channels. Subscribe now!',
   keywords: ['IPTV', 'IPTV Provider', 'buy IPTV', 'IPTV subscription', 'IPTV provider'],
   authors: [{ name: 'DigitalLizard' }],
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
