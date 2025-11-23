@@ -79,9 +79,6 @@ const nextConfig = {
       },
     ]
   },
-  metadata: {
-    icons: false,
-  },
 };
 
 export default pwaConfig(nextConfig);
