@@ -13,7 +13,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@genkit-ai/googleai": "latest",
+    "@genkit-ai/google-genai": "latest",
     "genkit": "latest",
     "@iconify-icons/circle-flags": "^1.2.4",
     "@iconify/react": "^5.0.1",
@@ -45,7 +45,6 @@
     "dotenv": "latest",
     "embla-carousel-react": "latest",
     "framer-motion": "latest",
-    "genkitx-groq": "latest",
     "lucide-react": "latest",
     "motion": "latest",
     "next": "latest",

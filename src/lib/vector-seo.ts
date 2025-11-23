@@ -67,7 +67,7 @@ export async function generateSemanticContent(topic: string): Promise<SemanticCo
 export async function generateEmbedding(text: string): Promise<number[]> {
   try {
     const { embedding } = await ai.embed({
-      embedder: 'googleai/text-embedding-004',
+      embedder: googleAI.embedder('text-embedding-004'),
       content: text,
     });
     return embedding;
