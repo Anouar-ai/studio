@@ -38,7 +38,7 @@ const countryData: [string, string][] = [
   ["Suriname", "sr"], ["Sweden", "se"], ["Switzerland", "ch"], ["Syria", "sy"], ["Tajikistan", "tj"], ["Tanzania", "tz"],
   ["Thailand", "th"], ["Timor-Leste", "tl"], ["Togo", "tg"], ["Tonga", "to"], ["Trinidad and Tobago", "tt"], ["Tunisia", "tn"],
   ["Turkey", "tr"], ["Turkmenistan", "tm"], ["Tuvalu", "tv"], ["Uganda", "ug"], ["Ukraine", "ua"], ["United Arab Emirates", "ae"],
-  ["United Kingdom", "gb"], ["Uruguay", "uy"], ["Uzbekistan", "uz"], ["Vanuatu", "vu"], ["Venezuela", "ve"], ["Vietnam", "vn"],
+  ["United Kingdom", "gb"], ["United States", "us"], ["Uruguay", "uy"], ["Uzbekistan", "uz"], ["Vanuatu", "vu"], ["Venezuela", "ve"], ["Vietnam", "vn"],
   ["Yemen", "ye"], ["Zambia", "zm"], ["Zimbabwe", "zw"]
 ];
 
