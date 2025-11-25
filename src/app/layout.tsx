@@ -25,8 +25,8 @@ const outfit = Outfit({
 });
 
 
-const defaultTitle = "Best IPTV Provider | Buy IPTV In USA, UK & Worldwide";
-const defaultDescription = "Looking to Buy IPTV? Choose the best IPTV provider offering affordable services in USA, UK & Worldwide with 24K+ channels. Subscribe now!";
+const defaultTitle = "Best IPTV Provider 2026 | Buy IPTV USA, UK & Worldwide - 24K+ Channels";
+const defaultDescription = "Buy IPTV from the #1 rated provider! Get 24,000+ live channels, HD/4K streaming, VOD movies & sports. Affordable IPTV subscription for USA, UK & worldwide. 24/7 support. Try now!";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.iptvprovider.me'),
@@ -35,19 +35,30 @@ export const metadata: Metadata = {
     template: '%s | IPTV Provider'
   },
   description: defaultDescription,
-  keywords: ['IPTV', 'IPTV Provider', 'buy IPTV', 'IPTV subscription', 'IPTV provider'],
-  authors: [{ name: 'DigitalLizard' }],
+  keywords: ['best IPTV provider', 'buy IPTV', 'IPTV subscription', 'IPTV USA', 'IPTV UK', 'IPTV service', 'premium IPTV', 'cheap IPTV', 'IPTV channels', 'live TV streaming'],
+  authors: [{ name: 'IPTV Provider' }],
   alternates: {
     canonical: '/',
+    languages: {
+      'en': '/',
+      'x-default': '/',
+    },
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.iptvprovider.me',
     siteName: 'IPTV Provider',
-    title: defaultTitle,
-    description: defaultDescription,
-    images: [{ url: `/api/og?title=${encodeURIComponent(defaultTitle)}` }],
+    title: "Best IPTV Provider 2026 | 24K+ Channels | USA, UK & Worldwide",
+    description: "Stream 24,000+ live channels in HD/4K. Movies, sports, news & more. Affordable plans. Subscribe to the best IPTV service today!",
+    images: [
+      { 
+        url: 'https://www.iptvprovider.me/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'IPTV Provider - Best Streaming Service'
+      }
+    ],
   },
   robots: {
     index: true,
@@ -62,10 +73,13 @@ export const metadata: Metadata = {
   },
    twitter: {
     card: "summary_large_image",
-    title: defaultTitle,
-    description: defaultDescription,
-    images: [`/api/og?title=${encodeURIComponent(defaultTitle)}`],
+    site: "@iptvprovider",
+    creator: "@iptvprovider",
+    title: "Best IPTV Provider 2026 | 24K+ Channels",
+    description: "Stream 24,000+ live channels in HD/4K. Movies, sports & more. Subscribe now!",
+    images: ['https://www.iptvprovider.me/twitter-card.jpg'],
   },
+  manifest: '/site.webmanifest'
 };
 
 export default function RootLayout({
@@ -100,7 +114,10 @@ export default function RootLayout({
       "url": process.env.NEXT_PUBLIC_SITE_URL || "https://www.iptvprovider.me/",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://www.iptvprovider.me/search?q={search_term_string}",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.iptvprovider.me/search?q={search_term_string}"
+        },
         "query-input": "required name=search_term_string"
       }
   }
@@ -119,7 +136,11 @@ export default function RootLayout({
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
           />
-          <link rel="manifest" href="/manifest.json" />
+          <link rel="icon" href="/favicon.ico" sizes="48x48"/>
+          <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+          <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+          <link rel="preconnect" href="https://fonts.googleapis.com"/>
+          <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
           <script src="https://analytics.ahrefs.com/analytics.js" data-key="Jl98JtH7ssQUsMyNzloJAw" async></script>
         </head>
       <body className={cn("font-body antialiased", inter.variable, outfit.variable)}>
