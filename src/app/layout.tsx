@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     creator: "@iptvprovider",
     title: "Best IPTV Provider 2026 | 24K+ Channels",
     description: "Stream 24,000+ live channels in HD/4K. Movies, sports & more. Subscribe now!",
-    images: ['https://www.iptvprovider.me/twitter-card.jpg'],
+    images: [`/api/og?title=${encodeURIComponent(defaultTitle)}`],
   },
   manifest: '/site.webmanifest'
 };
