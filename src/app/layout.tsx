@@ -1,5 +1,5 @@
 
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Outfit } from 'next/font/google';
 import { ThemeProvider } from "@/components/shared/ThemeProvider";
 import { Navbar } from "@/components/shared/Navbar";
@@ -24,62 +24,125 @@ const outfit = Outfit({
   variable: "--font-outfit",
 });
 
-
-const defaultTitle = "Best IPTV Provider 2026 | Buy IPTV USA, UK & Worldwide - 24K+ Channels";
-const defaultDescription = "Buy IPTV from the #1 rated provider! Get 24,000+ live channels, HD/4K streaming, VOD movies & sports. Affordable IPTV subscription for USA, UK & worldwide. 24/7 support. Try now!";
+// SEO Constants
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.iptvprovider.me";
+const SITE_NAME = "IPTV Provider";
+const DEFAULT_TITLE = "Best IPTV Provider 2025 | Buy IPTV USA, UK & Worldwide - 24K+ Channels";
+const DEFAULT_DESCRIPTION = "Buy IPTV from the #1 rated provider! Get 24,000+ live channels, HD/4K streaming, VOD movies & sports. Affordable IPTV subscription for USA, UK & worldwide. 24/7 support.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.iptvprovider.me'),
+  metadataBase: new URL(SITE_URL),
+  
   title: {
-    default: defaultTitle,
-    template: '%s | IPTV Provider'
+    default: DEFAULT_TITLE,
+    template: `%s | ${SITE_NAME}`
   },
-  description: defaultDescription,
-  keywords: ['best IPTV provider', 'buy IPTV', 'IPTV subscription', 'IPTV USA', 'IPTV UK', 'IPTV service', 'premium IPTV', 'cheap IPTV', 'IPTV channels', 'live TV streaming'],
-  authors: [{ name: 'IPTV Provider' }],
+  
+  description: DEFAULT_DESCRIPTION,
+  
+  keywords: [
+    'best IPTV provider',
+    'buy IPTV',
+    'IPTV subscription',
+    'IPTV USA',
+    'IPTV UK',
+    'IPTV service',
+    'premium IPTV',
+    'cheap IPTV',
+    'IPTV channels',
+    'live TV streaming',
+    'IPTV 2025',
+    '4K IPTV',
+    'sports IPTV',
+    'VOD streaming'
+  ],
+  
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  
   alternates: {
     canonical: '/',
     languages: {
-      'en': '/',
+      'en-US': '/',
       'x-default': '/',
     },
   },
+  
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.iptvprovider.me',
-    siteName: 'IPTV Provider',
-    title: "Best IPTV Provider 2026 | 24K+ Channels | USA, UK & Worldwide",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: "Best IPTV Provider 2025 | 24K+ Channels | USA, UK & Worldwide",
     description: "Stream 24,000+ live channels in HD/4K. Movies, sports, news & more. Affordable plans. Subscribe to the best IPTV service today!",
     images: [
-      { 
-        url: `/api/og?title=${encodeURIComponent(defaultTitle)}`,
+      {
+        url: `/api/og?title=${encodeURIComponent(DEFAULT_TITLE)}`,
         width: 1200,
         height: 630,
-        alt: 'IPTV Provider - Best Streaming Service'
+        alt: `${SITE_NAME} - Best Streaming Service`,
+        type: 'image/png',
       }
     ],
   },
+  
+  twitter: {
+    card: "summary_large_image",
+    site: "@iptvprovider",
+    creator: "@iptvprovider",
+    title: "Best IPTV Provider 2025 | 24K+ Channels",
+    description: "Stream 24,000+ live channels in HD/4K. Movies, sports & more. Subscribe now!",
+    images: [{
+      url: `/api/og?title=${encodeURIComponent(DEFAULT_TITLE)}`,
+      alt: `${SITE_NAME} - Premium IPTV Service`,
+    }],
+  },
+  
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: false,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
   },
-   twitter: {
-    card: "summary_large_image",
-    site: "@iptvprovider",
-    creator: "@iptvprovider",
-    title: "Best IPTV Provider 2026 | 24K+ Channels",
-    description: "Stream 24,000+ live channels in HD/4K. Movies, sports & more. Subscribe now!",
-    images: [`/api/og?title=${encodeURIComponent(defaultTitle)}`],
+  
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '48x48' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png' },
+    ],
   },
-  manifest: '/site.webmanifest'
+  
+  manifest: '/site.webmanifest',
+  
+  verification: {
+    google: 'WayUe3dolb9UPFpMPHfTYy8CS-T1RkpFYqGvAkW5XqI',
+    other: {
+      'msvalidate.01': 'CEC29E9356C1B062CC9637E64D68C778',
+    },
+  },
+  
+  category: 'technology',
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
+  ],
 };
 
 export default function RootLayout({
@@ -87,13 +150,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
+  
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "IPTV Provider",
-    "url": "https://www.iptvprovider.me",
-    "logo": "https://www.iptvprovider.me/logo.png",
+    "name": SITE_NAME,
+    "url": SITE_URL,
+    "logo": `${SITE_URL}/logo.png`,
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-800-555-0199",
@@ -109,25 +172,22 @@ export default function RootLayout({
   const websiteSchema = {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "IPTV Provider",
+      "name": SITE_NAME,
       "alternateName": ["IPTV Provider", "best iptv"],
-      "url": process.env.NEXT_PUBLIC_SITE_URL || "https://www.iptvprovider.me/",
+      "url": SITE_URL,
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": "https://www.iptvprovider.me/search?q={search_term_string}"
+          "urlTemplate": `${SITE_URL}/search?q={search_term_string}`
         },
         "query-input": "required name=search_term_string"
       }
   }
 
-
   return (
     <html lang="en" suppressHydrationWarning>
        <head>
-          <meta name="google-site-verification" content="WayUe3dolb9UPFpMPHfTYy8CS-T1RkpFYqGvAkW5XqI" />
-          <meta name="msvalidate.01" content="CEC29E9356C1B062CC9637E64D68C778" />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -143,7 +203,11 @@ export default function RootLayout({
           <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
           <script src="https://analytics.ahrefs.com/analytics.js" data-key="Jl98JtH7ssQUsMyNzloJAw" async></script>
         </head>
-      <body className={cn("font-body antialiased", inter.variable, outfit.variable)}>
+      <body className={cn(
+        "font-body antialiased",
+        inter.variable,
+        outfit.variable
+      )}>
         <ProgressBar />
         <Analytics />
         <ThemeProvider
@@ -152,9 +216,15 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex min-h-screen flex-col">
+          <div className="relative flex min-h-screen flex-col">
+            <a 
+              href="#main-content" 
+              className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md"
+            >
+              Skip to main content
+            </a>
             <Navbar />
-            <main className="flex-grow">{children}</main>
+            <main id="main-content" className="flex-grow">{children}</main>
             <Footer />
           </div>
           <ContactSheet />
