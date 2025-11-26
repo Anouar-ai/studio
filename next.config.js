@@ -82,6 +82,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/iptv-subscription',
+        destination: '/pricing',
+        permanent: true,
+      },
+      {
         source: '/old-blog/:slug',
         destination: '/new-blog/:slug',
         permanent: true,
