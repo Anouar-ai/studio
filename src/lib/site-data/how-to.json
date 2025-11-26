@@ -109,7 +109,7 @@
     "datePublished": "2024-07-23T14:00:00Z",
     "dateModified": "2024-07-23T14:00:00Z",
     "steps": [
-      { "title": "Download an IPTV Player", "description": "For macOS, we recommend using a dedicated IPTV player. Search the App Store for <strong>'GSE Smart IPTV'</strong> or download <strong>VLC Media Player</strong> from its official website." },
+      { "title": "Download an IPTV Player", "description": "For macOS, we recommend using a dedicated IPTV player. Search the App Store for <a href='https://apps.apple.com/ma/app/gse-smart-iptv-player-live-tv/id6444845680?l=fr-FR' target='_blank' rel='noopener noreferrer'><strong>GSE Smart IPTV</strong></a> or download <a href='https://images.videolan.org/vlc/index.fr.html' target='_blank' rel='noopener noreferrer'><strong>VLC Media Player</strong></a> from its official website." },
       { "title": "Installation and Setup", "description": "Install your chosen application. For this guide, we'll use GSE Smart IPTV. Open the app after installation." },
       { "title": "Add Xtream Playlist", "description": "In the GSE menu, navigate to <strong>'Xtream-Codes API'</strong>. Click the '+' button to add a new server." },
       { "title": "Enter Your Credentials", "description": "Fill in the fields: set the name to 'IPTV Provider', paste the server URL, and enter the username and password from your subscription email." },
