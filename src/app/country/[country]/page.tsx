@@ -9,6 +9,7 @@ import { Check, Shield, Tv, Zap, MessageCircle, Smartphone } from "lucide-react"
 import SemanticContent from "@/components/shared/SemanticContent";
 import { generateSemanticContent, type SemanticContent as SemanticContentType } from "@/lib/vector-seo";
 import { FlagIcon } from "@/components/shared/FlagIcon";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 
 type Props = {
@@ -52,6 +53,25 @@ export default async function CountryPage({ params }: { params: { country: strin
 
   const { name, code } = country;
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.iptvprovider.me';
+
+  const pageFaqs = [
+    {
+        question: `Is your IPTV service available in ${name}?`,
+        answer: `Yes, our IPTV service is fully available and optimized for viewers in ${name}. You get access to local channels as well as our full international lineup.`
+    },
+    {
+        question: `What payment methods do you accept in ${name}?`,
+        answer: `We accept a variety of payment methods, including major credit cards and cryptocurrencies. All payments are securely processed. For specific options available in ${name}, please proceed to checkout or contact our support team.`
+    },
+    {
+        question: `How fast is the activation process in ${name}?`,
+        answer: `Activation is instant worldwide, including in ${name}. As soon as your payment is confirmed, you will receive your login credentials via email and can start streaming immediately.`
+    },
+    {
+        question: `Do I need a VPN to use IPTV in ${name}?`,
+        answer: `While not mandatory, we highly recommend using a VPN in ${name} to ensure your privacy and bypass any potential ISP throttling or blocking, guaranteeing the best possible streaming experience.`
+    }
+  ];
 
   const breadcrumbSchema = {
       "@context": "https://schema.org",
@@ -98,6 +118,19 @@ export default async function CountryPage({ params }: { params: { country: strin
         "priceCurrency": "USD"
     }
   };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": pageFaqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+        }
+    }))
+  };
   
   let semanticContent: SemanticContentType;
   try {
@@ -121,6 +154,10 @@ export default async function CountryPage({ params }: { params: { country: strin
       <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <SemanticContent 
         primaryEntity={semanticContent.primaryEntity}
@@ -191,6 +228,26 @@ export default async function CountryPage({ params }: { params: { country: strin
                 </div>
             </div>
           </section>
+
+          <section className="bg-muted/30 py-16 dark:bg-card/30 sm:py-24 rounded-lg">
+              <Container>
+                  <div className="mx-auto max-w-3xl text-center">
+                      <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">FAQs about IPTV in {name}</h2>
+                  </div>
+                  <div className="mx-auto mt-8 max-w-3xl">
+                    <Accordion type="single" collapsible>
+                      {pageFaqs.map((faq, i) => (
+                        <AccordionItem key={i} value={`item-${i}`}>
+                          <AccordionTrigger>{faq.question}</AccordionTrigger>
+                          <AccordionContent>
+                            <p>{faq.answer}</p>
+                          </AccordionContent>
+                        </AccordionItem>
+                      ))}
+                    </Accordion>
+                  </div>
+              </Container>
+            </section>
 
         </Container>
       </main>
