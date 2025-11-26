@@ -99,7 +99,7 @@ export default async function LocationsPage() {
                                 href={`/country/${country.id}`}
                                 className="flex items-center gap-3 rounded-lg p-3 transition-colors hover:bg-muted/50"
                             >
-                                <FlagIcon countryCode={country.code} className="h-5 w-5 flex-shrink-0" />
+                                <FlagIcon countryCode={country.code} countryName={country.name} className="h-5 w-5 flex-shrink-0" />
                                 <span className="font-medium">{country.name}</span>
                             </Link>
                         ))}

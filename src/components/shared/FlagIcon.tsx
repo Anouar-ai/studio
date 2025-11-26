@@ -36,14 +36,25 @@ const useIcon = (countryCode: string) => {
   return icon;
 };
 
-const FlagIconComponent = ({ countryCode, className }: { countryCode: string; className?: string }) => {
+interface FlagIconComponentProps {
+    countryCode: string;
+    countryName: string;
+    className?: string;
+}
+
+const FlagIconComponent = ({ countryCode, countryName, className }: FlagIconComponentProps) => {
   const icon = useIcon(countryCode);
 
   if (!icon) {
-    return <div className={className} style={{ width: '1.25rem', height: '1.25rem', borderRadius: '50%', backgroundColor: 'hsl(var(--muted))' }} />;
+    return <div 
+        className={className} 
+        style={{ width: '1.25rem', height: '1.25rem', borderRadius: '50%', backgroundColor: 'hsl(var(--muted))' }}
+        role="img"
+        aria-label={`Flag of ${countryName}`} 
+    />;
   }
 
-  return <Icon icon={icon} className={className} />;
+  return <Icon icon={icon} className={className} aria-label={`Flag of ${countryName}`} />;
 };
 
 export const FlagIcon = memo(FlagIconComponent);
