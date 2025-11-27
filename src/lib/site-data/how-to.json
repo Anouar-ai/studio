@@ -190,21 +190,21 @@
   {
     "id": "roku",
     "title": "How to Watch IPTV on a Roku Device",
-    "description": "Roku devices don't directly support IPTV players, but with this simple workaround using screen mirroring, you can still enjoy your subscription.",
+    "description": "Roku devices don't natively support IPTV players, but you can still stream your favorite channels using this simple screen mirroring method.",
     "primaryKeyword": "Roku",
     "keywords": ["IPTV on Roku", "Roku screen mirror IPTV", "cast IPTV to Roku"],
     "datePublished": "2024-07-27T16:00:00Z",
-    "dateModified": "2024-07-27T16:00:00Z",
+    "dateModified": "2024-09-06T11:00:00Z",
     "steps": [
-      { "title": "Understand the Method", "description": "Roku's operating system does not allow the direct installation of common IPTV apps. The best method is to play the IPTV stream on another device (like a phone or PC) and 'cast' or 'screen mirror' it to your Roku." },
-      { "title": "Set Up IPTV on Your Phone or PC", "description": "First, follow our separate guide to set up your IPTV subscription on an <strong>Android/iOS device</strong> or a <strong>Windows/macOS computer</strong>." },
-      { "title": "Enable Screen Mirroring on Roku", "description": "On your Roku, go to <strong>Settings > System > Screen Mirroring</strong> and ensure 'Screen mirroring mode' is set to 'Prompt' or 'Always allow'." },
-      { "title": "Start Mirroring from Your Device", "description": "On your Android device, pull down the quick settings panel and find the 'Smart View', 'Cast', or 'Screen Mirroring' button. On Windows, press Win+K. Select your Roku from the list of available devices." },
-      { "title": "Play IPTV Content", "description": "Once your screen is mirrored to the TV, open your IPTV player on your phone or PC and play any channel. The video will now appear on your TV through the Roku." }
+      { "title": "Understand the Method: Screen Mirroring", "description": "Roku's operating system does not allow direct installation of IPTV apps. The most reliable method is to play the IPTV stream on a separate device (like your phone or PC) and then mirror its screen to your Roku." },
+      { "title": "Set Up IPTV on Your Casting Device", "description": "First, ensure your IPTV subscription is properly set up on an <strong>Android/iOS device</strong> or a <strong>Windows/macOS computer</strong> by following one of our other guides." },
+      { "title": "Enable Screen Mirroring on Your Roku", "description": "On your Roku, navigate to <strong>Settings > System > Screen Mirroring</strong>. Ensure that 'Screen mirroring mode' is set to either 'Prompt' or 'Always allow'." },
+      { "title": "Initiate Mirroring from Your Phone or PC", "description": "On your Android device, open the quick settings panel and tap 'Smart View', 'Cast', or 'Screen Mirror'. On a Windows PC, press the <strong>Windows Key + K</strong>. Select your Roku device from the list that appears." },
+      { "title": "Play Your IPTV Content", "description": "Once your device's screen is displayed on your TV, open your IPTV player and start playing any channel or movie. The content will be mirrored to your Roku in real-time." }
     ],
     "faqs": [
-      { "question": "Are there any apps for Roku that play M3U files?", "answer": "There are some media players on Roku that claim to play M3U files, but they are often unreliable, lack EPG support, and provide a poor user experience. Screen mirroring is currently the most dependable method." },
-      { "question": "Does screen mirroring reduce quality?", "answer": "The quality of the stream depends on the strength of your Wi-Fi network, as your phone/PC is sending the video to your Roku wirelessly. For best results, ensure both devices have a strong Wi-Fi signal." }
+      { "question": "Are there any M3U player apps for Roku?", "answer": "While some third-party apps in the Roku Channel Store claim to play M3U playlists, they are notoriously unreliable, often lack EPG support, and provide a poor user experience. For these reasons, screen mirroring remains the most dependable method." },
+      { "question": "Does screen mirroring reduce the stream quality?", "answer": "The quality of the mirrored stream depends heavily on the strength and stability of your Wi-Fi network, as your casting device sends the video to your Roku wirelessly. For the best results, ensure both devices have a strong connection to your router." }
     ]
   },
   {
