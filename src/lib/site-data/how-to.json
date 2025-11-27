@@ -32,7 +32,7 @@
       { "title": "Download a Recommended IPTV Player", "description": "Go to the Google Play Store and search for an IPTV player. We highly recommend <a href='https://www.iptvsmarters.com/' target='_blank' rel='noopener noreferrer'><strong>IPTV Smarters Pro</strong></a> or <a href='https://play.google.com/store/apps/details?id=ar.tvplayer.tv' target='_blank' rel='noopener noreferrer'><strong>TiviMate</strong></a> for the best and most reliable user experience." },
       { "title": "Install the Application", "description": "Tap the 'Install' button and wait for the app to download and install on your Android device." },
       { "title": "Open the App and Select Login Method", "description": "Launch the IPTV app. You will be prompted to add a new user. For the most seamless setup, choose the option to <strong>'Login with Xtream Codes API'</strong>." },
-      { "title": "Enter Your Subscription Details", "description": "Carefully enter the login credentials provided in your subscription confirmation email. This includes your username, password, and the server URL. Double-check for any typos to ensure a successful login." },
+      { "title": "Enter Your Subscription Details", "description": "Carefully enter the login credentials provided in your subscription confirmation email. This includes your username, your password, and the server URL. Double-check for any typos to ensure a successful login." },
       { "title": "Start Streaming Your Content", "description": "After you log in, the app will automatically download the channel lists, movies, and TV shows. You can now start enjoying thousands of hours of content!" }
     ],
     "faqs": [
@@ -150,21 +150,21 @@
   {
     "id": "lg-tv",
     "title": "How to Activate IPTV on an LG Smart TV",
-    "description": "This guide shows you how to easily set up an IPTV subscription on your LG Smart TV running webOS.",
+    "description": "This guide shows you how to easily set up an IPTV subscription on your LG Smart TV running webOS, unlocking a world of entertainment.",
     "primaryKeyword": "LG Smart TV",
     "keywords": ["IPTV on LG TV", "webOS IPTV", "Smart IPTV LG"],
     "datePublished": "2024-07-25T11:00:00Z",
     "dateModified": "2024-07-25T11:00:00Z",
     "steps": [
-      { "title": "Open the LG Content Store", "description": "Press the 'Home' button on your remote and navigate to the 'LG Content Store'." },
-      { "title": "Find an IPTV Player", "description": "Search for <strong>'IPTV Smarters Player'</strong>, <strong>'SET IPTV'</strong>, or <strong>'NET IPTV'</strong> and install your preferred application." },
-      { "title": "Get Your TV's MAC Address", "description": "If using SET IPTV or NET IPTV, launch the app. It will display a MAC address on the screen. Note this down." },
-      { "title": "Activate the Playlist", "description": "For SET/NET IPTV, visit the app's website on a computer, enter the MAC address and your M3U URL, and upload. For IPTV Smarters, you can log in directly on the TV using your Xtream Codes API credentials." },
-      { "title": "Restart and Watch", "description": "After uploading the playlist (for SET/NET) or logging in (for Smarters), restart the application on your LG TV. The channels and VOD will load, and you can start streaming." }
+      { "title": "Access the LG Content Store", "description": "Press the 'Home' button on your remote control and navigate to the 'LG Content Store'." },
+      { "title": "Find a Recommended IPTV Player", "description": "Use the search function to find an IPTV player. We strongly recommend <strong>'IPTV Smarters Player'</strong> because it allows direct login. Alternatively, you can use apps like 'SET IPTV' or 'NET IPTV'." },
+      { "title": "Install and Launch the App", "description": "Select your chosen app and follow the prompts to install it on your LG Smart TV." },
+      { "title": "Log In or Upload Playlist", "description": "If using <strong>IPTV Smarters</strong>, select 'Login with Xtream Codes API' and enter your credentials directly. If using <strong>SET IPTV</strong> or <strong>NET IPTV</strong>, launch the app to get your TV's MAC address, then visit the app's website on a computer to upload your M3U playlist URL." },
+      { "title": "Restart and Stream", "description": "After logging in or uploading your playlist, restart the application on your LG TV. The channels and VOD library will load, and you can begin streaming." }
     ],
     "faqs": [
-      { "question": "The app I want isn't in the LG Content Store.", "answer": "App availability can vary by region and TV model year. If you can't find a specific app, try searching for another one of our recommended players. If all else fails, an external streaming device is a great backup." },
-      { "question": "Do I have to pay for the LG TV app?", "answer": "Some apps like SET IPTV and NET IPTV require a one-time activation fee to the app developer after a trial period. This is separate from your IPTV subscription with us. IPTV Smarters Player is generally free to use." }
+      { "question": "Do I have to pay for the LG TV apps?", "answer": "While IPTV Smarters Player is generally free, other third-party apps like SET IPTV and NET IPTV often require a small, one-time activation fee that is paid directly to the app's developer. This is separate from your IPTV service subscription." },
+      { "question": "The app I want isn't in the LG Content Store. What should I do?", "answer": "App availability can differ based on your region and TV model. If you cannot find a specific player, the most reliable alternative is to connect an external streaming device, like an Amazon Fire TV Stick, which offers a wider range of app compatibility." }
     ]
   },
   {
