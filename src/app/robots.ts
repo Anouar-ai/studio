@@ -9,6 +9,22 @@ export default function robots(): MetadataRoute.Robots {
             userAgent: '*',
             allow: '/',
             disallow: ['/admin/', '/staging/'],
+        },
+        {
+            userAgent: 'GPTBot',
+            allow: '/',
+        },
+        {
+            userAgent: 'ChatGPT-User',
+            allow: '/',
+        },
+        {
+            userAgent: 'anthropic-ai',
+            allow: '/',
+        },
+        {
+            userAgent: 'PerplexityBot',
+            allow: '/',
         }
     ],
     sitemap: `${siteUrl}/sitemap.xml`,
