@@ -136,15 +136,15 @@
     "datePublished": "2024-07-24T10:00:00Z",
     "dateModified": "2024-07-24T10:00:00Z",
     "steps": [
-      { "title": "Access the App Store on Your TV", "description": "Press the 'Smart Hub' button on your remote control to open the app screen. Navigate to the 'Apps' section." },
-      { "title": "Search for an IPTV Player", "description": "Use the search function to look for an IPTV player. We recommend installing the <strong>'SET IPTV'</strong> or <strong>'NET IPTV'</strong> application." },
-      { "title": "Note Your TV's MAC Address", "description": "After installing and opening the app, it will display your TV's unique MAC address. Write this down or take a picture of the screen." },
-      { "title": "Upload Your Playlist Online", "description": "On a computer or phone, go to the website for the app you installed (e.g., setiptv.app or netiptv.eu). Find the section for uploading a playlist." },
-      { "title": "Enter MAC and M3U URL", "description": "Enter your TV's MAC address and paste your M3U subscription URL into the appropriate fields on the website. Click 'Upload' or 'Send'. Then, restart the app on your TV. Your channels will now be loaded." }
+      { "title": "Access the App Store on Your TV", "description": "Press the 'Smart Hub' or 'Home' button on your remote control to open the app screen. Navigate to the 'Apps' section." },
+      { "title": "Search for an IPTV Player", "description": "Use the search function to look for an IPTV player. We recommend installing the <strong>'SET IPTV'</strong> or <strong>'NET IPTV'</strong> application from the app store." },
+      { "title": "Note Your TV's MAC Address", "description": "After installing, open the app. The first thing you see will be your TV's unique MAC address. Write this down or take a picture of the screen, as you will need it for the next step." },
+      { "title": "Upload Your Playlist Online", "description": "On a separate device like a computer or phone, go to the website for the app you installed (e.g., setiptv.app or netiptv.eu). Find the section for uploading a playlist (often called 'M3U Playlist' or similar)." },
+      { "title": "Enter MAC and M3U URL", "description": "On the website, carefully enter your TV's MAC address and paste your M3U subscription URL into the appropriate fields. Click 'Upload' or 'Send'. Finally, restart the app on your TV. Your channels will now be loaded and ready to watch." }
     ],
     "faqs": [
-      { "question": "Are the IPTV apps for Samsung TV free?", "answer": "Apps like SET IPTV and NET IPTV are paid apps. They usually offer a 7-day free trial, after which a one-time activation fee (typically €5-€15) is required to continue using them. This fee is for the app, not for the IPTV subscription." },
-      { "question": "What if my TV is an older model?", "answer": "If your Samsung TV is an older model and doesn't support these apps, the best alternative is to purchase an external Android box or Amazon Fire TV Stick, which are affordable and fully compatible." }
+      { "question": "Are the IPTV apps for Samsung TV free?", "answer": "Apps like SET IPTV and NET IPTV are third-party applications that typically offer a 7-day free trial. After the trial, they require a one-time activation fee (usually around €5-€15) payable directly to the app developer to continue using them. This fee is separate from your IPTV subscription with us." },
+      { "question": "What if my TV is an older model and doesn't have the app store?", "answer": "If your Samsung TV is an older model (pre-2016) or doesn't support these apps, the best and most cost-effective alternative is to purchase an external Android streaming device, such as an Amazon Fire TV Stick or a Chromecast with Google TV. These devices are fully compatible and offer a better experience." }
     ]
   },
   {
