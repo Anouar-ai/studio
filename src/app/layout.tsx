@@ -19,7 +19,7 @@ const inter = Inter({
 
 const outfit = Outfit({
   subsets: ["latin"],
-  weight: ["700", "800", "900"],
+  weight: ["700", "900"],
   display: "swap",
   variable: "--font-outfit",
 });
@@ -237,3 +237,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+    
