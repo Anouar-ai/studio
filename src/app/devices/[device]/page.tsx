@@ -292,6 +292,7 @@ export default async function HowToPage({ params }: { params: { device: string }
                                 {faqs.map((faq, i) => (
                                 <AccordionItem key={i} value={`item-${i}`}>
                                     <AccordionTrigger>{faq.question}</AccordionTrigger>
+
                                     <AccordionContent>
                                     <p>{faq.answer}</p>
                                     </AccordionContent>
