@@ -1,17 +1,15 @@
 
 import { Hero } from "@/components/sections/Hero";
-import dynamic from "next/dynamic";
 import { Brands } from "@/components/sections/Brands";
 import { Pricing } from "@/components/sections/Pricing";
 import SemanticContent from "@/components/shared/SemanticContent";
 import { generateSemanticContent, type SemanticContent as SemanticContentType } from "@/lib/vector-seo";
+import { WeeklyBuzz } from "@/components/sections/WeeklyBuzz";
+import { SportEvents } from "@/components/sections/SportEvents";
+import { Devices } from "@/components/sections/Devices";
+import { CTA } from "@/components/sections/CTA";
+import { FAQ } from "@/components/sections/FAQ";
 
-
-const WeeklyBuzz = dynamic(() => import("@/components/sections/WeeklyBuzz").then((m) => m.WeeklyBuzz));
-const SportEvents = dynamic(() => import("@/components/sections/SportEvents").then((m) => m.SportEvents));
-const Devices = dynamic(() => import("@/components/sections/Devices").then((m) => m.Devices));
-const CTA = dynamic(() => import("@/components/sections/CTA").then((m) => m.CTA));
-const FAQ = dynamic(() => import("@/components/sections/FAQ").then((m) => m.FAQ));
 
 export default async function Home() {
     const productSchema = {

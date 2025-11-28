@@ -1,11 +1,11 @@
 
-import { getPlaceholderImage } from "@/lib/image-blur";
 import { ClientCarousel } from "./ClientCarousel";
 
 type CarouselItem = {
   title: string;
   src: string;
   href?: string;
+  placeholder: string;
 };
 
 interface ContentCarouselProps {
@@ -17,7 +17,7 @@ interface ContentCarouselProps {
   showHoverContent?: boolean;
 }
 
-export async function ContentCarousel({
+export function ContentCarousel({
   items,
   title,
   subtitle,
@@ -26,13 +26,6 @@ export async function ContentCarousel({
   showHoverContent = false,
 }: ContentCarouselProps) {
   
-  const itemsWithPlaceholders = await Promise.all(
-    items.map(async (item) => {
-      const placeholder = await getPlaceholderImage(item.src);
-      return { ...item, placeholder };
-    })
-  );
-
   return (
     <section className="relative space-y-4 px-4 py-4 sm:px-16">
       <div className="-mb-2 text-xl font-bold uppercase tracking-[10px] sm:text-2xl">
@@ -48,7 +41,7 @@ export async function ContentCarousel({
         </div>
       </div>
       
-      <ClientCarousel items={itemsWithPlaceholders} showHoverContent={showHoverContent} />
+      <ClientCarousel items={items} showHoverContent={showHoverContent} />
     </section>
   );
 }
