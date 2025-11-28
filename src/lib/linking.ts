@@ -2,7 +2,7 @@
 
 import { howToArticles, getArticlesWithEmbeddings } from '@/lib/how-to';
 import { findSemanticallySimilarContent } from './vector-related-content';
-import { cache } from 'react';
+import { unstable_cache as cache } from 'next/cache';
 
 export type Post = (typeof howToArticles)[0];
 
@@ -51,4 +51,7 @@ export const getRelatedPosts = cache(async (currentId: string, minLinks = 3) => 
       ...post,
       href: `/devices/${post.id}`
   }));
-});
+},
+['related-posts'],
+{ revalidate: 3600, tags: ['posts'] }
+);

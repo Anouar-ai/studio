@@ -1,7 +1,8 @@
+
 'use server';
 
 import { z } from 'zod';
-import { cache } from 'react';
+import { unstable_cache as cache } from 'next/cache';
 import { generateTextEmbedding } from '@/ai/flows/embedding-flow';
 import { generateSemanticContentFlow } from '@/ai/flows/generate-semantic-content-flow';
 import { SemanticContentSchema, type SemanticContent as SemanticContentType } from '@/lib/types/semantic-content';
@@ -28,7 +29,10 @@ export const generateSemanticContent = cache(async (topic: string): Promise<Sema
       contextualKeywords: [],
     };
   }
-});
+},
+['semantic-content'],
+{ revalidate: 3600, tags: ['seo'] }
+);
 
 /**
  * Generates a vector embedding for a given text string.
@@ -46,4 +50,7 @@ export const generateEmbedding = cache(async (text: string): Promise<number[]> =
     // This will disable semantic similarity for related content but prevent errors.
     return new Array(768).fill(0);
   }
-});
+},
+['text-embedding'],
+{ revalidate: 3600 * 24 } // Embeddings for content are stable, cache for a day
+);

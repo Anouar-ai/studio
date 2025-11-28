@@ -2,7 +2,7 @@
 import articles from '@/lib/site-data/how-to.json';
 import { PlaceHolderImages } from './placeholder-images';
 import { generateEmbedding } from './vector-seo';
-import { cache } from 'react';
+import { unstable_cache as cache } from 'next/cache';
 
 // Augment the article type to include an optional embedding
 export type ArticleWithEmbedding = (typeof articles)[0] & {
@@ -32,7 +32,10 @@ export const getArticlesWithEmbeddings = cache(async (): Promise<ArticleWithEmbe
         })
     );
     return articlesWithEmbeddings;
-});
+},
+['articles-with-embeddings'],
+{ revalidate: 3600, tags: ['articles'] }
+);
 
 
 // Export articles without embeddings for client-side and build-time usage
