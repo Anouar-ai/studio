@@ -8,10 +8,10 @@ import SemanticContent from "@/components/shared/SemanticContent";
 import { SubscriptionFeatures } from "@/components/sections/SubscriptionFeatures";
 import { getPricingPageData } from "@/lib/data/pricing-page";
 import { Schema } from "@/components/shared/Schema";
-import { generateMetadata } from "@/lib/site-config";
+import { generateMetadata as generatePageMetadata } from "@/lib/site-config";
 
 export function generateMetadata(): Metadata {
-    return generateMetadata({
+    return generatePageMetadata({
         title: "IPTV Subscription Plans | Best IPTV Provider Packages",
         description: "Choose the perfect IPTV Provider plan. Starting at just $7.50/month with 20,000+ channels, HD/4K quality, and 24/7 support. Instant activation. Buy now!",
         canonical: "/pricing",
