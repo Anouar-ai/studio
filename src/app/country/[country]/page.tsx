@@ -1,5 +1,4 @@
 
-import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -7,9 +6,9 @@ import { Container } from "@/components/shared/Container";
 import { allCountries, getCountryById } from "@/lib/countries";
 import { Check, Shield, Tv, Zap, MessageCircle, Smartphone } from "lucide-react";
 import SemanticContent from "@/components/shared/SemanticContent";
-import { generateSemanticContent, type SemanticContent as SemanticContentType } from "@/lib/vector-seo";
 import { FlagIcon } from "@/components/shared/FlagIcon";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { getCountryPageData } from "@/lib/data/country-page";
 
 
 type Props = {
@@ -45,105 +44,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function CountryPage({ params }: { params: { country: string }}) {
-  const country = getCountryById(params.country);
-
-  if (!country) {
-    notFound();
-  }
+  const {
+    country,
+    pageFaqs,
+    semanticContent,
+    breadcrumbSchema,
+    serviceSchema,
+    faqSchema
+  } = await getCountryPageData(params.country);
 
   const { name, code } = country;
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.iptvprovider.me';
-
-  const pageFaqs = [
-    {
-        question: `Is your IPTV service available in ${name}?`,
-        answer: `Yes, our IPTV service is fully available and optimized for viewers in ${name}. You get access to local channels as well as our full international lineup.`
-    },
-    {
-        question: `What payment methods do you accept in ${name}?`,
-        answer: `We accept a variety of payment methods, including major credit cards and cryptocurrencies. All payments are securely processed. For specific options available in ${name}, please proceed to checkout or contact our support team.`
-    },
-    {
-        question: `How fast is the activation process in ${name}?`,
-        answer: `Activation is instant worldwide, including in ${name}. As soon as your payment is confirmed, you will receive your login credentials via email and can start streaming immediately.`
-    },
-    {
-        question: `Do I need a VPN to use IPTV in ${name}?`,
-        answer: `While not mandatory, we highly recommend using a VPN in ${name} to ensure your privacy and bypass any potential ISP throttling or blocking, guaranteeing the best possible streaming experience.`
-    }
-  ];
-
-  const breadcrumbSchema = {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-          {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": `${baseUrl}/`
-          },
-          {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Locations",
-              "item": `${baseUrl}/locations`
-          },
-          {
-              "@type": "ListItem",
-              "position": 3,
-              "name": name,
-              "item": `${baseUrl}/country/${params.country}`
-          }
-      ]
-  };
-
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "IPTV Provider",
-    "provider": {
-      "@type": "Organization",
-      "name": "IPTV Provider"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": name
-    },
-    "name": `IPTV Provider for ${name}`,
-    "description": `Premium IPTV service available in ${name} with over 20,000 channels, HD/4K quality, and instant setup.`,
-    "offers": {
-        "@type": "Offer",
-        "price": "14.99",
-        "priceCurrency": "USD"
-    }
-  };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": pageFaqs.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer
-        }
-    }))
-  };
-  
-  let semanticContent: SemanticContentType;
-  try {
-      semanticContent = await generateSemanticContent(`IPTV Provider in ${name}`);
-  } catch (error) {
-      console.error("Failed to generate semantic content:", error);
-      semanticContent = {
-          primaryEntity: `IPTV Provider in ${name}`,
-          relatedEntities: [],
-          semanticClusters: [],
-          contextualKeywords: []
-      };
-  }
 
   return (
     <>
