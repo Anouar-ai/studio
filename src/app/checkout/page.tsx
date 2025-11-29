@@ -5,14 +5,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { CreditCard, MessageCircle } from "lucide-react";
+import { CreditCard } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SiWhatsapp } from "react-icons/si";
 import SemanticContent from "@/components/shared/SemanticContent";
-import { generateSemanticContent, type SemanticContent as SemanticContentType } from "@/lib/vector-seo";
 import { Schema } from "@/components/shared/Schema";
-import { generateBreadcrumbSchema } from "@/lib/schema";
+import { getCheckoutPageData } from "@/lib/data/checkout-page";
 
 export const metadata: Metadata = {
     title: "Secure Checkout | IPTV Provider",
@@ -24,23 +23,7 @@ export const metadata: Metadata = {
 
 
 export default async function CheckoutPage() {
-    const breadcrumbSchema = generateBreadcrumbSchema([
-        { name: "Home", item: "https://www.iptvprovider.me/" },
-        { name: "Checkout", item: "https://www.iptvprovider.me/checkout" }
-    ]);
-    
-    let semanticContent: SemanticContentType;
-    try {
-        semanticContent = await generateSemanticContent("IPTV Subscription Checkout");
-    } catch (error) {
-        console.error("Failed to generate semantic content:", error);
-        semanticContent = {
-            primaryEntity: "IPTV Subscription Checkout",
-            relatedEntities: [],
-            semanticClusters: [],
-            contextualKeywords: []
-        };
-    }
+    const { breadcrumbSchema, semanticContent } = await getCheckoutPageData();
 
     return (
         <>
