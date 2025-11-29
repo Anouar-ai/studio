@@ -7,13 +7,13 @@ import { FlagIcon } from '@/components/shared/FlagIcon';
 import SemanticContent from '@/components/shared/SemanticContent';
 import { getLocationsPageData } from '@/lib/data/locations-page';
 import { Schema } from '@/components/shared/Schema';
-import { generateMetadata } from '@/lib/site-config';
+import { generateMetadata as generatePageMetadata } from '@/lib/site-config';
 
 export function generateMetadata(): Metadata {
     const title = "IPTV Provider Service Locations | Available Worldwide";
     const description = "Our IPTV Provider is available in over 100 countries worldwide. Find your country and get the best IPTV streaming service for your region.";
     
-    return generateMetadata({
+    return generatePageMetadata({
         title,
         description,
         canonical: "/locations",
