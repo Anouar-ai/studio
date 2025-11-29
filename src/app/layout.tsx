@@ -28,7 +28,7 @@ const outfit = Outfit({
 });
 
 // SEO Constants
-const DEFAULT_TITLE = "IPTV Provider | 24,000+ Channels & VOD | Best IPTV Service";
+const DEFAULT_TITLE = "Best IPTV Provider | 24,000+ Channels & VOD | IPTV Service";
 const DEFAULT_DESCRIPTION = "Get the best IPTV service with over 24,000 live channels and a massive VOD library. Instant activation, HD/4K quality, and 24/7 support. Subscribe to the top IPTV provider today!";
 
 export const metadata: Metadata = {

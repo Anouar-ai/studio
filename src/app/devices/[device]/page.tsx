@@ -87,7 +87,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     notFound();
   }
 
-  const { title, description } = article;
+  const { description, primaryKeyword, totalTime } = article;
+  const totalTimeInMinutes = totalTime?.replace('PT', '').replace('M', '');
+  
+  const title = `Install IPTV on ${primaryKeyword}: ${totalTimeInMinutes} Min Setup Guide | 2024`;
 
   return generatePageMetadata({
     title: title,
