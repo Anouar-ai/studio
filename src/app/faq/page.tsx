@@ -3,9 +3,8 @@ import { FAQ } from "@/components/sections/FAQ";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/shared/Container";
-import { faqs } from "@/lib/site-data/faq";
 import SemanticContent from "@/components/shared/SemanticContent";
-import { generateSemanticContent, type SemanticContent as SemanticContentType } from "@/lib/vector-seo";
+import { getFaqPageData } from "@/lib/data/faq-page";
 
 export const metadata: Metadata = {
     title: "Frequently Asked Questions | IPTV Provider",
@@ -16,50 +15,11 @@ export const metadata: Metadata = {
 };
 
 export default async function FaqPage() {
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.iptvprovider.me/"
-        },
-        {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "FAQ",
-            "item": "https://www.iptvprovider.me/faq"
-        }
-    ]
-  };
-
-  let semanticContent: SemanticContentType;
-  try {
-    semanticContent = await generateSemanticContent("IPTV Provider Frequently Asked Questions");
-  } catch (error) {
-    console.error("Failed to generate semantic content:", error);
-    semanticContent = {
-        primaryEntity: "IPTV Provider Frequently Asked Questions",
-        relatedEntities: [],
-        semanticClusters: [],
-        contextualKeywords: []
-    };
-  }
+  const { 
+    semanticContent, 
+    faqSchema, 
+    breadcrumbSchema 
+  } = await getFaqPageData();
 
   return (
     <>
