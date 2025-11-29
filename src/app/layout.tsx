@@ -192,11 +192,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
        <head>
-          <script
+          <Script
+            id="organization-schema"
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
           />
-           <script
+           <Script
+            id="website-schema"
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
           />
@@ -215,7 +217,7 @@ export default function RootLayout({
         <Analytics />
         <Script
             src="https://analytics.ahrefs.com/analytics.js"
-            data-key="Jl98JtH7ssQUsMyNzloJAw"
+            id="ahrefs-analytics"
             strategy="lazyOnload"
         />
         <ThemeProvider
