@@ -147,9 +147,6 @@ export default function RootLayout({
        <head>
           <Schema id="organization" schema={generateOrganizationSchema()} />
           <Schema id="website" schema={generateWebSiteSchema()} />
-          <link rel="icon" href="/favicon.ico" sizes="48x48"/>
-          <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
-          <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
           <link rel="preconnect" href="https://fonts.googleapis.com"/>
           <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
           <script src="https://cdn.visitors.now/v.js" data-token="0a9ca441-3262-415a-a3ac-e06859feeeba" async></script>
