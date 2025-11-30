@@ -8,6 +8,8 @@ import { Container } from "@/components/shared/Container";
 import { ShieldCheck, Tv, Zap } from "lucide-react";
 import { AnimatedText } from "../ui/animated-underline-text-one";
 import { SiWhatsapp } from "react-icons/si";
+import Image from "next/image";
+import MouseIcon from "@/assets/icons/mouse.svg";
 
 export function Hero() {
   return (
@@ -85,7 +87,9 @@ export function Hero() {
               repeat: Infinity,
               repeatType: "loop",
             }}
-          />
+          >
+             <Image src={MouseIcon} alt="Scroll down" className="h-full w-full" />
+          </motion.div>
         </div>
       </motion.div>
     </section>
