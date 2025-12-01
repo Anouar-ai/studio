@@ -46,8 +46,8 @@ export function ClientCarousel({
               <Image
                 alt={`Poster for ${item.title}, a popular movie available on IPTV Provider`}
                 loading="lazy"
-                width="200"
-                height="300"
+                width={200}
+                height={300}
                 decoding="async"
                 className="rounded-xl object-cover transition-opacity duration-300 ease-in h-[300px] w-[200px]"
                 src={item.src}
