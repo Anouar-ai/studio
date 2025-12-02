@@ -14,32 +14,11 @@ export function generateMetadata(): Metadata {
     const title = "Buy IPTV Subscription | Plans from $7.50/mo";
     const description = "Choose the perfect IPTV Provider plan. Starting at just $7.50/month with 24,000+ channels, HD/4K quality, and 24/7 support. Instant activation. Buy now!";
     
-    return {
-        title: {
-            absolute: title,
-        },
+    return generatePageMetadata({
+        title,
         description,
-        alternates: {
-            canonical: "/pricing",
-        },
-        openGraph: {
-            title,
-            description,
-            images: [
-                {
-                    url: `/api/og?title=${encodeURIComponent(title)}`,
-                    width: 1200,
-                    height: 630,
-                },
-            ],
-        },
-        twitter: {
-            card: 'summary_large_image',
-            title,
-            description,
-            images: [`/api/og?title=${encodeURIComponent(title)}`],
-        },
-    };
+        canonical: "/pricing",
+    });
 }
 
 
