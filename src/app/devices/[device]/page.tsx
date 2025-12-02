@@ -268,5 +268,3 @@ export async function generateStaticParams() {
     device: article.id,
   }));
 }
-
-    
