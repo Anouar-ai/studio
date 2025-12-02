@@ -1,9 +1,9 @@
 
 export const siteConfig = {
-  name: "IPTV Provider",
+  name: "#1 IPTV Provider 2026 | 24K+ Live Channels & VOD Library",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.iptvprovider.me",
   ogImage: "/og-image.jpg",
-  description: "Buy IPTV from the #1 rated provider! Get 24,000+ live channels, HD/4K streaming.",
+  description: "Subscribe to the #1 IPTV provider with 24,000+ live channels & VOD. HD/4K quality, instant activation & 24/7 support. Try the best IPTV service now!",
   links: {
     twitter: "https://twitter.com/iptvprovider",
     facebook: "https://facebook.com/iptvprovider",

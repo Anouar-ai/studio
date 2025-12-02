@@ -8,7 +8,7 @@ export const plans = [
     price_monthly: 16.00,
     savings: null,
     features: [
-      "20,000+ Live Channels",
+      "24,000+ Live Channels",
       "Extensive VOD Library",
       "HD/4K Streaming Quality",
       "24/7 Customer Support",
@@ -26,7 +26,7 @@ export const plans = [
     price_monthly: 13.00,
     savings: "Save 18%",
     features: [
-      "20,000+ Live Channels",
+      "24,000+ Live Channels",
       "Extensive VOD Library",
       "HD/4K Streaming Quality",
       "24/7 Customer Support",
@@ -44,7 +44,7 @@ export const plans = [
     price_monthly: 10.00,
     savings: "Save 37%",
     features: [
-      "20,000+ Live Channels",
+      "24,000+ Live Channels",
       "Extensive VOD Library",
       "HD/4K Streaming Quality",
       "24/7 Customer Support",
@@ -62,7 +62,7 @@ export const plans = [
     price_monthly: 7.50,
     savings: "Save 53%",
     features: [
-      "20,000+ Live Channels",
+      "24,000+ Live Channels",
       "Extensive VOD Library",
       "HD/4K Streaming Quality",
       "24/7 Customer Support",
