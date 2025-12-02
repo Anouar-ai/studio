@@ -1,6 +1,6 @@
 
 import { notFound } from "next/navigation";
-import type { Metadata } from "next";
+import type { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/shared/Container";
@@ -13,11 +13,12 @@ import InternalLinks from "@/components/shared/InternalLinks";
 import type { Post } from "@/lib/linking";
 import { Schema } from "@/components/shared/Schema";
 import { generateArticleSchema, generateHowToSchema, generateFAQPageSchema, generateProductSchema, generateBreadcrumbSchema } from "@/lib/schema";
-import { generateMetadata as generatePageMetadata } from "@/lib/site-config";
+import { siteConfig } from "@/lib/site-config";
 
 
 type Props = {
   params: { device: string; };
+  searchParams: { [key: string]: string | string[] | undefined };
 };
 
 const BLUR_DATA_URL = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4IDUiPjxwYXRoIGQ9Ik0wIDBoOHY1SDB6IiBmaWxsPSIjZWRlZGVkIi8+PC9zdmc+";
@@ -80,23 +81,44 @@ function StructuredData({ article }: { article: Post }) {
 }
 
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
   const article = howToArticles.find((p) => p.id === params.device);
 
   if (!article) {
     notFound();
   }
 
-  const { description, primaryKeyword, totalTime } = article;
-  const totalTimeInMinutes = totalTime?.replace('PT', '').replace('M', '');
-  
-  const title = `Install IPTV on ${primaryKeyword}: ${totalTimeInMinutes} Min Setup Guide | 2024`;
+  const { title, description, datePublished, dateModified, image } = article;
 
-  return generatePageMetadata({
-    title: title,
-    description: description,
-    canonical: `/devices/${params.device}`,
-  });
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || []
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `/devices/${params.device}`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `/devices/${params.device}`,
+      type: 'article',
+      publishedTime: datePublished,
+      modifiedTime: dateModified,
+      authors: [siteConfig.name],
+      images: image ? [image.imageUrl, ...previousImages] : previousImages,
+    },
+     twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: image ? [image.imageUrl] : [],
+    },
+  }
 }
 
 export default async function HowToPage({ params }: { params: { device: string }}) {
@@ -246,3 +268,5 @@ export async function generateStaticParams() {
     device: article.id,
   }));
 }
+
+    
