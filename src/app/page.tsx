@@ -42,7 +42,7 @@ export default async function Home() {
       },
       ratingValue: "4.9",
       reviewCount: "1843",
-      price: "0", // Price specified in offers on pricing page
+      price: "16.00",
       offers: {
         "@type": "AggregateOffer",
         priceCurrency: "USD",
