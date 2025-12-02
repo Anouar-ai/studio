@@ -120,6 +120,7 @@ export const metadata: Metadata = {
     google: 'WayUe3dolb9UPFpMPHfTYy8CS-T1RkpFYqGvAkW5XqI',
     other: {
       'msvalidate.01': 'CEC29E9356C1B062CC9637E64D68C778',
+      'yandex-verification': '4cafd334f7cdc146',
     },
   },
   
