@@ -136,18 +136,18 @@
   {
     "id": "samsung-tv",
     "title": "How Can I Install IPTV on a Samsung Smart TV?",
-    "description": "You can install IPTV on a Samsung Smart TV by searching for a compatible IPTV player like 'SET IPTV' in the Samsung App Store. Once installed, you will need to use the TV's MAC address to upload your M3U playlist via the app developer's website.",
+    "description": "To install IPTV on a Samsung Smart TV by searching for 'SET IPTV' or 'NET IPTV' in the Samsung App Store. Once installed, you will need to use the TV's MAC address to upload your M3U playlist via the app developer's website.",
     "primaryKeyword": "Samsung Smart TV",
     "keywords": ["IPTV on Samsung TV", "Samsung Smart IPTV", "Set IPTV Samsung"],
     "datePublished": "2024-07-24T10:00:00Z",
     "dateModified": "2024-07-24T10:00:00Z",
     "totalTime": "PT10M",
     "steps": [
-      { "title": "Access the App Store on Your TV", "description": "Press the 'Smart Hub' or 'Home' button on your Samsung remote control to open the main app screen. Navigate to the 'Apps' section." },
-      { "title": "Search for a Compatible IPTV Player", "description": "Using the search function, look for an IPTV player. We recommend installing either the <strong>'SET IPTV'</strong> or <strong>'NET IPTV'</strong> application, as they are widely available on the Samsung App Store." },
-      { "title": "Find Your TV's Unique MAC Address", "description": "After installing your chosen app, open it. The first thing you will see on the screen is your TV's unique MAC address. It is very important that you write this down or take a picture of the screen." },
-      { "title": "Upload Your Playlist via Web Browser", "description": "On a separate device like a computer or smartphone, go to the website for the app you installed (e.g., setiptv.app for SET IPTV, or netiptv.eu for NET IPTV). Find the section for uploading a playlist." },
-      { "title": "Enter MAC and M3U URL", "description": "On the website, carefully enter your TV's MAC address into the first field, and paste your M3U subscription URL into the second field. Click 'Upload' or 'Send'. Finally, restart the app on your Samsung TV. Your channels will now be loaded." }
+        { "title": "Install an IPTV Player", "description": "<ol><li>Press the <strong>Smart Hub</strong> or <strong>Home</strong> button on your remote.</li><li>Navigate to <strong>Apps</strong> and search for a player like <strong>'SET IPTV'</strong> or <strong>'NET IPTV'</strong>.</li><li>Select and install the application.</li></ol>" },
+        { "title": "Find Your TV's MAC Address", "description": "Open the newly installed app. The first thing you'll see is your TV's unique MAC address. Write this down or take a picture of it." },
+        { "title": "Upload Your Playlist via Web Browser", "description": "<ol><li>On a computer or phone, go to the app's website (e.g., <strong>setiptv.app</strong> or <strong>netiptv.eu</strong>).</li><li>Find the section to upload a playlist (often called 'Add External Playlist' or similar).</li></ol>" },
+        { "title": "Enter MAC and M3U URL", "description": "<ol><li>Carefully type your TV's MAC address into the first field.</li><li>Paste your M3U subscription URL (from your email) into the second field.</li><li>Click 'Upload' or 'Send'.</li></ol>" },
+        { "title": "Restart and Watch", "description": "Restart the IPTV app on your Samsung TV. Your channels will now load automatically." }
     ],
     "faqs": [
       { "question": "Are the IPTV apps for Samsung TV free to use?", "answer": "Apps like SET IPTV and NET IPTV are created by third-party developers, not us. They typically offer a 7-day free trial. After the trial period, they require a one-time activation fee (usually around €5-€15) that is payable directly to the app developer to continue using them. This fee is separate from your IPTV subscription with our service." },
@@ -220,18 +220,17 @@
   {
     "id": "mag",
     "title": "How Do I Configure a MAG Box for IPTV?",
-    "description": "To set up a MAG box, you must first provide us with your device's unique MAC address. Then, you will enter the portal URL we provide into your box's server settings. This method is specific to MAG devices and ensures a stable, EPG-supported connection.",
+    "description": "To set up a MAG box, you must provide us with your device's MAC address and then enter the portal URL we provide into your box's server settings. This ensures a stable, EPG-supported connection.",
     "primaryKeyword": "MAG Box",
     "keywords": ["IPTV MAG setup", "MAG box portal", "configure MAG device"],
     "datePublished": "2024-07-28T09:00:00Z",
     "dateModified": "2024-07-28T09:00:00Z",
     "totalTime": "PT10M",
     "steps": [
-      { "title": "Find Your Device's MAC Address", "description": "First, connect your MAG box to your TV and internet. The unique MAC address, which always starts with <strong>00:1A:79</strong>, is printed on a sticker on the bottom of the device. You must write this address down." },
-      { "title": "Provide Your MAC Address to Us", "description": "During your IPTV subscription purchase, it is mandatory to provide us with the full MAC address of your MAG box. This is required for our system to authorize and activate your device on our servers." },
-      { "title": "Access the 'Inner Portal'", "description": "Restart your MAG box. As it is loading up, repeatedly press the <strong>'SET' or 'GEAR' button</strong> on your remote control. This will interrupt the normal boot process and take you to the system's 'Inner Portal' or settings menu." },
-      { "title": "Configure the Server Portal URL", "description": "Using your remote, navigate to <strong>'Servers' > 'Portals'</strong>. In the 'Portal 1 URL' field, carefully enter the specific portal address that was sent to you in your subscription confirmation email. Press 'OK' to save." },
-      { "title": "Reboot and Launch the Portal", "description": "Press the 'EXIT' key multiple times to return to the main portal menu, and then select the option to 'Reboot Portal' or 'Reboot Device'. Once the device restarts, it will automatically load the IPTV portal with your channels." }
+        { "title": "Find & Provide Your MAC Address", "description": "<ol><li>Connect your MAG box to your TV and internet.</li><li>Find the unique MAC address on the sticker on the bottom of the device (it starts with <strong>00:1A:79</strong>).</li><li>Provide this full MAC address to us when you order your subscription.</li></ol>" },
+        { "title": "Access the 'Inner Portal'", "description": "Restart your MAG box. While it's loading, press the <strong>'SET' or 'GEAR' button</strong> on your remote repeatedly to enter the 'Inner Portal' settings menu." },
+        { "title": "Configure the Server Portal", "description": "<ol><li>Using your remote, navigate to <strong>'Servers' > 'Portals'</strong>.</li><li>In the 'Portal 1 URL' field, enter the portal address from your subscription email.</li><li>Press 'OK' to save.</li></ol>" },
+        { "title": "Reboot and Launch", "description": "Press 'EXIT' to return to the main menu, then select the option to 'Reboot Portal' or 'Reboot Device'. The device will restart and automatically load the IPTV portal." }
     ],
     "faqs": [
       { "question": "Why is my MAG box stuck on the 'Loading' screen?", "answer": "This is a very common issue that almost always means one of two things: either the portal URL was entered incorrectly, or your device's MAC address has not yet been activated on our server. First, please double-check the portal URL for any typos. If it is correct, contact our support team to verify that your MAC address has been successfully activated." },

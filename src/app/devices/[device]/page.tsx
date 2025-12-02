@@ -128,7 +128,7 @@ export default async function HowToPage({ params }: { params: { device: string }
     notFound();
   }
   
-  const { title, description, steps, extraSections, faqs, image, primaryKeyword, id, totalTime } = article;
+  const { title, description, steps, extraSections, faqs, image, primaryKeyword, id, totalTime, datePublished, dateModified } = article;
   const totalTimeInMinutes = totalTime?.replace('PT', '').replace('M', '');
 
   return (
@@ -157,12 +157,18 @@ export default async function HowToPage({ params }: { params: { device: string }
               <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
                 {description}
               </p>
-               {totalTimeInMinutes && (
-                <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-muted px-4 py-1 text-sm text-muted-foreground">
-                    <Clock className="h-4 w-4" />
-                    <span>Estimated time: {totalTimeInMinutes} minutes</span>
+              <div className="mt-4 flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
+                {totalTimeInMinutes && (
+                  <div className="inline-flex items-center gap-2">
+                      <Clock className="h-4 w-4" />
+                      <span>Estimated time: {totalTimeInMinutes} minutes</span>
+                  </div>
+                )}
+                <div className="flex items-center gap-1">
+                  <span>Updated:</span>
+                  <time dateTime={dateModified}>{new Date(dateModified).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
                 </div>
-              )}
+              </div>
             </header>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -193,7 +199,7 @@ export default async function HowToPage({ params }: { params: { device: string }
                               </div>
                               <div>
                                   <h3 className="font-headline text-2xl font-semibold mt-1 mb-2">{step.title}</h3>
-                                  <p className="text-muted-foreground" dangerouslySetInnerHTML={{ __html: step.description }} />
+                                  <div className="text-muted-foreground" dangerouslySetInnerHTML={{ __html: step.description }} />
                               </div>
                           </div>
                       ))}
@@ -202,7 +208,7 @@ export default async function HowToPage({ params }: { params: { device: string }
                       {extraSections?.map(section => (
                         <div key={section.id} className="my-12">
                             <h2 className="font-headline text-3xl">{section.title}</h2>
-                            <p dangerouslySetInnerHTML={{ __html: section.content }} />
+                            <div dangerouslySetInnerHTML={{ __html: section.content }} />
                         </div>
                       ))}
 

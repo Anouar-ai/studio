@@ -41,12 +41,12 @@ export function Footer() {
           </div>
           <div>
             <h3 className="font-semibold">Contact</h3>
-            <div className="mt-4 space-y-2 text-sm text-muted-foreground">
+            <address className="mt-4 space-y-2 text-sm not-italic text-muted-foreground">
               <p>{footerLinks.contact.address}</p>
               <a href={`mailto:${footerLinks.contact.email}`} className="hover:text-primary">
                 {footerLinks.contact.email}
               </a>
-            </div>
+            </address>
           </div>
         </div>
         <div className="flex flex-col items-center justify-between border-t py-6 sm:flex-row">
