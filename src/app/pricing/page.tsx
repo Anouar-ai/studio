@@ -8,14 +8,36 @@ import SemanticContent from "@/components/shared/SemanticContent";
 import { SubscriptionFeatures } from "@/components/sections/SubscriptionFeatures";
 import { getPricingPageData } from "@/lib/data/pricing-page";
 import { Schema } from "@/components/shared/Schema";
-import { generateMetadata as generatePageMetadata } from "@/lib/site-config";
+import { generatePageMetadata } from "@/lib/site-config";
 
 export function generateMetadata(): Metadata {
-    return generatePageMetadata({
-        title: "Buy IPTV Subscription | Plans from $7.50/mo",
-        description: "Choose the perfect IPTV Provider plan. Starting at just $7.50/month with 20,000+ channels, HD/4K quality, and 24/7 support. Instant activation. Buy now!",
-        canonical: "/pricing",
-    });
+    const title = "Buy IPTV Subscription | Plans from $7.50/mo";
+    const description = "Choose the perfect IPTV Provider plan. Starting at just $7.50/month with 24,000+ channels, HD/4K quality, and 24/7 support. Instant activation. Buy now!";
+    
+    return {
+        title,
+        description,
+        alternates: {
+            canonical: "/pricing",
+        },
+        openGraph: {
+            title,
+            description,
+            images: [
+                {
+                    url: `/api/og?title=${encodeURIComponent(title)}`,
+                    width: 1200,
+                    height: 630,
+                },
+            ],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title,
+            description,
+            images: [`/api/og?title=${encodeURIComponent(title)}`],
+        },
+    };
 }
 
 
@@ -60,7 +82,7 @@ export default async function IPTVSubscription() {
             <div className="text-center">
               <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">IPTV Provider Subscription Plans</h1>
               <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-                  Choose the perfect IPTV Provider plan for your streaming needs. All plans include 20,000+ channels in HD/4K quality.
+                  Choose the perfect IPTV Provider plan for your streaming needs. All plans include 24,000+ channels in HD/4K quality.
               </p>
             </div>
         </Container>
