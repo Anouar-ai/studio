@@ -41,6 +41,7 @@ export const getFaqPageData = cache(
   ['faq-page-data'], // Unique cache key
   {
     revalidate: 3600, // Revalidate every hour
-    tags: ['faq-page'], // Tag for on-demand revalidation
+    tags: ['pages', 'faq-page'], // Tag for on-demand revalidation
   }
 );
+

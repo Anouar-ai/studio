@@ -34,6 +34,7 @@ export const getIptvFreeTrialPageData = cache(
   ['iptv-free-trial-page-data'], // Unique cache key
   {
     revalidate: 3600, // Revalidate every hour
-    tags: ['iptv-free-trial-page'], // Tag for on-demand revalidation
+    tags: ['pages', 'iptv-free-trial-page'], // Tag for on-demand revalidation
   }
 );
+

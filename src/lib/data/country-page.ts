@@ -87,6 +87,7 @@ export const getCountryPageData = cache(
   ['country-page-data'], // Base cache key
   {
     revalidate: 3600, // Revalidate every hour
-    tags: ['country-page'], // Tag for on-demand revalidation
+    tags: ['pages', 'country-page'], // Tag for on-demand revalidation
   }
 );
+

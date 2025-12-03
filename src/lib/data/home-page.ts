@@ -80,6 +80,7 @@ export const getHomePageData = cache(
   ['home-page-data'], // Cache key
   {
     revalidate: 3600, // Revalidate every hour
-    tags: ['home-page'], // Tag for on-demand revalidation
+    tags: ['pages', 'home-page'], // Tag for on-demand revalidation
   }
 );
+

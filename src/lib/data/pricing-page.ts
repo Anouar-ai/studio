@@ -79,6 +79,7 @@ export const getPricingPageData = cache(
   ['pricing-page-data'], // Unique cache key
   {
     revalidate: 3600, // Revalidate every hour
-    tags: ['pricing-page'], // Tag for on-demand revalidation
+    tags: ['pages', 'pricing-page'], // Tag for on-demand revalidation
   }
 );
+
