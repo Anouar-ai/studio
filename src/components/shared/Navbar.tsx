@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Container } from '@/components/shared/Container';
@@ -27,7 +28,7 @@ export function Navbar() {
           <div className="ml-auto flex items-center gap-2">
             <ThemeToggle />
             <Button asChild>
-              <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+              <Link href="https://wa.me/212700664844" target="_blank" rel="noopener noreferrer">
                 <SiWhatsapp />
                 <span className='hidden sm:inline-block ml-2'>WhatsApp</span>
               </Link>

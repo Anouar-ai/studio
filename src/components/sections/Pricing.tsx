@@ -61,7 +61,7 @@ export function Pricing() {
                 </CardContent>
                 <CardFooter>
                   <Button asChild className="w-full" variant={plan.isPopular ? "default" : "outline"}>
-                    <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">Order Now</Link>
+                    <Link href="https://wa.me/212700664844" target="_blank" rel="noopener noreferrer">Order Now</Link>
                   </Button>
                 </CardFooter>
               </Card>

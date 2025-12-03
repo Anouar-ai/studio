@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -56,7 +57,7 @@ export function Hero() {
               <Link href="/#pricing">View Pricing</Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+              <Link href="https://wa.me/212700664844" target="_blank" rel="noopener noreferrer">
                 <SiWhatsapp className="mr-2" />
                 Contact on WhatsApp
               </Link>

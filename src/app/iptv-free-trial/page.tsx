@@ -76,7 +76,7 @@ export default async function IptvFreeTrialPage() {
                             You get unrestricted access to all features, channels, and our VOD library, plus our 7-day money-back guarantee. It's the most reliable way to experience the best IPTV service available.
                         </p>
                         <Button asChild size="lg">
-                            <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+                            <Link href="https://wa.me/212700664844" target="_blank" rel="noopener noreferrer">
                                 <SiWhatsapp className="mr-2" />
                                 Start Your 1-Month Trial
                             </Link>

@@ -90,7 +90,7 @@ export default async function CheckoutPage() {
                                             <Input id="name" placeholder="Full Name" disabled />
                                         </div>
                                         <Button asChild size="lg" className="w-full">
-                                            <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+                                            <Link href="https://wa.me/212700664844" target="_blank" rel="noopener noreferrer">
                                                 <SiWhatsapp className="mr-2 h-4 w-4" />
                                                 Contact on WhatsApp
                                             </Link>
