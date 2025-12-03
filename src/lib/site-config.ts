@@ -8,6 +8,7 @@ export const siteConfig = {
     twitter: "https://twitter.com/iptvprovider",
     facebook: "https://facebook.com/iptvprovider",
     instagram: "https://instagram.com/iptvprovider",
+    email: "support@iptvprovider.me",
   },
 } as const;
 

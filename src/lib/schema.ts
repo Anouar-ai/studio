@@ -20,7 +20,7 @@ const defaultPublisher = {
   'name': siteConfig.name,
   'logo': {
     '@type': 'ImageObject' as const,
-    'url': siteConfig.ogImage,
+    'url': `${siteConfig.url}/api/og`,
   },
 };
 
@@ -48,10 +48,10 @@ export function generateOrganizationSchema(): Organization {
     '@type': 'Organization',
     'name': siteConfig.name,
     'url': siteConfig.url,
-    'logo': siteConfig.ogImage,
+    'logo': `${siteConfig.url}/api/og`,
     'contactPoint': {
       '@type': 'ContactPoint',
-      'email': 'support@iptvprovider.me',
+      'email': siteConfig.links.email,
       'contactType': 'Customer Service',
     },
     'sameAs': [
@@ -68,7 +68,7 @@ interface ProductSchemaProps {
   image: string;
   ratingValue: string;
   reviewCount: string;
-  price: string;
+  price?: string; // Make price optional
   priceCurrency?: string;
   offers?: Offer | AggregateOffer;
   sku?: string;
