@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect, useState } from "react";
@@ -19,16 +18,6 @@ export function Hero() {
 
   return (
     <section className="relative w-full overflow-hidden">
-      <Image
-        src="https://www.demotemplates.online/snowpulse/wp-content/uploads/2024/05/iptv-channels-list-USA-UK-Canada-Europe-Asia-Africa.jpg"
-        alt="A grid of popular TV channel logos"
-        fill
-        priority
-        className="absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out"
-        placeholder="blur"
-        blurDataURL={BLUR_DATA_URL}
-        style={{ opacity: videoLoaded ? 0 : 1 }}
-      />
       <video
         autoPlay
         loop
