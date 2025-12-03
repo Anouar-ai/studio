@@ -35,7 +35,7 @@ export function generateWebSiteSchema(): WebSite {
       '@type': 'SearchAction',
       'target': {
         '@type': 'EntryPoint',
-        'urlTemplate': `${siteConfig.url}/?q={search_term_string}`
+        'urlTemplate': `${siteConfig.url}/?s={search_term_string}`
       },
       'query-input': 'required name=search_term_string',
     },

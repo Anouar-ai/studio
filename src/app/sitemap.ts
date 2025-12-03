@@ -16,9 +16,10 @@ async function notifyIndexNow() {
 }
 
 const baseUrl = 'https://www.iptvprovider.me';
+const staticPageLastModified = '2024-08-01T12:00:00.000Z';
+
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
   
   const devicePages: MetadataRoute.Sitemap = howToArticles.map((article) => ({
     url: `${baseUrl}/devices/${article.id}`,
@@ -29,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const countryPages: MetadataRoute.Sitemap = allCountries.map((country) => ({
     url: `${baseUrl}/country/${country.id}`,
-    lastModified,
+    lastModified: staticPageLastModified,
     changeFrequency: 'monthly',
     priority: 0.7,
   }));
@@ -37,43 +38,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified,
+      lastModified: staticPageLastModified,
       changeFrequency: 'daily',
       priority: 1,
     },
     {
       url: `${baseUrl}/pricing`,
-      lastModified,
+      lastModified: staticPageLastModified,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
         url: `${baseUrl}/iptv-subscription`,
-        lastModified,
+        lastModified: staticPageLastModified,
         changeFrequency: 'monthly',
         priority: 0.9,
     },
     {
       url: `${baseUrl}/locations`,
-      lastModified,
+      lastModified: staticPageLastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/faq`,
-      lastModified,
+      lastModified: staticPageLastModified,
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified,
+      lastModified: staticPageLastModified,
       changeFrequency: 'yearly',
       priority: 0.5,
     },
     {
         url: `${baseUrl}/iptv-free-trial`,
-        lastModified,
+        lastModified: staticPageLastModified,
         changeFrequency: 'monthly',
         priority: 0.8,
     },
