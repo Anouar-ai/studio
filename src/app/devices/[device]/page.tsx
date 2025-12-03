@@ -10,20 +10,19 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import InternalLinks from "@/components/shared/InternalLinks";
-import type { Post } from "@/lib/linking";
 import { Schema } from "@/components/shared/Schema";
 import { generateArticleSchema, generateHowToSchema, generateFAQPageSchema, generateProductSchema, generateBreadcrumbSchema } from "@/lib/schema";
 import { generateMetadata as generatePageMetadata } from "@/lib/site-config";
+import { plans } from "@/lib/site-data/pricing";
 
+const BLUR_DATA_URL = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4IDUiPjxwYXRoIGQ9Ik0wIDBoOHY1SDB6IiBmaWxsPSIjZWRlZGVkIi8+PC9zdmc+";
 
 type Props = {
   params: { device: string; };
 };
 
-const BLUR_DATA_URL = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4IDUiPjxwYXRoIGQ9Ik0wIDBoOHY1SDB6IiBmaWxsPSIjZWRlZGVkIi8+PC9zdmc+";
-
-
-function StructuredData({ article }: { article: Post }) {
+function StructuredData({ article }: { article: ReturnType<typeof getArticleData> }) {
+    if (!article) return null;
     const { id, title, description, steps, faqs, image, datePublished, dateModified, primaryKeyword, totalTime } = article;
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.iptvprovider.me';
 
@@ -54,13 +53,22 @@ function StructuredData({ article }: { article: Post }) {
 
     const faqSchema = faqs ? generateFAQPageSchema(faqs) : null;
     
+    const lowPrice = Math.min(...plans.map(p => p.price_monthly));
+    const highPrice = Math.max(...plans.map(p => p.price_monthly));
+
     const productSchema = generateProductSchema({
         name: "IPTV Provider Subscription",
         description: `Our premium IPTV Provider is fully compatible with ${primaryKeyword}. Follow our guide to get set up.`,
         image: "https://images-cdn.ubuy.co.in/633fee9c3a16a463ad2f7388-iptv-subscription-not-box-including.jpg",
         ratingValue: "4.8",
         reviewCount: "2547",
-        price: "14.99",
+        offers: {
+            "@type": "AggregateOffer",
+            priceCurrency: "USD",
+            lowPrice: lowPrice.toFixed(2),
+            highPrice: highPrice.toFixed(2),
+            offerCount: plans.length.toString(),
+        }
     });
 
     const breadcrumbSchema = generateBreadcrumbSchema([
@@ -79,9 +87,12 @@ function StructuredData({ article }: { article: Post }) {
     );
 }
 
+function getArticleData(deviceId: string) {
+    return howToArticles.find((p) => p.id === deviceId);
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const article = howToArticles.find((p) => p.id === params.device);
+  const article = getArticleData(params.device);
 
   if (!article) {
     notFound();
@@ -89,7 +100,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const { title, description, image } = article;
 
-  // Using the centralized metadata generator
   return generatePageMetadata({
     title,
     description,
@@ -99,7 +109,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function HowToPage({ params }: { params: { device: string }}) {
-  const article = howToArticles.find((p) => p.id === params.device);
+  const article = getArticleData(params.device);
 
   if (!article) {
     notFound();
