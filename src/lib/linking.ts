@@ -1,6 +1,7 @@
 
 
-import { howToArticles, getArticlesWithEmbeddings } from '@/lib/how-to';
+import { howToArticles } from '@/lib/how-to';
+import { getArticlesWithEmbeddings } from '@/lib/server/how-to-server';
 import { findSemanticallySimilarContent } from './vector-related-content';
 import { unstable_cache as cache } from 'next/cache';
 
