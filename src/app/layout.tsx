@@ -27,33 +27,80 @@ const outfit = Outfit({
   variable: "--font-outfit",
 });
 
-// SEO Constants
-const DEFAULT_TITLE = "#1 IPTV Provider";
-const DEFAULT_DESCRIPTION = "Subscribe to the #1 IPTV provider with 24,000+ live channels & VOD. HD/4K quality, instant activation & 24/7 support. Try the best IPTV service now!";
-const defaultOgImage = `${siteConfig.url}/api/og?title=${encodeURIComponent(DEFAULT_TITLE)}`;
-
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
+  ],
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  
   title: {
-    default: DEFAULT_TITLE,
-    template: `%s | ${siteConfig.name}`
+    default: `${siteConfig.name} — The #1 Rated IPTV Service`,
+    template: `%s | ${siteConfig.name}`,
   },
-  
-  description: DEFAULT_DESCRIPTION,
-  
+  description: siteConfig.description,
+  applicationName: siteConfig.name,
+  referrer: 'origin-when-cross-origin',
   keywords: [
     'best IPTV provider', 'iptv providers', 'best iptv providers', 'iptv service provider',
     'buy IPTV', 'IPTV subscription', 'IPTV USA', 'IPTV UK', 'IPTV service',
     'premium IPTV', 'cheap IPTV', 'IPTV channels', 'live TV streaming',
     '4K IPTV', 'sports IPTV', 'VOD streaming'
   ],
-  
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
-  
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    title: `${siteConfig.name} — The #1 Rated IPTV Service`,
+    description: siteConfig.description,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.name} - Best Streaming Service`,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${siteConfig.name} — The #1 Rated IPTV Service`,
+    description: siteConfig.description,
+    creator: '@iptvprovider',
+    images: [siteConfig.ogImage],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'WayUe3dolb9UPFpMPHfTYy8CS-T1RkpFYqGvAkW5XqI',
+    yandex: '4cafd334f7cdc146',
+    other: {
+      'msvalidate.01': 'CEC29E9356C1B062CC9637E64D68C778',
+    },
+  },
   alternates: {
     canonical: '/',
     languages: {
@@ -61,50 +108,6 @@ export const metadata: Metadata = {
       'x-default': '/',
     },
   },
-  
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: siteConfig.url,
-    siteName: siteConfig.name,
-    title: DEFAULT_TITLE,
-    description: DEFAULT_DESCRIPTION,
-    images: [
-      {
-        url: defaultOgImage,
-        width: 1200,
-        height: 630,
-        alt: `${siteConfig.name} - Best Streaming Service`,
-      }
-    ],
-  },
-  
-  twitter: {
-    card: "summary_large_image",
-    site: "@iptvprovider",
-    creator: "@iptvprovider",
-    title: DEFAULT_TITLE,
-    description: DEFAULT_DESCRIPTION,
-    images: [{
-      url: defaultOgImage,
-      alt: `${siteConfig.name} - Premium IPTV Service`,
-    }],
-  },
-  
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: false,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: '48x48' },
@@ -114,28 +117,8 @@ export const metadata: Metadata = {
       { url: '/apple-touch-icon.png' },
     ],
   },
-  
   manifest: '/site.webmanifest',
-  
-  verification: {
-    google: 'WayUe3dolb9UPFpMPHfTYy8CS-T1RkpFYqGvAkW5XqI',
-    other: {
-      'msvalidate.01': 'CEC29E9356C1B062CC9637E64D68C778',
-      'yandex-verification': '4cafd334f7cdc146',
-    },
-  },
-  
   category: 'technology',
-};
-
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 5,
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
-  ],
 };
 
 export default function RootLayout({
