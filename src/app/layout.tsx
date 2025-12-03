@@ -1,5 +1,6 @@
 
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Inter, Outfit } from 'next/font/google';
 import { ThemeProvider } from "@/components/shared/ThemeProvider";
 import { Navbar } from "@/components/shared/Navbar";
@@ -139,16 +140,20 @@ export default function RootLayout({
           <Schema id="organization" schema={generateOrganizationSchema()} />
           <Schema id="website" schema={generateWebSiteSchema()} />
           <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
-          <script src="https://cdn.visitors.now/v.js" data-token="0a9ca441-3262-415a-a3ac-e06859feeeba" async></script>
         </head>
       <body>
         <ProgressBar />
         <Analytics />
-        <script
+        <Script
+            src="https://cdn.visitors.now/v.js"
+            data-token="0a9ca441-3262-415a-a3ac-e06859feeeba"
+            strategy="afterInteractive"
+        />
+        <Script
             src="https://analytics.ahrefs.com/analytics.js"
             id="ahrefs-analytics"
-            async
-        ></script>
+            strategy="afterInteractive"
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
