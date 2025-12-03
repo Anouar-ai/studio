@@ -98,13 +98,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     notFound();
   }
 
-  const { title, description, image } = article;
+  const { title, description } = article;
 
   return generatePageMetadata({
     title,
     description,
     canonical: `/devices/${params.device}`,
-    image: image?.imageUrl,
   });
 }
 
