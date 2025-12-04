@@ -14,7 +14,7 @@ import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export function generateMetadata(): Metadata {
-    const title = "IPTV Free Trial 2025: Start Streaming in 5 Minutes (No Card Needed)";
+    const title = "IPTV Free Trial 2026: Start Streaming in 5 Minutes (No Card Needed)";
     const description = "Start your IPTV free trial today. Access 500+ live channels, sports & movies. No credit card required. Instant activation. Try before you buy →";
     return generatePageMetadata({
         title,
